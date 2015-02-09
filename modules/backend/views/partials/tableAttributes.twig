@@ -1,0 +1,9 @@
+<table class="table table-striped table-hover table-bordered dataTable" data-ajax="{{ ajaxUrl }}">
+    <thead>
+    <tr>
+        {% for attr in attributes %}
+            <th>{{ attr.value }}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+</table>

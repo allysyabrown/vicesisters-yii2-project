@@ -1,0 +1,33 @@
+<div class="escort-content gallery-area">
+
+    {% if profile.isMe %}
+        <div class="upload-more cover">
+            <p>{{ t('profile', 'В случае, если вы VIP участник - вы можете загружать столько фотографий,
+    сколько пожелаете. Не забывайте - фотографии с откровенным содержанием модерируются.') }}</p>
+            <button class="upload-more-btn">{{ t('profile', 'Загрузить фото') }}</button>
+            <span>{{ t('profile', 'Изображения должны быть в формате .JPG') }}</span>
+        </div>
+    {% endif %}
+
+    <div class="content">
+        <ul>
+            {% for photo in profile.myPhotos %}
+                <li class="gallery-photo">
+                    {% include '@app/modules/frontend/views/escort/_escortPhotoLike.twig' %}
+
+                        {% if profile.isMe %}
+                            <i class="remove-photo flaticon-garbage12" data-url="{{ path('escort/removephoto', {id:photo.id}) }}"></i>
+                        {% endif %}
+
+                    <img src="{{ photo.src }}" alt="" class="auto-ajax"
+                         data-id="{{ photo.id }}"
+                         data-url="{{ path('photo/index', {'id': photo.id, 'escortId': profile.id}) }}"
+                         data-update=".gal-popup-wrap"/>
+
+                </li>
+            {% endfor %}
+        </ul>
+        {#<div class="increase-gallery">Show more ...</div>#}
+    </div>
+
+</div>

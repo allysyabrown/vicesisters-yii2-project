@@ -1,0 +1,39 @@
+{% extends '@backend/views/layouts/main.twig' %}
+
+{% block cssFiles %}
+    {{ parent() }}
+{% endblock %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+    <script src="{{ '/backend/js/jquery.tagsinput.js' }}"></script>
+    <script src="{{ '/backend/js/form-page.js' }}"></script>
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="panel">
+
+                {% if pageName is not defined %}
+                    {% set pageName = t('back', 'Форма') %}
+                {% endif %}
+                <header class="panel-heading">{{ pageName }}</header>
+
+                <div class="panel-body">
+                    {% block form %}
+                    {% endblock %}
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block scripts %}
+    {{ parent() }}
+    FormPage.init();
+{% endblock %}

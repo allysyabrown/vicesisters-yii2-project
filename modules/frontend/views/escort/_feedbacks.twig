@@ -1,0 +1,48 @@
+<div class="profile-feedback-area cover">
+    {% if profile.canAddFeedback() %}
+        {% include '@app/modules/frontend/views/escort/feedbackForm.twig' %}
+    {% endif %}
+    <div class="content">
+        <ul id="escort-feedbacks">
+            {% for message in feedbacks %}
+                {% include '@app/modules/frontend/views/escort/_feedbackMessage.twig' %}
+            {% endfor %}
+
+
+            {% if app.user.isGuest %}
+                <div class="container-feedbacks">
+
+                    {% if not feedbacks %}
+                        <span class="title-feed">{{ t('front', 'Пользователь не имеет отзывов') }}</span>
+                        <span class="desc-feed">{{ t('front', 'Будьте первым, кто напишет отзыв') }}</span>
+                    {% endif %}
+
+                    <span class="registr-feed">{{ t('front', 'Зарегистрируйтеись или войдите, чтобы написать') }}</span>
+
+                    <div class="registr-form">
+                        <button class="registr-feed-btn auto-url" data-url="{{ path('index/registration') }}">{{ t('front', 'Зарегистрировать новый аккаунт') }}</button>
+                        <span class="or-feed">{{ t('base', 'Или') }}</span>
+                        <button class="login-feed-btn auto-url" data-url="{{ path('index/login') }}">{{ t('base', 'Войти') }}</button>
+                    </div>
+
+                </div>
+            {% endif %}
+
+            {% if not app.user.isGuest and not isMe %}
+                {% if not feedbacks %}
+                    <div class="container-feedbacks-login">
+                        <span class="title-feed">{{ t('front', 'Пользователь не имеет отзывов') }}</span>
+                        <span class="desc-feed">{{ t('front', 'Будьте первым, кто напишет отзыв') }}</span>
+                    </div>
+                {% endif %}
+
+                <div class="block-feed">
+                    {% include '@app/modules/frontend/views/escort/feedbackForm.twig' %}
+                </div>
+            {% endif %}
+
+        </ul>
+    </div>
+</div>
+
+<div class="clear"></div>

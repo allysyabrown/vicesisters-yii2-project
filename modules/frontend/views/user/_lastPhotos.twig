@@ -1,0 +1,10 @@
+<div class="photo">
+    {% for photo in lastPhotos %}
+        <div class="img">
+            <img class="auto-url" data-url="{{ path('escort/profile', {id: photo.escort.id, page:'gallery'}) }}" src="{{ photo.src }}" alt="">
+
+            {% include '@app/modules/frontend/views/escort/_escortPhotoLike.twig' %}
+
+        </div>
+    {% endfor %}
+</div>

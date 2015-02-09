@@ -1,0 +1,18 @@
+<div class="settings-area escort-preference escort-account-settings">
+    <div class="escort-preference">
+        <div class="header">{{ t('account', 'Предпочтения') }}</div>
+        <div class="content">
+
+            <div class="settings-container">
+                {% include '@app/modules/frontend/views/account/_setService.twig' %}
+                {% include '@app/modules/frontend/views/account/_setSex.twig' %}
+                {% include '@app/modules/frontend/views/account/_setBDSM.twig' %}
+                {% include '@app/modules/frontend/views/account/_setOther.twig' %}
+
+                <div class="settings-footer">
+                    <div class="save-settings-btn">{{ t('account', 'СОХРАНИТЬ') }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,508 @@
+/* 
+    Created on : 12.11.2014, 10:56:08
+    Author     : Fenix
+*/
+*{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+html{
+    height: 100%;
+}
+body {
+    background-color: black;
+    color: white;
+    height: 100%;
+}
+.shadow.popups{
+    display: none;
+}
+
+.main-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    color: white;
+    background: url('../img/age_bg.png');
+
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+.age-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+}
+.age-wrapper .age-shadow {
+    /*background: rgba(0, 0, 0, 0.45);*/
+    width: 100%;
+    height: 100%;
+}
+/*.age-wrapper .age-content {
+    position: relative;
+}*/
+.age-wrapper .age-content .age-window {
+    position: absolute;
+    width: 460px;
+    height: 485px;
+    top: 50%;
+    margin-top: -243px;
+    left: 50%;
+    margin-left: -230px;
+    font-family: 'Roboto-Thin', Arial;
+}
+.age-wrapper .age-content .age-window .age-window-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.age-wrapper .age-content .age-window .age-window-header .header-title {
+    color: #ffffff;
+    font-size: 53px;
+    float: left;
+    margin-bottom: 10px;
+    letter-spacing: -0.022em;
+    font-family: 'Roboto-Thin', Arial;
+}
+.age-wrapper .age-content .age-window .age-window-header .header-logo {
+    float: right;
+    width: 238px;
+    height: 26px;
+    margin-top: 28px;
+    background: url('../img/vice_sisters_logo.png');
+}
+.age-wrapper .age-content .age-window .age-window-header .header-sub-title {
+    color: #c7c7c7;
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+.age-wrapper .age-content .age-window .age-window-body {
+    /*border: 1px solid red;*/
+    height: 195px;
+}
+.age-wrapper .age-content .age-window .age-window-body .age-buttons {
+    font-family: 'Roboto-Medium', Arial;
+    font-size: 15px;
+    text-align: center;
+    height: 50px;
+    margin-top: 95px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+.age-wrapper .age-content .age-window .age-window-body .age-buttons .go-away-btn {
+    position: relative;
+    width: 206px;
+    height: 40px;
+    border-radius: 4px;
+    color: #ffffff;
+    background: #7a7a7a;
+    line-height: 40px;
+    float: left;
+    cursor: pointer;
+    margin: 5px;
+}
+.age-wrapper .age-content .age-window .age-window-body .age-buttons .go-away-btn:hover {
+    background: #898b8e;
+}
+.age-wrapper .age-content .age-window .age-window-body .age-buttons .btn-separator {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 50px;
+    font-family: 'Roboto-Thin', Arial;
+}
+.age-wrapper .age-content .age-window .age-window-body .age-buttons .enter-the-site-btn {
+    position: relative;
+    width: 206px;
+    height: 40px;
+    border-radius: 4px;
+    color: #ffffff;
+    background: #7d36a3;
+    line-height: 40px;
+    float: right;
+    cursor: pointer;
+    margin: 5px;
+    letter-spacing: -0.022em;
+}
+.age-wrapper .age-content .age-window .age-window-body .age-buttons .enter-the-site-btn:hover {
+    background: #951fad;
+}
+.age-wrapper .age-content .age-window .age-window-footer {
+    font-family: 'Roboto-Light', Arial;
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 15px;
+}
+.age-wrapper .age-content .age-window .age-window-footer .footer-logo {
+    position: relative;
+    width: 452px;
+    height: 12px;
+    top: 0px;
+    left: 50%;
+    margin-left: -226px;
+    background: url('../img/foter_logo.png');
+}
+.age-wrapper .age-content .age-window .age-window-footer .join-btn {
+    float: left;
+    cursor: pointer;
+    text-decoration: underline;
+    opacity: 0.5;
+}
+.age-wrapper .age-content .age-window .age-window-footer .join-btn:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+.age-wrapper .age-content .age-window .age-window-footer .privacy-btn {
+    float: right;
+    cursor: pointer;
+    text-decoration: underline;
+    opacity: 0.5;
+}
+.age-wrapper .age-content .age-window .age-window-footer .privacy-btn:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+.clear {
+    clear: both;
+}
+
+
+
+/* 
+    Created on : 12.11.2014, 10:56:08
+    Author     : Fenix
+*/
+/*body {
+    background-color: black;
+}*/
+/*.main-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: #000000;
+    color: white;
+    background: url('../img/age_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+}*/
+/*.main-wrap .age-shadow {
+    background: rgba(0, 0, 0, 0.45);
+    width: 100%;
+    height: 100%;
+}*/
+/*.age-wrapper {
+    position: relative;
+    height: 100%;
+    top: 0px;
+}*/
+/*.age-wrapper .log-content {
+    position: relative;
+}*/
+.age-wrapper .log-content .log-window {
+    /*border: 1px solid firebrick;*/
+    position: absolute;
+    width: 460px;
+    height: 485px;
+    top: 50%;
+    margin-top: -243px;
+    left: 50%;
+    margin-left: -230px;
+    /*background: gold;*/
+    font-family: 'Roboto-Thin', Arial;
+}
+.age-wrapper .log-content .log-window .log-window-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.age-wrapper .log-content .log-window .log-window-header .header-title {
+    color: #ffffff;
+    font-size: 38px;
+    float: left;
+    margin-bottom: 10px;
+    font-family: 'Roboto-Thin', Arial;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+.age-wrapper .log-content .log-window .log-window-header .header-logo {
+    float: right;
+    width: 238px;
+    height: 26px;
+    margin-top: 14px;
+    background: url('../img/vice_sisters_logo.png') no-repeat;
+}
+.age-wrapper .log-content .log-window .log-window-header .header-sub-title {
+   color: #c7c7c7;
+    font-size: 19px;
+    margin-bottom: 27px;
+    margin-top: 0px;
+}
+.age-wrapper .log-content .log-window .log-window-body {
+    /*border: 1px solid red;*/
+    height: 270px;
+    width: 460px;
+}
+.age-wrapper .log-content .log-window .log-window-body .log-buttons {
+    font-family: 'Roboto-Medium', Arial;
+    font-size: 15px;
+    text-align: center;
+    height: 50px;
+    margin-top: 145px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    color: #ffffff;
+}
+.age-wrapper .log-content .log-window .log-window-body .log-buttons .reg-btn {
+    position: relative;
+    width: 206px;
+    height: 40px;
+    border-radius: 4px;
+    background: #116ddf;
+    line-height: 40px;
+    float: left;
+    cursor: pointer;
+    margin: 5px;
+}
+.age-wrapper .log-content .log-window .log-window-body .log-buttons .reg-btn:hover {
+    background: #2b7fe7;
+}
+.log-window-body .log-buttons .btn-separator {
+    position: relative;
+    font-size: 12px;
+    line-height: 50px;
+    font-family: 'Roboto-Thin', Arial;
+}
+.log-window-body .log-buttons .login-btn {
+    position: relative;
+    width: 206px;
+    height: 40px;
+    border-radius: 4px;
+    background: #7a7a7a;
+    line-height: 40px;
+    float: right;
+    cursor: pointer;
+    margin: 5px;
+}
+.log-window-body .log-buttons .login-btn:hover {
+    background: #898b8e;
+}
+.log-window-body input {
+    width: 205px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.6);
+    border: none;
+    margin: 0px;
+    border-radius: 4px;
+    font-size: 18px;
+    padding-left: 20px;
+    color: white;
+    /*line-height: 50px;*/
+}
+.log-window-body input:focus {
+    outline: none;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #a63bad;
+    width: 205px;
+    height: 48px;
+
+}
+.log-window-body input::-webkit-input-placeholder {
+    color: white;
+    font-family: 'Roboto-Thin', Arial;
+}
+.log-window-body input:-moz-placeholder {
+    color: white;
+    opacity: 1;
+    font-family: 'Roboto-Thin', Arial;
+}
+.log-window-body input::-moz-placeholder {
+    color: white;
+    opacity: 1;
+    font-family: 'Roboto-Thin', Arial;
+}
+.log-window-body input:-ms-input-placeholder {
+    color: white;
+    font-family: 'Roboto-Thin', Arial;
+}
+.log-window-body #login-form {
+    display: none;
+    /*border: 1px solid cyan;*/
+    position: absolute;
+    width: 460px;
+    height: 215px;
+    top: 260px;
+    left: 0px;
+}
+.log-window-body #login-form {
+    margin-bottom: 40px;
+}
+.log-window-body #login-form form-group:first-child {
+    margin-right: 15px;
+}
+.log-btn-lines {
+    display: none;
+    position: absolute;
+    left: 2px;
+    bottom: 26px;
+    width: 456px;
+    height: 2px;
+    background: url('../img/white_lines.png');
+}
+/*.age-wrapper .log-content .log-window .log-window-body .log-btn-area {
+    position: relative;
+    margin-top: 90px;
+}*/
+#reg-form button {
+    position: relative;
+    width: 146px;
+    height: 50px;
+    margin-left: 159px;
+    border: none;
+    border-radius: 4px;
+    background: #2ed512;
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto-Medium', Arial;
+    cursor: pointer;
+    margin-top: 93px;
+    outline: none;
+}
+#reg-form button:hover {
+    background: #33ea14;
+   
+}
+#login-form button {
+    position: relative;
+    width: 146px;
+    height: 50px;
+    left: 50%;
+    margin-left: -73px;
+    border: none;
+    border-radius: 4px;
+    background: #2ed512;
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto-Medium', Arial;
+    cursor: pointer;
+    margin-top: 123px;
+    outline: none;
+}
+#login-form button:hover{
+    background: #33ea14;
+}
+.log-window-body #reg-form {
+    display: none;
+    /*border: 1px solid yellow;*/
+    position: absolute;
+    width: 460px;
+    height: 215px;
+    top: 66px;
+    left: 0px;
+}
+.log-window-body #reg-form .log-btn-area {
+    position: relative;
+    margin-top: 80px;
+}
+.log-window-body #reg-form input:first-child {
+    margin-right: 5px;
+}
+.log-window-body #reg-form input:nth-child(3) {
+    margin-right: 5px;
+}
+.age-wrapper .log-content .log-window .log-window-footer {
+    position: absolute;
+    height: 20px;
+    width: 460px;
+    bottom: -50px;
+    left: 0px;
+    font-family: 'Roboto-Light', Arial;
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 15px;
+}
+.age-wrapper .log-content .log-window .log-window-footer .footer-logo {
+    position: relative;
+    width: 111px;
+    height: 12px;
+    top: 15px;
+    left: 50%;
+    margin-left: -55px;
+    background: url('../img/small_footer_logo.png');
+}
+.age-wrapper .log-content .log-window .log-window-footer .join-btn {
+    float: left;
+    cursor: pointer;
+    text-decoration: underline;
+    opacity: 0.5;
+}
+.age-wrapper .log-content .log-window .log-window-footer .join-btn:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+.age-wrapper .log-content .log-window .log-window-footer .privacy-btn {
+    float: right;
+    cursor: pointer;
+    text-decoration: underline;
+    opacity: 0.5;
+}
+.age-wrapper .log-content .log-window .log-window-footer .privacy-btn:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+/*.clear {
+    clear: both;
+}*/
+.log-window-body #reg-form .form-group {
+    position: relative;
+    display: inline-block;
+    width: 205px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.log-window-body #login-form .form-group {
+    position: relative;
+    display: inline-block;
+    width: 205px;
+    margin-right: 20px;
+}
+#registrationform-role label:first-child{
+   color: #cacaca;
+position: absolute;
+right: -52px;
+top: 0px;
+left: 42px;
+font-family: 'Roboto-Thin', Arial;
+font-size: 18px;
+}
+#registrationform-role label:last-child{
+   color: #cacaca;
+position: absolute;
+left: 280px;
+font-family: 'Roboto-Thin', Arial;
+font-size: 18px;
+top: 0px;
+}
+
+#registrationform-role input {
+    width: 20px;
+position: absolute;
+top: -11px;
+right: 59px;
+}
+
+.registration-radio{
+    position: relative;
+    width: 100%;
+    float: left;
+    margin-bottom: 55px;
+    margin-top: 79px;
+}
+
+.registration-input{
+    position: relative;
+    width: 100%;
+    float: left;
+}

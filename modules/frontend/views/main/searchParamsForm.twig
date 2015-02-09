@@ -1,0 +1,71 @@
+{% if findProfilesUrl is not defined %}
+    {% set findProfilesUrl = path('escort/find') %}
+{% endif %}
+
+{{ searchForm.begin({ 'action': path('escort/search'), 'placeholders': true, 'labels': false }) }}
+
+{{ searchForm.text('searchText') }}
+{{ searchForm.submit(null) }}
+{{ searchForm.select('sex') }}
+{{ searchForm.select('region', { 'selectOptions': {
+    'class': 'form-control auto-ajax-select',
+    'data-url': path('ajax/counties'),
+    'data-update': '#country-selector',
+    'data-run': 'Frontend.handleRegionSelector("#country-selector")'
+} }) }}
+
+<div id="country-selector">
+    {% if searchForm.region and searchForm.countries %}
+        {% include '@app/modules/frontend/views/ajax/_countriesSelector.twig' %}
+    {% endif %}
+</div>
+
+<br />
+
+<div class="advanced-search">
+    <img class="search-img-adv" src="/frontend/img/search.png">
+    <span class="advanced-search-sp">advanced search</span>
+    <img class="drop-img" src="/frontend/img/show-more.png">
+</div>
+<span class="reset-all"><a href="{{ path('index/resetsearch') }}">{{ t('front', 'Сбросить всё') }}</a></span>
+
+<br />
+
+<div class="advanced-search-form animated">
+    <div class="checkboxes-search">
+        {{ searchForm.checkBox('isEscort') }}
+        {{ searchForm.checkBox('isAgency') }}
+        {{ searchForm.checkBox('isVip') }}
+        {{ searchForm.checkBox('isPremium') }}
+        {{ searchForm.checkBox('isStandard') }}
+    </div>
+    <br />
+    <div class="inputs-search">
+        {{ searchForm.select('age') }}
+        {{ searchForm.select('ethnicity') }}
+        {{ searchForm.select('orientation') }}
+        {{ searchForm.select('height') }}
+        {{ searchForm.select('weight') }}
+        {{ searchForm.select('hair') }}
+        {{ searchForm.select('eyes') }}
+        {{ searchForm.select('breast') }}
+        {{ searchForm.select('waist') }}
+        {{ searchForm.select('hips') }}
+        {{ searchForm.select('extended') }}
+        {% if searchForm.extendedTextItems %}
+            {% for item in searchForm.extendedTextItems %}
+                <div data-id="{{ item.value }}" class="control-form-appended">
+                    {{ item.name }}
+                    <span>-</span>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+<div class="hide-container">
+    {{ searchForm.checkBox('advanced') }}
+    {{ searchForm.text('extendedText') }}
+</div>
+
+{{ searchForm.end() }}

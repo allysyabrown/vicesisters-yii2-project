@@ -1,0 +1,23 @@
+{% extends '@frontend/views/layouts/main.twig' %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+    <h1>TICKET ID {{ ticket.id }}</h1>
+    {% for key,msg in ticket.ticketMessages %}
+        <div class="col-md-6" style="margin-bottom: 10px">
+            <p>Author ID: {{ msg.from }}</p>
+            <p>Date: {{ msg.date }}</p>
+            <p>Text: {{ msg.text }}</p>
+        </div>
+    {% endfor %}
+    {% include '@app/modules/frontend/views/ticket/ticketMessageForm.twig' %}
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+{% endblock %}

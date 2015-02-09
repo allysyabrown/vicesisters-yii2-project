@@ -1,0 +1,6 @@
+
+<div id="city-selector">
+    {% if accountForm.cityItems %}
+        {{ accountForm.dropDownList('city', accountForm.cityItems, {'class': 'user-city'}) }}
+    {% endif %}
+</div>

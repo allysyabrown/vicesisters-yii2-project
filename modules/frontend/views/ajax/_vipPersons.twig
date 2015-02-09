@@ -1,0 +1,35 @@
+<div class="vip-persons-area">
+    <div class="vip-persons-header">
+        <div class="title">{{ t('base', 'Премиум рулетка') }}</div>
+    </div>
+    <div class="hidden-container">
+        <ul class="content">
+            {% for vip in vips %}
+                <li class="auto-url" data-url="{{ path('escort/profile', {'id': vip.id}) }}">
+                    <div class="member-mini-gallery">
+                        <ul>
+                            {% if(vip.getPhotosForPremium()) %}
+                                {% for photo in vip.getPhotosForPremium() %}
+                                    <li>
+                                        <img src="{{ photo.src }}" alt="">
+                                    </li>
+                                {% endfor %}
+                            {% endif %}
+                        </ul>
+                    </div>
+                    <div class="rating-stars three-stars"></div>
+                    <p class="title">
+                        {{ vip.fullName }}
+                    </p>
+                    <p class="sub-title">
+                        {{ vip.escortInfo.phone }}
+                    </p>
+                    <p class="text">
+                        {{ substr(vip.escortInfo.description, 142) }}...
+                    </p>
+                    <a href="{{ path('escort/profile', {'id': vip.id}) }}"><span class="vip-more">{{ t('base', 'Подробнее') }}</span></a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

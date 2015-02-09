@@ -1,0 +1,23 @@
+<div class="message-popup">
+    <div class="message-header">
+        <div class="message-img"></div>
+        <div class="message-title">{{ t('base','Отправить сообщение') }}:</div>
+        <div class="user-name">{{ account.getFirstName()~' '~account.getLastName() }}</div>
+        <div class="user-ava">
+            <img src="{{ account.getAvatar() }}" alt=""/>
+            <div class="user-ava-arrow"></div>
+        </div>
+    </div>
+    <div class="message-content">
+        <div class="massege-title">{{ t('base', 'Введите ваше сообщение') }} :</div>
+
+        {% include '@app/modules/frontend/views/account/messageForm.twig' %}
+        {#<form action="new-message" method="post">#}
+            {#<textarea name="user-message" placeholder="Hello!"></textarea>#}
+            {#<div class="message-btns">#}
+                {#<div class="cencel-btn">Cancel</div>#}
+                {#<button type="submit">Send Message</button>#}
+            {#</div>#}
+        {#</form>#}
+    </div>
+</div>

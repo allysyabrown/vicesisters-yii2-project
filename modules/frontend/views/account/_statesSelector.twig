@@ -1,0 +1,6 @@
+{% if accountForm.stateItems %}
+    {{ accountForm.dropDownList('state', accountForm.stateItems, {'class': 'user-state auto-ajax-select', 'data-url': path('account/citiesbystate'), 'data-update': '#city-selector'}) }}
+{% endif %}
+{% if citiesContainer is defined and citiesContainer %}
+    <div id="city-selector"></div>
+{% endif %}

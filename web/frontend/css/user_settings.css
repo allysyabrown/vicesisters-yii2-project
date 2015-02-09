@@ -1,0 +1,64 @@
+.user-top-ava {
+    position: relative;
+    width: 100%;
+    height: 110px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    padding-top: 10px;
+    background: url('../img/user_top_bg.jpg');
+}
+.user-top-ava .user-ava {
+    position: relative;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    left: 0%;
+    top: -30%;
+    background: #404040;
+    text-align: center;
+    color: white;
+    border: 8px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+.user-top-ava .user-ava:hover .add-new-ava {
+    border: 1px dashed #898c8d;
+}
+.user-top-ava .user-ava:hover .ava-text {
+    color: #898c8d;
+}
+.user-top-ava .user-ava .add-new-ava{
+    position: relative;
+    width: 115px;
+    height: 115px;
+    left: 50%;
+    margin-left: -57.5px;
+    top: 50%;
+    margin-top: -57.5px;
+    border-radius: 50%;
+    border: 1px dashed #757575;
+    z-index: 5;
+}
+.user-top-ava .user-ava .add-new-ava img{
+    border-radius: 50%;
+    left: -16%;
+    position: relative;
+    top: -17%;
+    width: 150px;
+    z-index: 10;
+}
+.user-top-ava .user-ava .add-ava-img {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 55px;
+    top: 45px;
+    background: url('../img/add_ava_img.png');
+}
+.user-top-ava .user-ava .ava-text {
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+    color: #757575;
+    font-size: 12px;
+    font-family: 'Roboto-Medium', Arial;
+}

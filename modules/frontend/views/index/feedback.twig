@@ -1,0 +1,15 @@
+{% extends '@frontend/views/layouts/main.twig' %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+{{ feedbackForm.begin({'id': 'feedback-form', 'options':{'class': 'ajax-form','data-url':'/ajax-feedback-' ~ escortId}, 'placeholders': true}) }}
+
+    {{ feedbackForm.text('text') }}
+
+    {{ feedbackForm.submit() }}
+
+{{ feedbackForm.end() }}
+{% endblock %}

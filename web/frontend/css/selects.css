@@ -1,0 +1,194 @@
+.selectize-control.form-control.single {
+    width: 170px;
+    height: 30px;
+    border-radius: 4px;
+    color: white;
+    padding-left: 6px;
+    font-size: 13px;
+    font-family: 'Roboto-Regular', Arial;
+    margin-left: 11px;
+    background: 130px center rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    float: left;
+    outline: none;
+    -webkit-appearance: none;
+    line-height: 30px;
+    border: 1px solid transparent;
+}
+.control-form-appended{
+    width: 170px;
+    height: 30px;
+    border-radius: 4px;
+    color: white;
+    padding-left: 8px;
+    font-size: 13px;
+    font-family: 'Roboto-Regular', Arial;
+    margin-left: 9px;
+    background: 130px center rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    float: right;
+    outline: none;
+    -webkit-appearance: none;
+    line-height: 30px;
+    border: 1px solid transparent;
+    display: inline-block;
+    position: relative;
+    right: 112px;
+    overflow: hidden;
+}
+.selectize-input.items.full.has-options.has-items.focus.dropdown-active.input-active {
+    background: #000;
+    margin-left: -10px;
+    border-radius: 4px;
+    padding-left: 10px;
+    border: 1px solid #7D36A3;
+}
+.selectize-control .selectize-input input{
+    display: none;
+}
+.selectize-dropdown.single.form-control {
+    border-radius: 4px;
+    width:180px!important;
+    background: #fff;
+    margin-left: -10px;
+    margin-top: 5px;
+    color: #000;
+    position: absolute;
+    z-index: 10;
+    border-radius: 8px;
+}
+.option {
+    padding-left: 10px;
+}
+.option:hover {
+    background: #7D36A3;
+    color: #fff;
+}
+.selectize-dropdown-content {
+    max-height: 220px;
+    overflow-y: auto;
+    overflow-x: auto;
+    border-radius: 8px;
+}
+.selectize-input.items.full.has-options.has-items.focus.dropdown-active.input-active {
+
+}
+.add-to-setting-list-btn {
+    width: 15px;
+    position: relative;
+    height: 15px;
+    right: -768px;
+    top: -33px;
+    background: #000;
+}
+.user-settings-ul{
+    position: relative;
+    left: 5px;
+    display: inline-block;
+    list-style: none;
+}
+.user-settings-ul li{
+    width: 170px;
+    height: 30px;
+    border-radius: 4px;
+    color: white;
+    padding-left: 10px;
+    font-size: 13px;
+    font-family: 'Roboto-Regular', Arial;
+    background: 130px center rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    float: left;
+    outline: none;
+    -webkit-appearance: none;
+    line-height: 30px;
+    border: 1px solid transparent;
+    margin-left: 8px;
+    margin-bottom: 8px;
+}
+
+.control-form-appended span{
+    position: absolute;
+    left: 145px;
+    width: 30px;
+    text-align: center;
+    border-left: 1px solid #000;
+    height: 32px;
+    top: -1px;
+    display: block;
+}
+
+.inputs-search div:nth-child(12){
+    background: #7E57C6;
+}
+.inputs-search div:nth-child(13){
+    background: #AF0061;
+}
+.inputs-search div:nth-child(14){
+    background: #FF6D10;
+}
+.inputs-search div:nth-child(15){
+    background: #993DBC;
+}
+.inputs-search div:nth-child(16){
+    background: #008FBF;
+}
+.inputs-search div:nth-child(17){
+    background: #00AFAB;
+}
+.selectize-dropdown-content div{
+    background: #fff!important;
+    font-family: roboto-medium;
+}
+.selectize-dropdown-content div:hover{
+    background: #7D36A3!important;
+}
+
+.checkboxes-search .form-group label {
+    font-family: roboto-Regular;
+    font-size: 13px;
+}
+.item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 0px 1px 1px #b6b6b6;
+}
+.inputs-search .form-group .selectize-control{
+    width:170px!important;
+}
+.inputs-search .form-group .selectize-control .selectize-dropdown .selectize-dropdown-content{
+    max-height: 145px!important;
+}
+.selectize-dropdown-content:after {
+    position: absolute;
+    content: " ";
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom: 7px solid #fff;
+    margin: auto;
+    left: 87px;
+    top: -13px;
+}
+.inputs-search {
+    margin-left: -5px;
+}
+span.reset-all {
+    position: absolute;
+    top: 124px;
+    right: 22px;
+    opacity: 0.5;
+    font-family: roboto-light;
+    font-size: 14px;
+    cursor: pointer;
+}
+span.reset-all:hover {
+    opacity: 1;
+}
+span.reset-all a {
+    font-family: roboto-light;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+}
+

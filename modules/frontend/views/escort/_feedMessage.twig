@@ -1,0 +1,59 @@
+<div class="feeds-top-content" data-id="{{ message.id }}">
+    <div class="header">
+        <div class="info-date">
+            <div class="title">
+                <a href="{{ message.ownerHomeUrl }}" class="user-name">{{ message.ownerFullName }}</a>
+                <div class="header-arrow"></div>
+                <span>{{ t('profile', 'опубликовал запись') }}</span>
+            </div>
+            <div class="clear"></div>
+            <div class="feed-date">
+                <div class="date-img"></div>
+                <span>{{ message.date }}</span>
+            </div>
+        </div>
+
+        <div id="like-container-{{ message.id }}">
+            {% include '@app/modules/frontend/views/escort/_feedMessageLikes.twig' %}
+        </div>
+
+    </div>
+    <div class="advertising-text">
+        {{ message.text }}
+    </div>
+
+    <div class="right-btns">
+        {% if message.canLike %}
+            <a href="{{ path('like/feedmessage', {'id': message.id}) }}"
+               id="feedlike-{{ message.id }}"
+               class="like-btn auto-ajax{{ message.isLiked ? ' active' : '' }}"
+               data-update="#like-container-{{ message.id }}"
+               data-run="Profile.toggleLike('#feedlike-{{ message.id }}')">
+                <div class="like-img"></div>
+                <span class="tooltip-like">Like This!</span>
+            </a>
+        {% endif %}
+
+        {% if message.canComment %}
+            <div class="coment-btn">
+                <div class="coment-img"></div>
+                <span class="tooltip-comment">Comment</span>
+            </div>
+        {% endif %}
+
+    </div>
+
+</div>
+
+{% if message.canComment %}
+    {% include '@app/modules/frontend/views/escort/feedCommentForm.twig' %}
+{% endif %}
+
+<ul id="feed-comments-{{ message.id }}">
+
+    {% if message.comments %}
+        {% set comments = message.comments %}
+        {% include '@app/modules/frontend/views/escort/_feedComments.twig' %}
+    {% endif %}
+
+</ul>

@@ -1,0 +1,5 @@
+<center>
+	<div class="row1">{{ t('error', 'Недостаточно денег на счету') }}</div>
+	<div class="row2"><a href="{{ path('account/index', {'page': 'credits'}) }}">{{ t('payment', 'Пожалуйста, пополните счёт на ${amount}', {'amount': amount}) }}</a></div>
+	<div class="row3">{{ amount }} $</div>
+</center>

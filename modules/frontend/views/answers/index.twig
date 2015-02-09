@@ -1,0 +1,23 @@
+{% extends '@frontend/views/layouts/main.twig' %}
+
+{% block cssFiles %}
+    {{ parent() }}
+    <link href="{{ '/frontend/css/answers_style.css' }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ '/frontend/css/nano_scroller.css' }}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+    <script src="{{ '/frontend/js/pages/answers.js' }}" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+
+    {% include '@app/modules/frontend/views/answers/answersList.twig' %}
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    Answers.init();
+{% endblock %}

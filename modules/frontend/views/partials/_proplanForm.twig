@@ -1,0 +1,10 @@
+{{ proplanForm.begin({ 'action': path('ajax/proplansubmit', {'id': proplanForm.id}), 'placeholders': false, 'labels': true }) }}
+
+    {% if proplanForm.durationItems %}
+        {{ proplanForm.select('duration') }}
+    {% endif %}
+
+    {{ proplanForm.hidden('price') }}
+
+
+{{ proplanForm.end() }}

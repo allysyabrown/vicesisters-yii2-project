@@ -1,0 +1,4 @@
+<div class="img">
+    <img class="auto-url" data-url="{{ path('escort/profile', {'id':user.id}) }}" src="{{ user.getAva() }}" alt="">
+    <div class="stamp">{{ user.getFirstName()~' '~user.getLastName() }}</div>
+</div>

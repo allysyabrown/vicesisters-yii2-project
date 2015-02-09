@@ -1,0 +1,35 @@
+List:
+1. Stats worker
+2. Records worker
+3. Memberships duration worker
+4. Params update worker
+
+
+Producers:
+1. ProducerEscortStats
+2. ProducerRecords
+3. ProducerParams
+
+
+Consumers:
+1. ConsumerEscortStats (views/rating/online)
+2. ConsumerRecords (feeds/comments)
+3. ConsumerParams (rating)
+
+
+Consumers:
+x1 yii consumerescortstats/rating
+x2 yii consumerescortstats/online
+x2 yii consumerescortstats/views
+
+x1 yii consumerrecords/feeds
+x1 yii consumerrecords/comments
+
+x1 yii consumerparams/rating
+
+
+Schedule:
+* * * * * yii producerescortstats
+* * * * * yii producerrecords
+* * * * * yii producerparams
+* * * * * yii memberships

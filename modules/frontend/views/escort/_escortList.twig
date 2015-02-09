@@ -1,0 +1,39 @@
+<div class="regular-members-area">
+    <div class="header">
+        <div class="baner-header">
+            <p class="title">{{ t('front', 'Все анкеты') }}</p>
+            <!-- <a href="{{ path('escort/list') }}">{{ t('base', 'Ещё') }}</a> -->
+        </div>
+
+         <div class="header-menu">
+            {#{% include '@app/modules/frontend/views/main/_searchParamsSelector.twig' %}#}
+            <div class="get-regular-posts"></div>
+        </div> 
+
+    </div>
+    <div class="baner">
+        <a href="{{ path('redirect/index', {page: 'kievlady.com'}) }}" target="_blank"><img src="/frontend/img/kiev-lady-ad.jpg" alt=""></a>
+        <a href="#"><img src="/frontend/img/place-for-ad.jpg" alt=""></a>
+    </div>
+
+    {% if vips is not defined %}
+        {% set vips = false %}
+    {% endif %}
+
+    <div id="escorts-list">
+        <div class="member-area">
+            <ul>
+                <div class="dummy ajaxLoader"></div>
+                {% if vips %}
+                    {% include '@app/modules/frontend/views/ajax/_topProfiles.twig' %}
+                {% endif %}
+                {# Or by ajax #}
+            </ul>
+        </div>
+    </div>
+
+    <div class="regular-member-footer">
+        {% include '@app/modules/frontend/views/main/_showMoreButton.twig' %}
+    </div>
+    
+</div>

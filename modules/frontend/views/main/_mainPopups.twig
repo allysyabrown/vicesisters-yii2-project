@@ -1,0 +1,120 @@
+<div class="shadow popups">
+
+
+    <div class="popups-wrap">
+        <div class="popusp-bg">
+
+            <div class="popup-content"></div>
+
+            <div class="popup-step-1">
+                <div class="gradient"></div>
+                <div class="header">
+                    <div class="title">Be popular!</div>
+                    <div class="sub-title"><span>25</span> ViceCoins</div>
+                </div>
+                <div class="content">
+
+                    <img src="/frontend/img/popups/popup_step_1_bg.png" alt="">
+                    <div class="text">
+                        Pin your profile with enlarged images at the top of the members<br/>
+                        list and join our TOP Listing.<br/><br/>
+                        Just for 25 ViceCoins you become a VIP Member for 1 month.
+                    </div>
+                    <span>
+                        Start enjoying the new service right now.
+                    </span>
+                </div>
+            </div>
+
+            <div class="popup-step-2">
+                <div class="header">Be popular!</div>
+                <div class="content">
+                    <div class="gradient-step-2"></div>
+                    <div class="text">Choose your Photo</div>
+                    <img src="/frontend/img/popups/popup-arow.png" alt="">
+                    <div id="cropper-popup" class="add-img-btn">+</div>
+                    <div class="suport-window">
+                        <div class="title">Your Title</div>
+                        <div class="text">
+                            Hello im on Cafe<br/>
+                            Call me +893456<br/>
+                            i wait u...
+                        </div>
+                    </div>
+                    <div class="slide-status">
+                        <div class="slide-one">1.</div>
+                        <div class="slide-two">2.</div>
+                        <div class="slide-three">3.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-step-3">
+                <div class="gradient"></div>
+                <div class="header">
+                    <div class="title">Be popular!</div>
+                    <div class="sub-title">Type your Message</div>
+                    <div class="intro-arrow"></div>
+                </div>
+                <div class="content">
+                    <div class="suport-window">
+                        <div class="popup-user-avatar">
+                            <img src="{{ app.user.ava }}" alt=""/>
+                        </div>
+                        {% include '@app/modules/frontend/views/account/hotMessageForm.twig' %}
+                    </div>
+                    <div class="slide-status">
+                        <div class="slide-one">1.</div>
+                        <div class="slide-two">2.</div>
+                        <div class="slide-three">3.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-step-4">
+                <div class="header">
+                    <div class="title">
+                        Good !
+                    </div>
+                    <div class="sub-title">
+                        Your message done !
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="vise-price">
+                        <span class="price-text">Total</span>
+                        <div class="count">10</div>
+                        <span class="second-price-text">ViceCoins</span>
+                    </div>
+                </div>
+                <div class="user-coints">
+                    <span class="first-coint-text">You have</span>
+                    <div class="coint-count">1961.6</div>
+
+                    <span class="second-coint-text">Credits</span>
+                </div>
+                <div class="slide-status">
+                    <div class="slide-one">1.</div>
+                    <div class="slide-two">2.</div>
+                    <div class="slide-three">3.</div>
+                </div>
+            </div>
+
+            <div class="popup-step-5" style="display: none">
+                <div class="header"></div>
+                <div class="content">
+                    <span class="coint-title">Enter the desired amount :</span>
+                    <input class="coint-field"/>
+                </div>
+            </div>
+
+            <div id="popup-buttons">
+                <div class="popup-button">
+                    <div class="back-btn">Back</div>
+                    <div class="next-btn">Next</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

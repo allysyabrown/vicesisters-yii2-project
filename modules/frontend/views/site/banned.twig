@@ -1,0 +1,23 @@
+{% extends '@frontend/views/layouts/bloor.twig' %}
+
+{% block cssFiles %}
+    {{ parent() }}
+    <link href="/frontend/css/banned.css" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+
+<center><div class="wrapper-banned">
+	<div class="lock-img"></div>
+	<span class="title">
+  {{ t('base', 'Your page is banned') }}
+  </span>
+	<span class="description">{{ t('front', 'If you have any questions, please contact') }}</span>
+	<a class="link">{{ t('front', 'Customer Support') }}</a>
+		
+	<div class="home-btn auto-url" data-url="{{ returnUrl }}"><a href="{{ returnUrl }}">{{ t('base', 'Home') }}</a></div>
+</div>
+</center>
+
+
+{% endblock %}

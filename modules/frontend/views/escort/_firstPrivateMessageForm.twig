@@ -1,0 +1,10 @@
+{{ privateMessageForm.begin({'action': path('account/addprivatemessage', {'id': privateMessageForm.to})} ) }}
+
+    {{ privateMessageForm.textarea('text') }}
+
+    <div class="message-btns">
+        <div class="cencel-btn">{{ t('base', 'Отмена') }}</div>
+        <button type="submit">{{ t('base', 'Отправить сообщение') }}</button>
+    </div>
+
+{{ privateMessageForm.end() }}

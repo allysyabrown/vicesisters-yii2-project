@@ -1,0 +1,16 @@
+{{ ticketForm.begin({'action': path('ticket/sendticket')}) }}
+	<div class="container-help">
+		<div class="container-help-left">
+			<div class="title-text-help">{{ t('front','Мы можем помочь вам!') }}</div>
+			<div class="description-help">{{ t('front','Задайте ваш вопрос службе поддержки') }}</div>
+		</div>
+		<div class="container-help-right"><img src="/frontend/img/help_img.png" /></div>
+	</div>
+
+    <center><div class="title_help">{{ ticketForm.hidden('category_id') }}</div></center>
+    <center>{{ ticketForm.text('name') }}</center>
+    <center><div class="text_help">{{ ticketForm.textarea('text') }}<div></center>
+
+    {#{{ ticketForm.submit() }}#}
+
+{{ ticketForm.end() }}

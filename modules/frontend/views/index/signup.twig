@@ -1,0 +1,70 @@
+{% extends '@frontend/views/layouts/bloor.twig' %}
+
+{% block cssFiles %}
+    {{ parent() }}
+
+    <link href="frontend/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="frontend/css/animate.css" rel="stylesheet" type="text/css"/>
+
+{% endblock %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+    <script src="{{ '/frontend/js/pages/singup.js' }}" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+
+    <div class="main-wrap"></div>
+
+    <div class="age-wrapper">
+        <div class="age-shadow"></div>
+        <div class="log-content">
+            <div class="log-window bounceInUp animated">
+                <div class="log-window-header">
+                    {% if not openRegForm %}
+                        <div class="header-title rubberBand animated" data-url="{{ path('index/registration') }}">{{ t('base', 'Войдите!') }}</div>
+                    {% endif %}
+                    <div class="header-logo"></div>
+                    <div class="clear"></div>
+                    {% if not openLoginForm %}
+                        <div class="header-sub-title" data-url="{{ path('index/login') }}">
+                            {% if not openRegForm %}
+                                {{ t('base', 'или зарегистрируйте свой профиль') }}
+                            {% endif %}
+                            <!-- {{ t('base', 'Войти22') }} -->
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="log-window-body">
+                    <div class="log-buttons">
+                        <div class="reg-btn" data-url="{{ path('index/registration') }}">{{ t('base', 'Зарегистрироваться') }}</div>
+                        <span class="btn-separator">{{ t('base', 'Или') }}</span>
+                        <div class="login-btn" data-url="{{ path('index/login') }}">{{ t('base', 'Войти') }}</div>
+                    </div>
+
+                    {% include '@app/modules/frontend/views/index/loginForm.twig' %}
+                    {% include '@app/modules/frontend/views/index/regForm.twig' %}
+                    <div class="log-btn-lines"></div>
+
+                </div>
+
+                <div class="log-window-footer">
+                    <!-- <div class="footer-logo"></div> -->
+                    <div class="join-btn auto-url" data-url="{{ path('index/signup') }}">{{ t('base', 'Войти или зарегистрироваться') }}</div>
+                    {#<div class="privacy-btn">Privacy Policy</div>#}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    Signup.init({
+        openLoginForm: {{ openLoginForm ? 1 : 0 }},
+        openRegForm: {{ openRegForm ? 1 : 0 }}
+    });
+{% endblock %}

@@ -1,0 +1,30 @@
+<div class="interlocutors-area nano">
+    {#<input type="text" name="search-field" class="search-window" placeholder="Search Name ..."/>#}
+    <!--<div class="edit-btn"></div>-->
+    <div class="interlocutors-list nano-content">
+        <ul>
+            {% for key,dialog in dialogs %}
+                <li class="auto-ajax" data-url="{{ path('account/dialog', {'code' : dialog.dialogCode}) }}" data-update=".message-block-area" data-run="Dialogs.setScrollbar()">
+                    <div class="ava-status">
+                        <img src="{{ dialog.subscriber.getAva() }}" alt=""/>
+                        <div class="online-status{% if dialog.subscriber.isOnline %} online{% else %} offline{% endif %}"></div>
+                    </div>
+                    <div class="user-name-text">
+                        <div class="user-info">
+                            <span class="user-name">
+                                {{ dialog.subscriber.getFirstName()~' '~dialog.subscriber.getLastName() }}<br/>
+                            </span>
+                            <span class="message-date">{{ dialog.lastDate }}</span>
+                        </div>
+                        <div class="user-massege">
+                            {{ dialog.lastMessage }}
+                        </div>
+                    </div>
+                    {#<div class="remove-btn">#}
+                        {#<img src="/frontend/img/del_img.png" alt=""/>#}
+                    {#</div>#}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

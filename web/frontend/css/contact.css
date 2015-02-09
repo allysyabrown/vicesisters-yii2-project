@@ -1,0 +1,91 @@
+.container-img{
+    text-align: -webkit-center;
+    text-align: -moz-center;
+    position: relative;
+    top: 125px;
+}
+.back-img{
+    background: url("/frontend/img/contact/contact.png") no-repeat;
+    width: 800px;
+    height: 556px;
+}
+.contacts-sp{
+    color: white;
+    font-size: 38px;
+    top: 70px;
+    position: relative;
+    font-family: roboto-Regular;
+}
+.contact-message{
+    position: relative;
+    display: block;
+    top: 222px;
+}
+.contact-email {
+    position: relative;
+    top: 234px;
+    color: #fff;
+    font-family: roboto-light;
+}
+.phone-number {
+    position: relative;
+    top: 215px;
+    color: #fff;
+    font-family: roboto-Regular;
+}
+.phone-number:before {
+    content: " ";
+    position: relative;
+    top: 28px;
+    left: -104px;
+    background: url("/frontend/img/contact/contact-viber.png") no-repeat;
+    display: block;
+    height: 38px;
+    width: 37px;
+}
+.phone-number:after {
+    content: " ";
+    position: relative;
+    top: -28px;
+    left: 104px;
+    background: url("/frontend/img/contact/contact-phone.png") no-repeat;
+    display: block;
+    height: 38px;
+    width: 37px;
+}
+.contact-skype {
+    position: relative;
+    top: 160px;
+    right: -70px;
+    color: #fff;
+    font-family: roboto-light;
+}
+.contact-skype:before {
+    content: " ";
+    position: relative;
+    top: 38px;
+    left: -122px;
+    background: url("/frontend/img/contact/contact-skype.png") no-repeat;
+    display: block;
+    height: 38px;
+    width: 37px;
+}
+.btn-support {
+    position: relative;
+    top: 230px;
+    right: 45px;
+    width: 125px;
+    height: 30px;
+    border-radius: 8px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    outline: none;
+    -webkit-transiton:1s;
+    transition:1s;
+    font-family: roboto-medium;
+}
+.btn-support:hover{
+    color:#000;
+    background:#fff;
+}

@@ -1,0 +1,24 @@
+<div class="hide-container">
+    <div id="first-private-message">
+
+        <div class="message-popup">
+
+            <div class="message-header">
+                <div class="message-img"></div>
+                <div class="message-title">{{ t('front', 'Отправить сообщение пользователю') }}:</div>
+                <div class="user-name">{{ profile.fullName }}</div>
+                <div class="user-ava">
+                    <img src="{{ profile.ava }}" alt=""/>
+                    <div class="user-ava-arrow"></div>
+                </div>
+            </div>
+
+            <div class="message-content">
+                <div class="massege-title">{{ t('front', 'Введите сообщение') }}:</div>
+                {% include '@app/modules/frontend/views/escort/_firstPrivateMessageForm.twig' %}
+            </div>
+
+        </div>
+
+    </div>
+</div>

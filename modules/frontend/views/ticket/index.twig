@@ -1,0 +1,23 @@
+{% extends '@frontend/views/layouts/main.twig' %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+    <h1>TICKETS</h1>
+    {% for key,ticket in ticketList %}
+        <div class="col-md-6" style="margin-bottom: 10px">
+            <p>ID: {{ ticket.id }}</p>
+            <p>Категория: {{ ticket.category.name }}</p>
+            Название: <a href="ticket-{{ ticket.id }}">{{ ticket.name }}</a>
+        </div>
+    {% endfor %}
+    {% include '@app/modules/frontend/views/ticket/ticketForm.twig' %}
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+{% endblock %}

@@ -1,0 +1,8 @@
+{{ loginForm.begin({'id': 'login-form', 'action': path('index/login')}) }}
+
+    {{ loginForm.text('user_name') }}
+    {{ loginForm.password('password') }}
+
+    {{ loginForm.submit() }}
+
+{{ loginForm.end() }}

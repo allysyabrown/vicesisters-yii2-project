@@ -1,0 +1,15 @@
+
+{% if tableFilteringName is not defined %}
+    {% set tableFilteringName = t('back', 'Показывать только:') %}
+{% endif %}
+
+<h4>{{ tableFilteringName }}</h4>
+<div class="clearfix">
+    <div class="btn-group">
+        <select class="form-control auto-select">
+            {% for setting in tableFilteringSettings %}
+                <option data-url="{{ setting.url }}"{{ setting.selected ? ' selected="selected"' : '' }}>{{ setting.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+<!--sidebar start-->
+<aside>
+    <div id="sidebar"  class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+            <li>
+                <a class="active" href="{{ path('index/index') }}">
+                    <i class="fa fa-dashboard"></i>
+                    <span>{{ t('back', 'Главная') }}</span>
+                </a>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-users"></i>
+                    <span>{{ t('back', 'Аккаунты') }}</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="{{ path('account/online') }}">{{ t('back', 'Онлайн') }}</a></li>
+                    <li><a  href="{{ path('account/escorts') }}">{{ t('back', 'Эскорты') }}</a></li>
+                    <li><a  href="{{ path('account/users') }}">{{ t('back', 'Пользователи') }}</a></li>
+                    <li><a  href="{{ path('account/all') }}">{{ t('back', 'Все') }}</a></li>
+                    <li><a  href="{{ path('account/lastregistered') }}">{{ t('back', 'Последние зарегистрированные') }}</a></li>
+                    <li><a  href="{{ path('account/lastactive') }}">{{ t('back', 'Последние активные') }}</a></li>
+                </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-money"></i>
+                    <span>{{ t('back', 'Платежи') }}</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="{{ path('payment/allpayments') }}">{{ t('back', 'Все платежи') }}</a></li>
+                    <li><a  href="{{ path('payment/alltransactions') }}">{{ t('back', 'Все транзакции') }}</a></li>
+                </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-credit-card"></i>
+                    <span>{{ t('back', 'Пропланы') }}</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="{{ path('proplan/list') }}">{{ t('back', 'Список') }}</a></li>
+                    <li><a  href="{{ path('proplan/userslist') }}">{{ t('back', 'Участники') }}</a></li>
+                </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-tasks"></i>
+                    <span>{{ t('back', 'Тикеты') }}</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="{{ path('ticket/all') }}">{{ t('back', 'Все') }}</a></li>
+                    <li><a  href="{{ path('ticket/opened') }}">{{ t('back', 'Открытые') }}</a></li>
+                    <li><a  href="{{ path('ticket/closed') }}">{{ t('back', 'Закрытые') }}</a></li>
+                </ul>
+            </li>
+
+            <!--multi level menu start-->
+            {#<li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-sitemap"></i>
+                    <span>Multi level Menu</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="javascript:;">Menu Item 1</a></li>
+                    <li class="sub-menu">
+                        <a  href="boxed_page.html">Menu Item 2</a>
+                        <ul class="sub">
+                            <li><a  href="javascript:;">Menu Item 2.1</a></li>
+                            <li class="sub-menu">
+                                <a  href="javascript:;">Menu Item 3</a>
+                                <ul class="sub">
+                                    <li><a  href="javascript:;">Menu Item 3.1</a></li>
+                                    <li><a  href="javascript:;">Menu Item 3.2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>#}
+            <!--multi level menu end-->
+
+        </ul>
+        <!-- sidebar menu end-->
+    </div>
+</aside>
+<!--sidebar end-->

@@ -1,0 +1,94 @@
+<div class="settings-header">{{ t('account', 'Услуга') }}</div>
+<div class="settings-content">
+    <div class="settings-holder{{ accountForm.isOn('models') ? ' is-on' : '' }}">
+        <div class="indicator"></div>
+        <span class="title">{{ t('account', 'Модели') }}</span>
+        <div id="models" class="onoff-switch{{ accountForm.isOn('models') ? ' is-on' : '' }}" data-id="models" data-state="{{ accountForm.isOn('models') ? 1 : 0 }}">
+            <div class="slider"></div>
+        </div>
+    </div>
+    {#<div class="settings-holder{{ accountForm.isOn('fashionModels') ? ' is-on' : '' }}">
+        <div class="indicator"></div>
+        <span class="title">{{ t('account', 'Модели') }}</span>
+        <div id="fashion-models" class="onoff-switch{{ accountForm.isOn('fashionModels') ? ' is-on' : '' }}" data-id="fashionModels" data-state="{{ accountForm.isOn('fashionModels') ? 1 : 0 }}">
+            <div class="slider"></div>
+        </div>
+    </div>#}
+    <div class="settings-holder{{ accountForm.isOn('travalingCompanion') ? ' is-on' : '' }}">
+        <div class="indicator"></div>
+        <span class="title">{{ t('account', 'Спутник в поездке') }}</span>
+        <div id="travaling-companion" class="onoff-switch{{ accountForm.isOn('travalingCompanion') ? ' is-on' : '' }}" data-id="travalingCompanion" data-state="{{ accountForm.isOn('travalingCompanion') ? 1 : 0 }}">
+            <div class="slider"></div>
+        </div>
+    </div>
+    <div class="settings-holder{{ accountForm.isOn('girlfriendExpirience') ? ' is-on' : '' }}">
+        <div class="indicator"></div>
+        <span class="title">{{ t('account', 'Девушка по вызову') }}</span>
+        <div id="girlfriend-expirience" class="onoff-switch{{ accountForm.isOn('girlfriendExpirience') ? ' is-on' : '' }}" data-id="girlfriendExpirience" data-state="{{ accountForm.isOn('girlfriendExpirience') ? 1 : 0 }}">
+            <div class="slider"></div>
+        </div>
+    </div>
+    <div class="settings-holder{{ accountForm.isOn('partyServices') ? ' is-on' : '' }}">
+        <div class="indicator"></div>
+        <span class="title">{{ t('account', 'Вечеринки') }}</span>
+        <div id="party-services" class="onoff-switch{{ accountForm.isOn('partyServices') ? ' is-on' : '' }}" data-id="partyServices" data-state="{{ accountForm.isOn('partyServices') ? 1 : 0 }}">
+            <div class="slider"></div>
+        </div>
+    </div>
+    <div class="settings-holder{{ accountForm.isOn('weekendCompanion') ? ' is-on' : '' }}">
+        <div class="indicator"></div>
+        <span class="title">{{ t('account', 'Компания на выходные') }}</span>
+        <div id="weekend-companion" class="onoff-switch{{ accountForm.isOn('weekendCompanion') ? ' is-on' : '' }}" data-id="weekendCompanion" data-state="{{ accountForm.isOn('weekendCompanion') ? 1 : 0 }}">
+            <div class="slider"></div>
+        </div>
+    </div>
+    <div class="settings-holder{{ accountForm.isOn('holidayCompanion') ? ' is-on' : '' }}">
+        <div class="indicator"></div>
+        <span class="title">{{ t('account', 'Компания на праздники') }}</span>
+        <div id="holiday-companion" class="onoff-switch{{ accountForm.isOn('holidayCompanion') ? ' is-on' : '' }}" data-id="holidayCompanion" data-state="{{ accountForm.isOn('holidayCompanion') ? 1 : 0 }}">
+            <div class="slider"></div>
+        </div>
+    </div>
+    <div class="settings-holder{{ accountForm.isOn('companionForExecutive') ? ' is-on' : '' }}">
+        <div class="indicator"></div>
+        <span class="title">{{ t('account', 'Спутник для руководителей') }}</span>
+        <div id="companion-for-executive" class="onoff-switch{{ accountForm.isOn('companionForExecutive') ? ' is-on' : '' }}" data-id="companionForExecutive" data-state="{{ accountForm.isOn('companionForExecutive') ? 1 : 0 }}">
+            <div class="slider"></div>
+        </div>
+    </div>
+    <div class="settings-holder{{ accountForm.isOn('businessTripCompanion') ? ' is-on' : '' }}">
+        <div class="indicator"></div>
+        <span class="title">{{ t('account', 'Спутник в деловой поездке') }}</span>
+        <div id="business-trip-companion" class="onoff-switch{{ accountForm.isOn('businessTripCompanion') ? ' is-on' : '' }}" data-id="businessTripCompanion" data-state="{{ accountForm.isOn('businessTripCompanion') ? 1 : 0 }}">
+            <div class="slider"></div>
+        </div>
+    </div>
+    <div class="settings-holder{{ accountForm.isOn('ExcitingEncouters') ? ' is-on' : '' }}">
+        <div class="indicator"></div>
+        <span class="title">{{ t('account', 'Секс встречи') }}</span>
+        <div id="exciting-encounters" class="onoff-switch{{ accountForm.isOn('ExcitingEncouters') ? ' is-on' : '' }}" data-id="ExcitingEncouters" data-state="{{ accountForm.isOn('ExcitingEncouters') ? 1 : 0 }}">
+            <div class="slider"></div>
+        </div>
+    </div>
+    <div class="settings-holder{{ accountForm.isOn('duo') ? ' is-on' : '' }}">
+        <div class="indicator"></div>
+        <span class="title">{{ t('account', 'Дуэт (Секс втроем с клиентом)') }}</span>
+        <div id="duo" class="onoff-switch{{ accountForm.isOn('duo') ? ' is-on' : '' }}" data-id="duo" data-state="{{ accountForm.isOn('duo') ? 1 : 0 }}">
+            <div class="slider"></div>
+        </div>
+    </div>
+    <div class="settings-holder{{ accountForm.isOn('massage') ? ' is-on' : '' }}">
+        <div class="indicator"></div>
+        <span class="title">{{ t('account', 'Массаж') }}</span>
+        <div id="massage" class="onoff-switch{{ accountForm.isOn('massage') ? ' is-on' : '' }}" data-id="massage" data-state="{{ accountForm.isOn('massage') ? 1 : 0 }}">
+            <div class="slider"></div>
+        </div>
+    </div>
+    <div class="settings-holder{{ accountForm.isOn('stripTease') ? ' is-on' : '' }}">
+        <div class="indicator"></div>
+        <span class="title">{{ t('account', 'Стриптиз') }}</span>
+        <div id="strip-tease" class="onoff-switch{{ accountForm.isOn('stripTease') ? ' is-on' : '' }}" data-id="stripTease" data-state="{{ accountForm.isOn('stripTease') ? 1 : 0 }}">
+            <div class="slider"></div>
+        </div>
+    </div>
+</div>

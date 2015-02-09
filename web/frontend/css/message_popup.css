@@ -1,0 +1,155 @@
+/* 
+    Created on : 09.12.2014, 9:14:55
+    Author     : Fenix
+*/
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+body {
+  background-color: black;
+  color: white;
+  height: 100%;
+}
+.content-wrap {
+  position: absolute;
+  height: 100%;
+  width: 960px;
+  top: 90px;
+  left: 50%;
+  margin-left: -480px;
+  /*background-color: aqua;*/
+}
+.main-wrapper.blur {
+  -webkit-filter: blur(15px);
+}
+/*Feed back;*/
+.message-popup {
+
+}
+.message-header {
+  position: absolute;
+  width: 540px;
+  height: 35px;
+  /*background: green;*/
+  left: 0px;
+  font-family: 'Roboto-Regular', Arial;
+  top: -35px;
+}
+.message-img {
+  position: relative;
+  width: 30px;
+  height: 16px;
+  margin-top: 10px;
+  margin-left: 15px;
+  float: left;
+  background: url(../img/message_header_img.png);
+}
+.message-title {
+  position: absolute;
+  font-size: 16px;
+  top: 8px;
+  left: 60px;
+  color: white;
+}
+.user-name {
+  font-size: 18px;
+  color: #e8204a;
+  margin-top: 6px;
+  margin-right: 160px;
+  float: right;
+}
+.user-ava {
+  position: absolute;
+  width: 160px;
+  height: 95px;
+  top: -15px;
+  right: 20px;
+  /*background: gold;*/
+}
+img {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  left: 50%;
+  margin-left: -45px;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+}
+.user-ava-arrow {
+  position: absolute;
+  width: 43px;
+  height: 36px;
+  bottom: 0px;
+  left: 25px;
+  background: url(../img/message_ava_arrow.png);
+}
+.message-content {
+  position: relative;
+  margin-left: 55px;
+  padding-top: 25px;
+  /*background: cyan;*/
+}
+.massege-title {
+  font-size: 13px;
+  font-family: 'Roboto-Medium', Arial;
+  color: #7a7a7a;
+  margin-bottom: 20px;
+}
+textarea {
+  width: 404px;
+  height: 124px;
+  border-radius: 5px;
+  padding: 13px;
+  color: black;
+  font-size: 15px;
+  border: 1px solid #d0d0d0;
+  font-family: 'Roboto-Medium', Arial;
+}
+textarea:focus {
+  outline: none;
+}
+.message-btns {
+  position: relative;
+  width: 345px;
+  height: 34px;
+  margin-top: 25px;
+  margin-left: 45px;
+  /*background: gold;*/
+}
+.cencel-btn {
+  color: white;
+  width: 170px;
+  height: 34px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 34px;
+  background: #7a7a7a;
+  font-family: 'Roboto-Medium', Arial;
+  font-size: 12px;
+  float: left;
+  cursor: pointer;
+}
+.cencel-btn:hover {
+  background: #898b8e;
+}
+button {
+  color: white;
+  width: 170px;
+  height: 34px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 34px;
+  background: #e8204a;
+  font-family: 'Roboto-Medium', Arial;
+  font-size: 12px;
+  float: right;
+  cursor: pointer;
+}
+button:hover {
+  background: #f4436d;
+}
+.clear {
+  clear: both;
+}

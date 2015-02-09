@@ -1,0 +1,49 @@
+{% extends '@frontend/views/layouts/main.twig' %}
+{% block cssFiles %}
+    {{ parent() }}
+    <link href="/frontend/css/settings_style.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+    <script src="{{ '/general/js/plugins/cropper/cropper.js' }}" type="text/javascript"></script>
+    <script src="{{ '/general/js/plugins/cropper/crop.js' }}" type="text/javascript"></script>
+    <script src="{{ '/frontend/js/pages/escort-account.js' }}" type="text/javascript"></script>
+    <script src="{{ '/frontend/js/pages/payment.js' }}" type="text/javascript"></script>
+    <script src="{{ '/frontend/js/pages/bitcoin.js' }}" type="text/javascript"></script>
+    <script src="{{ '/frontend/js/pages/wu.js' }}" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="side-settings-block">
+
+        <div class="header">{{ t('base', 'Настройки') }}</div>
+
+        <div class="contetnt">
+            {% include '@app/modules/frontend/views/account/_leftMenu.twig' %}
+        </div>
+
+        <div class="footer-setting-content">
+            {% include '@app/modules/frontend/views/account/_settingsFooter.twig' %}
+        </div>
+    </div>
+
+    {% include '@app/modules/frontend/views/account/_account.twig' %}
+    {% include '@app/modules/frontend/views/account/_preferences.twig' %}
+    {% include '@app/modules/frontend/views/account/_changePassword.twig' %}
+    {% include '@app/modules/frontend/views/account/_credits.twig' %}
+    {% include '@app/modules/frontend/views/account/_travels.twig' %}
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    EscortAccount.init({
+        showPage: "{{ show }}",
+        uploadAvaUrl: "{{ path('account/uploadavatar') }}",
+        travelsDelimiter: "{{ travelsForm.listDelimiter }}"
+    });
+    Payment.init();
+    Bitcoin.init();
+    Wu.init();
+{% endblock %}

@@ -1,0 +1,11 @@
+<div class="last-certified">
+    <div class="title">Last Verified</div>
+    <ul>
+        {% for vip in vips %}
+            <li>
+                <img src="/frontend/img/certified/certified_img.jpg" alt="">
+                <div class="stamp">{{ vip.name }}</div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

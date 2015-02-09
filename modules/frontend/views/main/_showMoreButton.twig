@@ -1,0 +1,5 @@
+{% if showMoreUrl is not defined %}
+    {% set showMoreUrl = path('escort/list') %}
+{% endif %}
+
+<a class="show-more-btn" href="{{ showMoreUrl }}"><span class="show-more">{{ t('base', 'Показать еще...') }}</span><img class="show-more-img" src="/frontend/img/show-more.png"/> </a>

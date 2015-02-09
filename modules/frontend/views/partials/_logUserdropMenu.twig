@@ -1,0 +1,115 @@
+<div class="log-user-drop-menu">
+    <div class="triangle"></div>
+    <ul>
+        {#<li>
+            <a href="#">
+                Help
+                <div class="menu-help-img"></div>
+            </a>
+        </li>#}
+        <a href="{{ path('account/dialogs') }}">
+            <li style="border-radius:10px 10px 0px 0px;">
+                <span class="icon-messages icon_dropdownmenu"></span>
+                {{ t('base', 'Мои сообщения') }}
+                {% if notification.getMessages > 0 %}
+                    <div id="menu-message" class="new-count">{{ notification.getMessages }}</div>
+                {% endif %}  
+            </li>
+        </a>
+
+        {#{% if app.user.isEscort %}#}
+        {#<a href="{{ path('escort/profile', {'id': app.user.id, 'page': 'feed'}) }}">#}
+            {#<li>#}
+                {#{{ t('base', 'Мои новости') }}#}
+                {#<div class="menu-feed-img"></div>#}
+                {#{% if notification.getAnswers > 0 %}#}
+                    {#<div id="menu-feeds" class="new-count">{{ notification.getAnswers }}</div>#}
+                {#{% endif %}#}
+            {#</li>#}
+        {#</a>    #}
+        {#{% endif %}#}
+
+        {% if app.user.isEscort %}
+        <a href="{{ path('escort/profile', {'id':app.user.id}) }}">
+            <li>
+            <span class="icon-myprofile icon_dropdownmenu"></span>
+                {{ t('base', 'Мой профиль') }}
+            </li>
+        </a>    
+        {% elseif app.user.isUser %}
+        <a href="{{ path('user/profile', {'id':app.user.id}) }}">
+            <li>
+                <span class="icon-photogalery icon_dropdownmenu"></span>
+                {{ t('base', 'Мой профиль') }}
+            </li>
+        </a>    
+        {% endif %}
+
+        {% if app.user.isEscort %}
+       <a href="{{ path('escort/profile', {'id': app.user.id, 'page': 'gallery'}) }}"> 
+            <li>
+                <span class="icon-photogalery icon_dropdownmenu"></span>
+                {{ t('base', 'Мои фотографии') }}
+            </li>
+        </a>
+        <a href="{{ path('account/index', {'page': 'credits'} ) }}">
+            <li>
+                <span class="icon-dollar103 icon_dropdownmenu"></span>
+                {{ t('base', 'Кредиты') }}
+            </li>
+        </a>
+        {% endif %}
+
+        {#{% if app.user.isEscort %}#}
+        {#<a href="{{ path('account/favorites') }}">#}
+            {#<li>#}
+                {#{{ t('base', 'Избранное') }}#}
+                {#<div class="menu-favorites-img"></div>#}
+                {#{% if notification.getFavorites > 0 %}#}
+                    {#<div id="menu-favorites" class="new-count">{{ notification.getFavorites }}</div>#}
+                {#{% endif %}#}
+            {#</li>#}
+        {#</a>#}
+        {#{% endif %}#}
+
+
+        {% if app.user.isEscort %}
+        <a href="{{ path('site/proplans') }}">
+            <li class="green-background">
+                <span class="icon-shopping2 icon_dropdownmenu"></span>
+                {{ t('base', 'Виды аккаунтов') }}
+            </li>
+        </a>
+        {% endif %}
+
+        {% if app.user.isEscort %}
+            <a href="{{ path('account/index') }}">
+                <li>
+                    <span class="icon-settings icon_dropdownmenu"></span>
+                    {{ t('base', 'Настройки') }}
+                </li>
+            </a>
+        {% elseif app.user.isUser %}
+            <a href="{{ path('user/index') }}">
+                <li>
+                    <span class="icon-settings icon_dropdownmenu"></span>
+                    {{ t('base', 'Настройки') }}
+                </li>
+             </a>
+        {% elseif app.user.isAdmin %}
+            <a href="{{ path('/backend/index/index') }}">
+                <li>
+                    <span class="icon-folder5 icon_dropdownmenu"></span>
+                    {{ t('base', 'Админка') }}
+                </li>
+            </a>
+        {% endif %}
+        <a href="{{ path('index/logout') }}">
+            <li style="border-radius:0px 0px 10px 10px;">
+                <span class="icon-signout icon_dropdownmenu"></span>
+                {{ t('base', 'Выход') }}
+                <!-- <div class="menu-log-out-img"></div> -->
+            </li>
+        </a>
+    </ul>
+</div>

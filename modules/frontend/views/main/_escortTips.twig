@@ -1,0 +1,20 @@
+<div class="escort-tips-area">
+    <div class="title">{{ t('account', 'Подсказки по аккаунту') }}</div>
+    {#<a href="#">See All</a>#}
+    <div class="banners-area">
+        <ul>
+            <li class="first-banners">
+                <a href="{{ path('site/proplans') }}"><img class="front-side" src="/frontend/img/vip-account-ad.jpg" alt=""/></a>
+                <a href="{{ path('escort/females') }}"><img class="back-side" src="/frontend/img/catalog-ad.jpg" alt=""></a>
+            </li>
+            <li class="second-banners">
+                <a href="{{ path('site/proplans') }}"><img class="front-side-two" src="/frontend/img/BoosterButtonBunner.jpg" alt=""></a>
+                <a href="{{ path('escort/females') }}"><img class="back-side-two" src="/frontend/img/BestEscortButtonBunner.jpg" alt=""/></a>
+            </li>
+            <li class="third-banners">
+                <a><img class="message-btn auto-ajax front-side-third" data-url="{{ path('ajax/getmessagepopup', {id:'73043'}) }}" src="/frontend/img/send-support-ad.jpg" alt=""></a>
+                {#<a><img class="back-side-third add-top-members-post-btn"  data-url="{{ path('escort/topmessagecost') }}" src="/frontend/img/hotmessageButtonBunner.jpg" alt=""></a>#}
+            </li>
+        </ul>
+    </div>
+</div>

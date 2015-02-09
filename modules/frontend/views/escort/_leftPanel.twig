@@ -1,0 +1,66 @@
+<div class="left-panel-area">
+    <div class="panel-header">
+        <span>{{ t('profile', 'Основная информация') }}</span>
+        {#<img src="frontend/img/left_panel_arrow.png" alt=""/>#}
+    </div>
+    <div class="clear"></div>
+    <div class="escort-info-area">
+        <div class="title-info">
+            <ul>
+                <li>{{ t('profile', 'Телефон') }}:</li>
+                <li>{{ t('profile', 'Сайт') }}:</li>
+                <li>{{ t('profile', 'Пол') }}:</li>
+                <li>{{ t('profile', 'Цвет волос') }}:</li>
+                <li>{{ t('profile', 'Ориентация') }}:</li>
+                <li>{{ t('profile', 'Цвет глаз') }}:</li>
+                <li>{{ t('profile', 'Этнос') }}:</li>
+                <li>{{ t('profile', 'Языки') }}:</li>
+                <li>{{ t('profile', 'Рост') }}:</li>
+                <li>{{ t('profile', 'Возраст') }}:</li>
+                <li>{{ t('profile', 'Вес') }}:</li>
+                <li>{{ t('profile', 'Грудь') }}:</li>
+                <li>{{ t('profile', 'Талия') }}:</li>
+                <li>{{ t('profile', 'Бёдра') }}:</li>
+                <li>{{ t('profile', 'Дата регистрации') }}:</li>
+            </ul>
+        </div>
+        <div class="data-info">
+            <ul>
+                <li>{{ profile.escortInfo.phone ? profile.escortInfo.phone : '-'}}</li>
+                <li>
+                    {% if profile.escortInfo.webPage %}
+                        <a class="link" href="{{ path('redirect/index', {'page': profile.escortInfo.webPage}) }}" target="_blank" rel="nofollow">{{ profile.escortInfo.webPage }}</a>
+                    {% else %}
+                        -
+                    {% endif %}
+                </li>
+                <li>{{ profile.gender ? profile.gender : '-' }}</li>
+                <li>{{ profile.escortInfo.hairColor ? profile.escortInfo.hairColor : '-' }}</li>
+                <li>{{ profile.escortInfo.orientationName ? profile.escortInfo.orientationName : '-' }}</li>
+                <li>{{ profile.escortInfo.eyesColor ? profile.escortInfo.eyesColor : '-' }}</li>
+                <li>{{ profile.escortInfo.ethnicityName ? profile.escortInfo.ethnicityName : '-' }}</li>
+                <li>{{ profile.escortInfo.languagesString ? profile.escortInfo.languagesString : '-' }}</li>
+                <li>{{ profile.escortInfo.height ? profile.escortInfo.height : '-' }}</li>
+                <li>{{ profile.escortInfo.age ? profile.escortInfo.age : '-' }}</li>
+                <li>{{ profile.escortInfo.weight ? profile.escortInfo.weight : '-' }}</li>
+                <li>{{ profile.escortInfo.breast ? profile.escortInfo.breast : '-' }}</li>
+                <li>{{ profile.escortInfo.waist ? profile.escortInfo.waist : '-' }}</li>
+                <li>{{ profile.escortInfo.hips ? profile.escortInfo.hips : '-' }}</li>
+                <li>{{ profile.registrationDate ? profile.registrationDate : '-' }}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="panel-header">
+        <span>{{ t('profile', 'Список услуг') }}</span>
+        {#<img src="frontend/img/left_panel_arrow.png" alt=""/>#}
+    </div>
+    <div class="clear"></div>
+    <div class="services-list">
+        <ul>
+            {% for tag in profile.escortInfo.serviceTags %}
+                <li>{{ tag }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

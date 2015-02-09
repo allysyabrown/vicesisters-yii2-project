@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="head-wrap">
+        <div class="top-header">
+            <div class="top-container">
+                <a href="{{ path('index/index') }}" class="header-logo"></a>
+                <ul>
+                    <li><a href="{{ path('site/escortagencias') }}">{{ t('front', 'Эскорт агентства') }}</a></li>
+                    <li><a href="{{ path('site/stripclub') }}">{{ t('front', 'Стрип-клуб') }}</a></li>
+                    <li><a href="{{ path('site/massage') }}">{{ t('front', 'Массаж') }}</a></li>
+                    <li><a href="{{ path('site/advertising') }}">{{ t('front', 'Реклама') }}</a></li>
+                    <li><a href="{{ path('site/agencies') }}">{{ t('front', 'Агентства') }}</a></li>
+                    {#<li><a href="{{ path('site/help') }}">{{ t('front', 'Помощь') }}</a></li>#}
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-header-bg">
+            <div class="header-red-line gradient-bvb"></div>
+        </div>
+
+        <div class="header header-js">
+
+            <ul class="header-btns">
+                <li class="hvr-radial-out"><a href="{{ path('escort/females') }}">{{ t('base', 'Женщины') }}</a></li>
+                <li class="hvr-radial-out"><a href="{{ path('escort/males') }}">{{ t('base', 'Мужчины') }}</a></li>
+                <li class="hvr-radial-out"><a href="{{ path('escort/shemales') }}">{{ t('base', 'Транссексуалы') }}</a></li>
+                <li class="hvr-radial-out"><a href="{{ path('site/agencies') }}">{{ t('front', 'Агентства') }}</a> </li>
+                <li class="hvr-radial-out"><a href="{{ path('site/appartaments') }}">{{ t('front', 'Аппартаменты') }}</a></li>
+                <li class="hvr-radial-out"><a href="{{ path('site/vacancies') }}">{{ t('front', 'Вакансии') }}</a></li>
+            </ul>
+
+            {% if app.user.isGuest %}
+                <div class="login-btn icon-signinheader auto-url login-btn-header" data-url="{{ path('index/signup') }}">
+                    <span>{{ t('base', 'Вход') }}</span>
+                    <!-- <img src="/frontend/img/login_img.png" alt=""/> -->
+                </div>
+            {% else %}
+                <div class="user-prof login-btn-header">
+                    <!-- <span>{{ app.user.name }}</span> -->
+                    <img src="{{ app.user.ava }}" alt=""/>
+                    {% if notification.getMessages > 0 %}
+                        <div class="user-alerts">{{ notification.getMessages }}</div>
+                    {% endif %}
+                </div>
+            {% endif %}
+            {% include '@app/modules/frontend/views/partials/_logUserdropMenu.twig' %}
+        </div>
+    </div>
+</div>
+
+

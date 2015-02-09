@@ -1,0 +1,32 @@
+{% extends '@frontend/views/layouts/bloor.twig' %}
+
+{% block cssFiles %}
+    {{ parent() }}
+    <link href="/frontend/css/404.css" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+
+<div class="wrapper-page404">
+	<div class="window">
+		<div>
+			<div class="title">{{ t('front', 'Ой') }}!</div>
+			<div class="clear"></div>
+			<div class="desc">{{ message }}</div>
+		</div>
+
+		<div class="log-window-body">
+                    <div class="log-buttons">
+                        <div class="back-btn auto-url" data-url="{{ returnUrl }}">{{ t('front', 'Назад') }}</div>
+                        <span class="btn-separator">{{ t('base', 'Или') }}</span>
+                        <div class="go-btn auto-url" data-url="{{ path('escort/list') }}">{{ t('front', 'Перейти к поиску') }}</div>
+                    </div>   
+                    <div class="log-btn-lines"></div>
+        </div>
+
+        <div class="footer-logo"></div>
+        	
+	</div>
+</div>
+
+{% endblock %}

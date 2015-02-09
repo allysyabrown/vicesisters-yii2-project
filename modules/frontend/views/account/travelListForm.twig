@@ -1,0 +1,6 @@
+{{ travelListForm.begin({'action': path('account/changetravellist'), 'options': {'class': 'auto-ajax-form'} }) }}
+
+    {{ travelListForm.hidden('countries') }}
+    {{ travelListForm.submit() }}
+
+{{ travelListForm.end() }}

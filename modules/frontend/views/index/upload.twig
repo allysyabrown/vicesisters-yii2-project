@@ -1,0 +1,20 @@
+{% extends '@frontend/views/layouts/main.twig' %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+    {{ uploadForm.begin({'options': {'enctype': 'multipart/form-data'}}) }}
+
+        {{ uploadForm.upload('file') }}
+        {{ uploadForm.submit() }}
+
+    {{ uploadForm.end() }}
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+{% endblock %}

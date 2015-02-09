@@ -1,0 +1,10 @@
+<div>
+    <div class="verifield">
+        <p class="verifield-title">{{ t('profile', 'Новые эскорты') }}</p>
+
+        {% for user in lastVerified %}
+            {% include '@app/modules/frontend/views/user/_verifiedUser.twig' %}
+        {% endfor %}
+
+    </div>
+</div>

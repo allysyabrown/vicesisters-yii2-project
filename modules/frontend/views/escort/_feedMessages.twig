@@ -1,0 +1,16 @@
+<div class="feeds-area cover">
+    {% if profile.canAddFeed() %}
+        {% include '@app/modules/frontend/views/escort/feedMessageForm.twig' %}
+    {% endif %}
+<div id="escort-feed-messages" class="content">
+    {% include '@app/modules/frontend/views/escort/_feedMessageList.twig' %}
+</div>
+    {% if showShowMoreFeedsButton is not defined %}
+        {% set showShowMoreFeedsButton = false %}
+    {% endif %}
+    {% if showShowMoreFeedsButton %}
+        {% include '@app/modules/frontend/views/main/_showMoreButton.twig' %}
+    {% endif %}
+</div>
+
+<div class="clear"></div>

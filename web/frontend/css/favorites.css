@@ -1,0 +1,154 @@
+.main-wrapper .content-wrap .interlocutors-area {
+  position: relative;
+  height: 530px;
+  width: 300px;
+  float: left;
+  margin-top: 20px;
+}
+.main-wrapper .content-wrap .interlocutors-area .search-window {
+  position: relative;
+  width: 288px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  padding-left: 10px;
+  color: white;
+  font-family: 'Roboto-Light', Arial;
+  font-size: 16px;
+  background-color: rgba(20, 20, 20, 0.65);
+  margin-bottom: 15px;
+}
+.main-wrapper .content-wrap .interlocutors-area .search-window:focus {
+  outline: none;
+}
+.main-wrapper .content-wrap .interlocutors-area .search-window::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.4;
+}
+.main-wrapper .content-wrap .interlocutors-area .search-window:-moz-placeholder {
+  color: white;
+  opacity: 0.4;
+}
+.main-wrapper .content-wrap .interlocutors-area .search-window::-moz-placeholder {
+  color: white;
+  opacity: 0.4;
+}
+.main-wrapper .content-wrap .interlocutors-area .search-window:-ms-input-placeholder {
+  color: white;
+  opacity: 0.4;
+}
+.main-wrapper .content-wrap .interlocutors-area .edit-btn {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  float: right;
+  cursor: pointer;
+  margin: -42px 8px 0px 0px;
+  background-image: url('/frontend/img/search.png');
+  background-size: 100%;
+}
+
+.main-wrapper .content-wrap {
+position: absolute;
+height: 100%;
+width: 960px;
+top: 90px;
+left: 50%;
+margin-left: -480px;
+ }
+
+.message-block-area {
+position: relative;
+float: right;
+min-height: 530px;
+width: 630px;
+margin-top: 20px;
+}
+
+.interlocutors-area ul li img {
+border-radius: 12px;
+width: 300px;
+margin: 5px 0px 5px 0px;
+}
+.message-block-area ul {
+list-style: none;
+}
+.message-block-area ul li {
+position: relative;
+cursor: pointer;
+border-radius: 10px;
+margin-bottom: 5px;
+height: 70px;
+padding-top: 10px;
+background: rgba(229, 229, 229, 0.2);
+}
+
+.message-block-area ul li:hover {
+background-color: rgba(255, 255, 255, 0.25);
+}
+.message-block-area ul li .ava-status {
+position: absolute;
+width: 70px;
+height: 90px;
+/* background-color: green; */
+}
+.message-block-area ul li .ava-status img {
+position: absolute;
+width: 42px;
+height: 42px;
+border-radius: 50%;
+top: 10px;
+left: 12px;
+cursor: pointer;
+}
+.message-block-area ul li .ava-status .offline {
+background: #ec304f;
+}
+.message-block-area ul li .ava-status .online-status {
+position: absolute;
+width: 4px;
+height: 4px;
+top: 10px;
+right: 15px;
+border-radius: 50%;
+}
+
+.message-block-area ul li .user-name-text {
+width: 190px;
+height: 90px;
+margin-left: 70px;
+/* background-color: orange; */
+font-family: 'Roboto-Regular', Arial;
+}
+.message-block-area ul li .remove-btn {
+position: absolute;
+/* background-color: blue; */
+text-align: center;
+line-height: 80px;
+top: 0px;
+right: 0px;
+width: 40px;
+height: 80px;
+}
+.message-block-area ul li .remove-btn:hover {
+  background-color: #e8204a;
+  border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+.message-block-area ul li .user-name-text .user-info {
+color: white;
+}
+.message-block-area ul li .user-name-text .user-info .user-name {
+font-family: 'Roboto-Medium', Arial;
+font-size: 15px;
+}
+.message-block-area ul li .user-name-text .user-info .message-date {
+position: absolute;
+top: 30px;
+font-size: 16px;
+color: #fff;
+}
+.message-block-area ul li .user-name-text .user-massege {
+margin-top: 15px;
+font-size: 11px;
+}

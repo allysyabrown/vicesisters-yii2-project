@@ -1,0 +1,8 @@
+<li data-id="{{ message.id }}">
+    <a href="{{ path('escort/profile', {'id': message.owner}) }}">
+        <div class="title">{{ message.title }}</div>
+        <div class="text">{{ message.text }}</div>
+        <img src="{{ message.img }}" alt="">
+       {# <img src="http://lorempixel.com/200/200/people/" alt="">#}
+    </a>
+</li>

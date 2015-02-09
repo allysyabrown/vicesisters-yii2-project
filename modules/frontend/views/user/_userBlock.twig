@@ -1,0 +1,15 @@
+<div class="profile">
+    <div class="name">{{ user.fullName }}
+        <div class="user-online-status{% if user.isOnline %} online{% else %} offline{% endif %}"></div>
+    </div>
+    <p class="city">{{ t('base', 'Пользователь Vicesisters') }}</p>
+    <p class="description">{{ t('base', 'Напиши мне прямо сейчас') }}</p>
+
+    {% if not user.isMe and not app.user.isGuest %}
+        <div class="send-msg auto-ajax"
+             data-url="{{ path('ajax/getmessagepopup', {'id': user.id}) }}"
+             data-update=".popusp-bg">{{ t('base', 'Написать') }}</div>
+    {% endif %}
+
+    <img src="{{ user.getAvatar() }}" class="img-profile"/>
+</div>

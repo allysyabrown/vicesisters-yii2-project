@@ -1,0 +1,15 @@
+{% extends '@backend/views/layouts/table.twig' %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+    <script src="{{ '/backend/js/pages/payments-list.js' }}" type="text/javascript"></script>
+{% endblock %}
+
+{% block table %}
+    {% include '@app/modules/backend/views/partials/tableAttributes.twig' %}
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    PaymentsList.init();
+{% endblock %}

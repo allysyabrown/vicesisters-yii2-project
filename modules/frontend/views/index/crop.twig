@@ -1,0 +1,42 @@
+{% extends '@frontend/views/layouts/main.twig' %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+    {{ cropper({
+        'url':url | raw,
+        'imageOptions':{
+            'id': 'imageId',
+            'width': 600,
+            'alt': 'Crop this image'
+        },
+        'jsOptions':{
+            'minSize': [50,50],
+            'aspectRatio': 0.75,
+            'onRelease': onRelease,
+            'selection': true,
+            'theme': 'light',
+        },
+        'buttons':{
+            'start': {
+                'label': 'Adjust thumbnail cropping'
+            },
+            'crop': {
+                'label': 'Apply cropping',
+            },
+            'cancel': {
+                'label': 'Cancel cropping'
+            }
+        },
+        'ajaxUrl': 'cropping',
+        'ajaxParams': {'img': url | raw}
+    }) | raw }}
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+{% endblock %}

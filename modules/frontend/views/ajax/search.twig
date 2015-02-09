@@ -1,0 +1,28 @@
+{% extends '@frontend/views/layouts/main.twig' %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+    <script src="{{ '/frontend/js/pages/search.js' }}" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    {% include '@app/modules/frontend/views/main/searchParamsForm.twig' %}
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    Search.init();
+{% endblock %}

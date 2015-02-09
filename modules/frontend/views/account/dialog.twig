@@ -1,0 +1,20 @@
+{% extends '@frontend/views/layouts/main.twig' %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+    <script src="{{ '/general/js/plugins/form-master/jquery.form.js' }}" type="text/javascript"></script>
+    <script src="{{ '/frontend/js/pages/account-dialog.js' }}" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+
+    <h1>DIALOG WITH USER {{ to }}</h1>
+
+    {% include '@app/modules/frontend/views/account/_messages.twig' %}
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    AccountDialog.init();
+{% endblock %}

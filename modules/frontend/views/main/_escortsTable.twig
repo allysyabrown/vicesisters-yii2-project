@@ -1,0 +1,22 @@
+<table>
+    <thead>
+    <tr>
+        <th>{{ t('main', 'ID') }}</th>
+        <th>{{ t('front', 'Имя') }}</th>
+        <th>{{ t('front', 'Почта') }}</th>
+        <th>{{ t('front', 'Пол') }}</th>
+        <th>{{ t('front', 'Аватар') }}</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for vip in vips %}
+        <tr>
+            <td>{{ vip.id }}</td>
+            <td>{{ vip.userName }}</td>
+            <td>{{ vip.email }}</td>
+            <td>{{ vip.gender }}</td>
+            <td>{{ vip.ava }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

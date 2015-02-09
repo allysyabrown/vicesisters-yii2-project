@@ -1,0 +1,31 @@
+<span class="title-chose chose-sp">{{ t('front', 'Выберите регион') }}</span>
+<span class="bottom-title-chose chose-sp">{{ t('front', 'для поиска эскортов') }}</span>
+<div class="region-selector">
+
+    {% include '@app/modules/frontend/views/main/searchParamsForm.twig' %}
+
+    {#<form class="auto-ajax-form" method="post" action="{{ findProfilesUrl }}" data-update="#escorts-list ul">
+
+        <input type="text" name="searchText" class="text-input" value="{{ searchSettings.searchText }}" />
+        <br />
+
+        <select name="region" data-update="#country-selector" class="auto-ajax-select" data-url="{{ path('ajax/counties') }}">
+            &#123;&#35;<option>{{ t('front', 'выбрать регион...') }}</option>&#35;&#125;
+            <option>---</option>
+            {% for region in regions %}
+                <option value="{{ region.id }}" data-params="region={{ region.id }}"{{ searchSettings and region.id == searchSettings.region ? ' selected="selected"' : '' }}>{{ region.name }}</option>
+            {% endfor %}
+        </select>
+
+        <div id="country-selector">
+            {% if searchSettings and searchSettings.region  %}
+                {% include '@app/modules/frontend/views/ajax/_countriesSelector.twig' %}
+            {% endif %}
+        </div>
+
+        <button type="submit" class="chose-btn">
+            {{ t('base', 'Поиск') }}
+        </button>
+
+    </form>#}
+</div>

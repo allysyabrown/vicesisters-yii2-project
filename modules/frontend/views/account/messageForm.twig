@@ -1,0 +1,15 @@
+{% if account.id %}
+    {% set url = path('account/addprivatemessage',{ 'id' : account.id }) %}
+    {% set scroll = 'void(0)' %}
+{% else %}
+    {% set url = path('account/addprivatemessage',{ 'id' : to }) %}
+    {% set scroll = 'Dialogs.scrollToBottom()' %}
+{% endif %}
+
+{{ messageForm.begin({'action': url, 'options': {'class': 'auto-ajax-form', 'data-after':'#messages-list', 'data-run':scroll}}) }}
+
+    {{ messageForm.textarea('text') }}
+
+    <button type="submit" class="submit-button">{{ t('base','Отправить') }}</button>
+
+{{ messageForm.end() }}

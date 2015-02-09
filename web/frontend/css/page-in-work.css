@@ -1,0 +1,101 @@
+.main-wrapper .content-wrap {
+	position: absolute;
+	height: 100%;
+	width: 960px;
+	left: 50%;
+	margin-left: -480px;
+	background: url('../img/age_bg.png');
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.wrapper-pageinwork{
+	position: relative;
+	height: 100%;
+	margin-top: 20%;
+}
+.title-pageinwork{
+	font-size: 40px;
+  	font-family: 'Roboto-Light', Arial;
+  	color:#fff;
+  	padding-bottom: 15px;
+}
+.description-pageinwork{
+	font-size: 18px;
+  	font-family: 'Roboto-Light', Arial;
+  	color:#fff;
+  	padding-bottom: 70px;
+  	width: 35%;
+}
+.back-pageinwork{
+	background: #7a7a7a;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 165px;
+	height: 35px;
+	line-height: 35px;
+}
+.wrapper-pageinwork a{
+	font-size: 12px;
+	font-family: 'Roboto-Medium', Arial;
+	color:#fff;
+	text-decoration:none;
+}
+.back-pageinwork:hover{
+	background: #98999b
+}
+.face{
+	background-image: url('/frontend/img/page-under-construction/face.png');
+	width:36px;
+	height: 35px;
+	display: inline-block;
+	cursor: pointer;
+	background-size: 100%;
+}
+.face:hover{
+	background-image: url('/frontend/img/page-under-construction/facehover.png');
+	width:36px;
+	height: 35px;
+}
+.insta{
+	background-image: url('/frontend/img/page-under-construction/insta.png');
+	width:36px;
+	height: 35px;
+	display: inline-block;
+	cursor: pointer;
+	background-size: 100%;
+}
+.insta:hover{
+	background-image: url('/frontend/img/page-under-construction/instahover.png');
+	width:36px;
+	height: 35px;
+}
+.twit{
+	background-image: url('/frontend/img/page-under-construction/twit.png');
+	width:36px;
+	height: 35px;
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+	background-size: 100%;
+}
+.twit:hover{
+	background-image: url('/frontend/img/page-under-construction/twithover.png');
+	width:36px;
+	height: 35px;
+}
+.google{
+	background-image: url('/frontend/img/page-under-construction/g+.png');
+	width:36px;
+	height: 35px;
+	display: inline-block;
+	margin-right: 10px;
+	cursor: pointer;
+	background-size: 100%;
+}
+.google:hover{
+	background-image: url('/frontend/img/page-under-construction/g+hover.png');
+	width:36px;
+	height: 35px;
+
+}

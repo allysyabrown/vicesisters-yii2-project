@@ -1,0 +1,29 @@
+{% extends '@frontend/views/layouts/main.twig' %}
+
+{% block cssFiles %}
+    {{ parent() }}
+    <link href="/frontend/css/contact.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+    <script src="{{ '/frontend/js/pages/contact.js' }}" type="text/javascript"></script>
+{% endblock %}
+
+{% block body %}
+    <section class="container-img">
+        <div class="back-img">
+            <span class="contacts-sp">{{ t('front', 'Контакты') }}</span>
+            <img class="contact-message" src="/frontend/img/contact/contact-message.png">
+            <span class="contact-email">{{ app.params.managerEmail }}</span>
+            <span class="phone-number">{{ app.params.managerPhone }}</span>
+            <span class="contact-skype">{{ app.params.managerSkype }}</span>
+            <button class="btn-support{{ app.user.isGuest ? ' auto-url' : ' help-popup-button' }}"{{ app.user.isGuest ? ' data-url='~path('index/login') : '' }}>{{ t('front', 'Помощь') }}</button>
+        </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    Contact.init();
+{% endblock %}

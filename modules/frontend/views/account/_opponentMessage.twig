@@ -1,0 +1,20 @@
+<li class="my-message">
+
+    <div class="user-ava-status">
+        <a href="{% if message.author.isEscort %}
+                    {{ path('escort/profile', {'id': message.author.id }) }}
+                 {% else %}
+                    {{ path('user/profile', {'id': message.author.id }) }}
+                 {% endif %}">
+            <img src="{{ message.author.avatar }}" alt=""/>
+        </a>
+        <div class="user-status{% if message.author.isOnline %} online{% else %} offline{% endif %}"></div>
+    </div>
+    <div class="message-text">
+        <div class="triangle"></div>
+        <span class="align-left">{{ message.date }}</span>
+        <p class="message-container">
+            {{ message.text }}
+        </p>
+    </div>
+</li>

@@ -1,0 +1,51 @@
+<div class="shadow crop-ava">
+    <div class="cropper-popup-wrap">
+        <div class="cropper-main">
+            <div class="user-photo">
+                <div class="title">
+                    {{ t('front', 'Нажми " + " для загрузки фото') }}
+                </div>
+                <div class="sub-title">
+                    {{ t('front', 'Загрузите свое фото') }}
+                </div>
+                <div class="go-arrow"></div>
+
+                <label class="add-photo-crop" for="inputImage">
+                    +
+                    <input type="file" name="file" id="inputImage" accept="image/*" class="hide"/>
+                </label>
+
+                <div class="crop-img-container">
+                    <div class="cropper-container">
+                        <img src="/frontend/img/blank.png" alt=""/>
+
+                    </div>
+                </div>
+            </div>
+            <div class="cropper-header">
+                <div class="header">
+                    <img src="/frontend/img/crop_img.png" alt=""/>
+                    <div class="crop-title">
+                        <p>{{ t('front', 'Редактировать фото') }}</p>
+                    </div>
+
+                </div>
+
+                <div class="cropper-body">
+                    <div class="top-photo-exm">{{ t('front', 'ТОП') }}
+                        <div class="img-preview"></div>
+                    </div>
+                    <div class="prof-photo-exm">
+                        {{ t('front', 'Профиль') }}
+                        <div class="img-preview"></div>
+                    </div>
+                </div>
+
+                <div class="crop-fotter">
+                    <div class="back-btn">{{ t('front', 'Назад') }}</div>
+                    <div class="done-btn">{{ t('front', 'Готово') }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

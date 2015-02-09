@@ -1,0 +1,9 @@
+{{ commentForm.begin({'action': path('escort/addfeedcomment', {'id': message.id}), 'options': {'id':'comment-form-'~message.id, 'class': 'auto-ajax-form comment-form hide-container', 'data-after': '#feed-comments-'~message.id, 'data-close': '#feed-comment-form-'~message.id }}) }}
+
+    {#{{ commentForm.text('title') }}#}
+    {{ commentForm.textarea('text') }}
+    {{ commentForm.hidden('escortId') }}
+
+    <button type="submit" class="submit-button">{{ t('base','Отправить') }}</button>
+
+{{ commentForm.end() }}

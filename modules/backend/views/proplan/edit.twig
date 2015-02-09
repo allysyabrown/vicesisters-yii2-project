@@ -1,0 +1,23 @@
+{% extends '@backend/views/layouts/form.twig' %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+    <script src="{{ '/backend/js/pages/proplan.js' }}"></script>
+{% endblock %}
+
+{% block form %}
+
+    {% include '@app/modules/backend/views/proplan/proplanForm.twig' %}
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    Proplan.init({
+        durationOptionValueLabel: "{{ t('back', 'Значение') }}",
+        durationOptionNameLabel: "{{ t('back', 'Имя') }}",
+        durationOptionsName: "EditProlanForm[durationOptions]",
+        regionPriceName: "EditProlanForm[regionsPrices]",
+        regionPriceLabel: "{{ t('back', 'Цена') }}"
+    });
+{% endblock %}

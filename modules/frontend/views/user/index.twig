@@ -1,0 +1,45 @@
+{% extends '@frontend/views/layouts/main.twig' %}
+
+{% block cssFiles %}
+    {{ parent() }}
+    <link href="/frontend/css/user_settings.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+    <script src="{{ '/general/js/plugins/cropper/cropper.js' }}" type="text/javascript"></script>
+    <script src="{{ '/general/js/plugins/cropper/crop.js' }}" type="text/javascript"></script>
+    <script src="{{ '/frontend/js/pages/user-account.js' }}" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+    <center>
+        <div class="row container_user">
+
+            <div class="content_user">
+
+                <div class="user-top-ava">
+                    <div class="user-ava">
+                        <div class="add-new-ava">
+                            <img src="{{ app.user.ava }}" />
+                        </div>
+                        <div class="add-ava-img"></div>
+                        <div class="ava-text">{{ t('base', 'Аватар') }}</div>
+                    </div>
+                </div>
+
+                {% include '@app/modules/frontend/views/user/accountForm.twig' %}
+            </div>
+
+        </div>
+    </center>
+    
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    UserAccount.init({
+        changeAvaUrl: "{{ path('user/changeavatar') }}",
+    });
+{% endblock %}

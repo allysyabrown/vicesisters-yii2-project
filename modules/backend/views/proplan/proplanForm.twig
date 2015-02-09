@@ -1,0 +1,132 @@
+{{ proplanForm.begin({ 'action': path('proplan/edit', {'id': proplanForm.id}), 'placeholders': false, 'labels': true, 'options': { 'class': 'form-horizontal tasi-form' } }) }}
+
+
+    <div class="col-lg-6">
+        <section class="panel">
+            <div class="panel-body">
+
+                {{ proplanForm.select('duration') }}
+                {{ proplanForm.text('price') }}
+                {{ proplanForm.text('rate') }}
+                {{ proplanForm.checkBox('allowDurationOptions') }}
+                <div id="proplan-duration-items" {{ not proplanForm.allowDurationOptions ? ' class="hide"' : '' }}>
+                    <div class="col-lg-12">
+
+                        <div class="col-lg-1">
+                            <div id="add-duration-option" class="tagsinput-add"></div>
+                        </div>
+
+                        <div class="col-lg-11">
+
+                            <div id="duration-options-example" class="hide">
+                                <div class="col-lg-12 duration-option-container">
+                                    <div class="col-lg-11">
+                                        {{ duraionsForm.dropDownList('duration', duraionsForm.durationItems, {'id': null}) }}
+                                    </div>
+                                    <div class="col-lg-1">
+                                        <a class="fa fa-times remove-duration-option pull-right" href="javascript:;"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="duration-options-list">
+                                {% if proplanForm.durationOptions %}
+                                    {% for item in proplanForm.durationOptionsItems %}
+                                        {% set duraionsForm = item.duraionsForm %}
+
+                                        <div class="col-lg-12 duration-option-container">
+                                            <div class="col-lg-11">
+                                                {{ duraionsForm.dropDownList('duration', duraionsForm.durationItems, {'id': null}) }}
+                                            </div>
+                                            <div class="col-lg-1">
+                                                <a class="fa fa-times remove-duration-option pull-right" href="javascript:;"></a>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="col-lg-6">
+        <section class="panel">
+            <div class="panel-body">
+
+                <div class="col-lg-12">
+                    {{ proplanForm.checkBox('allowMembersPrices') }}
+                </div>
+
+                <div id="proplans-prices-container"{{ not proplanForm.allowMembersPrices ? ' class="hide"' : '' }}>
+                    {% for item in proplanForm.membersPricesItems %}
+                        <div class="col-lg-12">
+
+                            <div class="col-lg-3">
+                                {{ item.name }}
+                            </div>
+
+                            <div class="col-lg-9">
+                                <input type="hidden" class="form-control" name="EditProlanForm[membersPrices][{{ loop.index }}][id]" value="{{ item.id }}" />
+                                <input type="text" class="form-control" name="EditProlanForm[membersPrices][{{ loop.index }}][value]" value="{{ item.price }}" />
+                            </div>
+
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="col-lg-12">
+                    {{ proplanForm.checkBox('allowRegionsPrices') }}
+                </div>
+
+                <div id="regions-prices-container"{{ not proplanForm.allowRegionsPrices ? ' class="hide"' : '' }}>
+
+                    <div class="row">
+                        <div id="add-region-price" class="tagsinput-add"></div>
+                    </div>
+
+                    <div id="region-price-example" class="hide">
+                        <div class="regions-prices-list col-lg-12">
+                            <div class="col-lg-9">
+                                {% include '@app/modules/backend/views/ajax/_regionsSelector.twig' %}
+                            </div>
+                            <div class="col-lg-2 region-price-inputs"></div>
+                            <div class="col-lg-1">
+                                <a class="fa fa-times remove-region-price" href="javascript:;"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% if(proplanForm.regionsPrices) %}
+                        {% for region in proplanForm.regionsPricesItems %}
+                            {% set regionsForm = region.regionsForm %}
+
+                            <div class="regions-prices-list col-lg-12">
+                                <div class="col-lg-9">
+                                    {% include '@app/modules/backend/views/ajax/_regionsSelector.twig' %}
+                                </div>
+                                <div class="col-lg-2 region-price-inputs">
+                                    <input data-id="{{ loop.index }}" class="form-control" type="text" name="EditProlanForm[regionsPrices][{{ loop.index }}][price]" value="{{ region.price }}" />
+                                </div>
+                                <div class="col-lg-1">
+                                    <a class="fa fa-times remove-region-price" href="javascript:;"></a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <div class="col-lg-12">
+        {{ proplanForm.submit(t('base', 'Сохранить'), { 'class': 'btn btn-danger' }) }}
+    </div>
+
+{{ proplanForm.end() }}

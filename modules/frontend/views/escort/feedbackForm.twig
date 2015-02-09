@@ -1,0 +1,8 @@
+{{ feedbackForm.begin({'action': path('escort/addfeedback'), 'options': {'class': 'auto-ajax-form feedback-form', 'data-before': '#escort-feedbacks', 'data-remove': '.container-feedbacks-login'}}) }}
+
+    {{ feedbackForm.textarea('text') }}
+    {{ feedbackForm.hidden('escortId') }}
+
+    <button type="submit" class="submit-button hide-container">{{ t('base','Отправить') }}</button>
+
+{{ feedbackForm.end() }}

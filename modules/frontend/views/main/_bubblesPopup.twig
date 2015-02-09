@@ -1,0 +1,52 @@
+<div class="shadow bubbles-popup">
+
+    <div class="active-b-wrap">
+        <div class="active-bubble">
+            <div class="circles-bg"></div>
+            <div class="circles-bg-2"></div>
+            <div class="circles-bg-3"></div>
+            <div class="circles-bg-4"></div>
+{#            <div class="circles-bg-5"></div>#}
+            <img class="current-girl-ava" src="/frontend/img/bubble_girls/bubble_girl_10.jpg" alt="">
+        </div>
+
+        <ul>
+            <li>
+                <!-- <a class="sex-btn start"></a> -->
+            </li>
+            <li>
+                <!-- <a class="vip-btn start"><p>VIP</p>
+                    <img src="/frontend/img/icons/vip_icon.png" alt="">
+                </a> -->
+            </li>
+
+            <li>
+                <a class="message-btn start{% if not app.user.isGuest %} auto-ajax{% endif %}" href="{{ path('index/signup') }}">
+                    <p>{{ t('base', 'Написать') }}</p>
+                </a>
+            </li>
+
+            <li>
+                <a class="profile-btn start" href="#" target="blank">
+                    <p>{{ t('base', 'Профиль') }}</p>
+                </a>
+            </li>
+            <li>
+                <a class="photo-btn start" href="#">
+                    <p>{{ t('profile', 'Фотоальбом') }}</p>
+                </a>
+            </li>
+            <li>
+                <a class="user-status" href="#">
+                    <div class="status_text">Online</div>
+                    <div class="status-indicator"></div>
+
+                    <p class="user-name">Member Name</p>
+                    <span class="city-name">City</span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+</div>

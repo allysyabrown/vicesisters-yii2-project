@@ -1,0 +1,10 @@
+{{ accountForm.begin({'action': path('user/index')}) }}
+
+    <div class="user_input">{{ accountForm.text('firstName') }}</div>
+    <div class="user_input">{{ accountForm.text('lastName') }}</div>
+    <div class="user_input">{{ accountForm.select('sex') }}</div>
+    <div class="user_input">{{ accountForm.text('phone') }}</div>
+
+	<div class="user_settings_button">{{ accountForm.submit() }}</div>
+
+{{ accountForm.end() }}

@@ -1,0 +1,77 @@
+<div class="user-info-area">
+    <div class="content">
+        <div class="upper-title">
+            <img class="user-ava" src="{{ profile.ava }}" alt=""/>
+            <div class="user-data">
+                <div class="user-name">
+                    {{ profile.fullName }}<br/>
+                    <div class="user-online-status{% if profile.isOnline %} online{% else %} offline{% endif %}"></div>
+                </div>
+                <span>{{ profile.regionName }}</span>
+
+                {% if profile.isVerified %}
+                    {% include '@app/modules/frontend/views/escort/_verifiedCheckBox.twig' %}
+                {% endif %}
+
+            </div>
+            <div class="vievs-today">
+                <div class="count">{{ profile.todayViews }}</div>
+                <div class="text">{{ t('base', 'Просмотров сегодня') }}</div>
+            </div>
+            <div class="vievs-total">
+                <div class="count">{{ profile.totalViews }}</div>
+                <div class="text">{{ t('base', 'Просмотров всего') }}</div>
+            </div>
+            <div class="user-reiting">
+                <div class="rating-count">{{ profile.totalRating }}</div>
+                {#<div class="rating-bar">#}
+                    {#<div class="rating-line"></div>#}
+                    {#<div class="line-indicator"></div>#}
+                {#</div>#}
+                <div class="text">{{ t('base', 'Рейтинг') }}</div>
+            </div>
+        </div>
+        <div class="user-profile-tabs">
+        <div class="lower-title">
+
+            {% if not profile.isMe %}
+                <div class="send-msg auto-ajax"
+                     data-url="{{ path('ajax/getmessagepopup', {'id': profile.id}) }}"
+                     data-update=".popusp-bg">{{ t('base', 'Написать') }}</div>
+            {% endif %}
+
+            <ul>
+                <li class="escort-nav active" data-id=".about-area">
+                    <i class="icon-aboutme icon_navmenu" ></i>
+                    <span>{{ t('profile', 'Обо мне') }}</span>
+                </li>
+                <li class="escort-nav" data-id=".feedmessages-area">
+                    <i class="icon-feeds icon_navmenu" ></i>
+                    <span>{{ t('profile', 'Мои записи') }}</span>
+                </li>
+                <li class="escort-nav" data-id=".gallery-area">
+                    <i class="icon-photogalery icon_navmenu icon-photogalery2" ></i>
+                    <span>{{ t('profile', 'Фотоальбом') }}</span>
+                </li>
+                <li class="escort-nav" data-id=".feedbacks-area">
+                    <i class="icon-feedbacks icon_navmenu" ></i>
+                    <span>{{ t('profile', 'Отзывы') }}</span>
+                </li>
+            </ul>
+
+            <div class="advertising-vip">
+                <div class="triangle"></div>
+                <div class="advertising-text">
+                    In case that you are a VIP member. you may upload as many pictures as you like.<br/>
+                    Also. <a href="#">VIP member's</a> pictures containing nudity will be moderated.
+                </div>
+                <div class="upload-photo-btn">Upload more photo</div>
+                <div class="rules-download-text">
+                    Images must be in .JPG or .GIF formats.
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+</div>

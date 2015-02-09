@@ -1,0 +1,100 @@
+
+.main-wrapper .content-wrap {
+	position: absolute;
+	height: 100%;
+	width: 960px;
+	left: 50%;
+	margin-left: -480px;
+	background: url('../img/age_bg.png');
+	background-repeat: no-repeat;
+	background-position: center top;
+
+}
+.wrapper-page404{
+	height: 100%;
+	width:100%;
+}
+.window{
+	position: absolute;
+	width: 460px;
+	height: 485px;
+	top: 50%;
+	margin-top: -243px;
+	left: 50%;
+	margin-left: -230px;
+	font-family: 'Roboto-Thin', Arial;
+}
+.title{
+	color: #ffffff;
+	font-size: 53px;
+	float: left;
+	margin-bottom: 10px;
+	font-family: 'Roboto-Thin', Arial;
+	
+}
+.desc{
+	color: #c7c7c7;
+	font-size: 19px;
+	margin-top: 5px;
+}
+.clear{
+	clear: both;
+}
+.log-window-body{
+	width: 460px;
+}
+.log-buttons{
+	font-family: 'Roboto-Medium', Arial;
+	font-size: 15px;
+	text-align: center;
+	height: 50px;
+	margin-top: 95px;
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 4px;
+	color: #ffffff;
+}
+.back-btn{
+	position: relative;
+	width: 206px;
+	height: 40px;
+	border-radius: 4px;
+	background: #7a7a7a;
+	line-height: 40px;
+	float: left;
+	cursor: pointer;
+	margin: 5px;
+}
+.back-btn:hover{
+	background: #898b8e;
+}
+.btn-separator{
+	position: relative;
+	font-size: 12px;
+	line-height: 50px;
+	font-family: 'Roboto-Thin', Arial;
+
+}
+.go-btn{
+	position: relative;
+	width: 206px;
+	height: 40px;
+	border-radius: 4px;
+	background: #7d36a3;
+	line-height: 40px;
+	float: right;
+	cursor: pointer;
+	margin: 5px;
+
+}
+.go-btn:hover {
+    background: #951fad;
+}
+.footer-logo{
+	position: relative;
+	width: 452px;
+	height: 12px;
+	margin-top: 150px;
+	left: 50%;
+	margin-left: -226px;
+	background: url('../img/foter_logo.png');
+}

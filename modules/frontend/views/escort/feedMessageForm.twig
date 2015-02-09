@@ -1,0 +1,9 @@
+{{ messageForm.begin({'action': path('escort/addfeedmessage'), 'options': {'class': 'auto-ajax-form message-form', 'data-before': '#escort-feed-messages'}}) }}
+
+    {#{{ messageForm.text('title') }}#}
+    {{ messageForm.textarea('text') }}
+    {{ messageForm.hidden('escortId') }}
+
+    <button type="submit" class="submit-button hide-container">{{ t('base','Отправить') }}</button>
+
+{{ messageForm.end() }}

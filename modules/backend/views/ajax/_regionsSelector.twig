@@ -1,0 +1,17 @@
+<div class="col-lg-12">
+
+    <div class="col-lg-3">
+        {{ regionsForm.dropDownList('region', regionsForm.regionItems, {
+            'id': null,
+            'class': 'form-control auto-ajax-select',
+            'data-url': path('ajax/counties'),
+            'data-find': '$(this).closest(".col-lg-3").siblings(".country-selector")'
+        }) }}
+    </div>
+
+    <div class="country-selector">
+        {% if regionsForm.region and  regionsForm.countries %}
+            {% include '@app/modules/backend/views/ajax/_countriesSelector.twig' %}
+        {% endif %}
+    </div>
+</div>

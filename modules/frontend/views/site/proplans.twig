@@ -1,0 +1,281 @@
+{% extends '@frontend/views/layouts/main.twig' %}
+{% block cssFiles %}
+    {{ parent() }}
+    <link href="/frontend/css/proplans.css" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block scriptFiles %}
+    {{ parent() }}
+    <script src="{{ '/frontend/js/pages/proplans.js' }}" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="title">
+            <div>{{ t('front', 'Будь популярным') }}</div>
+            <span>{{ t('front', 'больше фотографий, больше показов, больше уникальности') }}</span>
+        </div>
+        <div class="wrap-container">
+            <div class="row">
+                <table style="width:100%">
+                    <tr>
+                        <td>
+                        <div class="spacer"></div>
+                         <center>
+                            <div class="button-free">
+                                <div class="free-text">FREE</div>
+                                <div class="free-bg-down"> </div>
+                            </div>
+                            <div class="spacer"></div></center>
+                        </td>
+                        <td class="border-left-right"><div class="spacer"></div><center>
+                            <div class="button-premium proplan-get-cost" data-url="{{ path('ajax/proplancost', {'id': 2}) }}">
+                                <div class="premium-text">PREMIUM <span>Account</span></div>
+                                <div class="premium-buy">BUY <span>{{ premiumPrice }}$</span> </div>
+                            </div>
+                            </center>
+                        </td>
+                        <td>
+                            <div class="spacer"></div>
+                            <center>
+                                <div class="button-vip proplan-get-cost" data-url="{{ path('ajax/proplancost', {'id': 1}) }}">
+                                    <div class="vip-text">VIP <br><span>Account</span></div>
+                                    <div class="vip-buy">BUY <span>{{ vipPrice }}$</span> </div>
+                                </div>
+                            </center></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="title-text">
+                                <h1>{{ t('front', 'Общение без границ с Free аккаунтом!') }}<h1>
+                                    <p class="desc">{{ t('front', 'Бесплатный аккаунт дарит Вам возможность стать участником уникальной глобальной социальной сети, где каждый независимо от пола, статуса и ориентации сможет получить массу удовольствия от общения с пользователями по всему миру. У Вас всегда есть возможность повысить свою популярность на сайте, купив Премиум или VIP аккаунт!') }}</p>
+                            </div>
+
+                        </td>
+                        <td class="border-left-right">
+                            <div class="title-text">
+                                <h1>{{ t('front', 'Увеличивай свои шансы с Premium аккаунтом!') }}<h1>
+                                    <p class="desc">{{ t('front', 'Премиум аккаунт поможет Вам резко повысить свою популярность на сайте. Такой тип аккаунта дает массу преимуществ. Премиум анкета размещается «Рулетке» на главной странице сайта. Владельцы этого типа аккаунта получают скидку на «Усилитель популярности»!') }}</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="title-text">
+                                <h1>{{ t('front', 'Становись лучшим среди лучших с VIP аккаунтом!') }}<h1>
+                                    <p class="desc">{{ t('front', 'При покупке VIP аккаунта Вы получаете место среди самых популярных пользователей в ТОПе на главной странице сайта. У VIP пользователей нет ограничений в загрузке фотографий. Больше фотографий – больше шансов повысить свой рейтинг. Уникальное предложение для VIP – скидка 80% на «Усилитель популярности»!') }}</p>
+                            </div>
+                        </td>
+                    </tr>
+      
+                    <tr>
+                        <td>
+                        <div class="check">
+                            <center>
+                                <img src="/frontend/img/check.png" /> - <span>{{ t('front', 'Горячие сообщения ') }}{{ hotMessagePrice }}$</span>
+                            </center>
+                            <center>
+                                <img src="/frontend/img/check.png" /> - <span>{{ t('front', '«Усилитель популярности» ') }}{{ purplePrice }}$</span>
+                            </center>
+                            <center>
+                                <img src="/frontend/img/check.png" /> - <span>5 {{ t('front', 'фотографий в профиле') }}</span>
+                            </center>
+                            <center>
+                                <img src="/frontend/img/check.png" /> - <span>{{ t('front', 'Каждый час онлайн +5 баллов') }}</span>
+                            </center>
+                            <center>
+                                <img src="/frontend/img/check.png" /> - <span>{{ t('front', 'Каждый "Лайк" +1 балл') }}</span>
+                            </center>
+                            <center>
+                                <img src="/frontend/img/uncheck.png" /> - <span>{{ t('front', 'Место в "Рулетке" и ТОПе') }}</span>
+                            </center>
+                            <center>
+                                <img src="/frontend/img/uncheck.png" /> - <span>{{ t('front', 'Баллы к рейтингу') }}</span>
+                            </center>
+                            
+                            
+                        </div></td>
+                        <td class="border-left-right">
+                        <div class="check">
+                            <center>
+                                <img src="/frontend/img/check.png" /> - <span>{{ t('front', 'Горячие сообщения ') }}{{ premiumHotMessagePrice }}$</span>
+                            </center>
+                            <center>
+                                <img src="/frontend/img/check.png" /> - <span>{{ t('front', '«Усилитель популярности» ') }}{{ premiumPurplePrice }}$</span>
+                            </center>
+                            <center>
+                                <img src="/frontend/img/check.png" /> - <span>20 {{ t('front', 'фотографий в профиле') }}</span>
+                            </center>
+                            <center>
+                                <img src="/frontend/img/check.png" /> - <span>{{ t('front', 'Каждый час онлайн +5 баллов') }}</span>
+                            </center>
+                            <center>
+                                <img src="/frontend/img/check.png" /> - <span>{{ t('front', 'Каждый "Лайк" +1 балл') }}</span>
+                            </center>
+                            <center>
+                                <img src="/frontend/img/check.png" /> - <span>{{ t('front', 'Место в «Рулетке»') }}</span>
+                            </center>
+                            <center>
+                                <img src="/frontend/img/uncheck.png" /> - <span>+ 300 {{ t('front', 'баллов к рейтингу') }}</span>
+                            </center>
+                            
+                            
+                        </div></td>
+                        <td>
+                        <div class="check">
+                            <center>
+                                <img src="/frontend/img/check.png" /> - <span>{{ t('front', 'Горячие сообщения ') }}{{ vipHotMessagePrice }}$</span>
+                            </center>
+                            <center>
+                                <img src="/frontend/img/check.png" /> - <span>{{ t('front', '«Усилитель популярности» ') }}{{ vipPurplePlace }}$</span>
+                            </center>
+                            <center>
+                                <img src="/frontend/img/check.png" /> - <span>20+ {{ t('front', 'фотографий в профиле') }}</span>
+                            </center>
+                            <center>
+                                <img src="/frontend/img/check.png" /> - <span>{{ t('front', 'Каждый час онлайн +5 баллов') }}</span>
+                            </center>
+                            <center>
+                                <img src="/frontend/img/check.png" /> - <span>{{ t('front', 'Каждый "Лайк" +1 балл') }}</span>
+                            </center>
+                            <center>
+                                <img src="/frontend/img/check.png" /> - <span>{{ t('front', 'Место в ТОПе') }}</span>
+                            </center>
+                            <center>
+                                <img src="/frontend/img/check.png" /> - <span>+ 1000 {{ t('front', 'баллов к рейтингу') }}</span>
+                            </center>
+                            
+                            
+                        </div></td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <div class="spacer"></div>
+                         <center>
+                            <div class="button-free-up">
+                                <div class="free-text-up">FREE</div>
+                                <div class="free-bg-up"> </div>
+                            </div>
+                            <div class="spacer"></div></center>
+                        </td>
+                        <td class="border-left-right">
+                            <div class="spacer"></div>
+                            <center>
+                                <div class="button-premium proplan-get-cost" data-url="{{ path('ajax/proplancost', {'id': 2}) }}">
+                                    <div class="premium-text">PREMIUM <span>Account</span></div>
+                                    <div class="premium-buy">BUY <span>{{ premiumPrice }}$</span> </div>
+                                </div>
+                            </center>
+                        </td>
+                        <td>
+                            <div class="spacer"></div>
+                            <center>
+                                <div class="button-vip proplan-get-cost" data-url="{{ path('ajax/proplancost', {'id': 1}) }}">
+                                    <div class="vip-text">VIP <br><span>Account</span></div>
+                                    <div class="vip-buy">BUY <span>{{ vipPrice }}$</span> </div>
+                                </div>
+                            </center></td>
+                    </tr>
+                </table>  
+            </div>
+
+        </div>
+        <div class="everyone">
+
+            <div class="row">
+                <div class="description">
+                    <h1>{{ t('front', 'Расскажи всем!') }}</h1>
+                    <p>
+                        {{ t('front', 'о том, что ты любишь, что делаешь и где находишься') }}.
+                    </p>
+
+
+                </div>
+                <div class="button-try-now">
+                    <button class="auto-url" data-url="{{ path('site/proplaninfo', {'name': 'hotmessages'}) }}">{{ t('base', 'Подробнее') }}</button>
+                </div>
+                <div style=""><img src="/frontend/img/tell-everyone-bg.jpg" /></div>
+
+            </div>
+
+        </div>
+        <div class="top_vip">
+            <div class="col-6">
+                <div>
+                    <h1>{{ t('front', 'TOP VIP') }}</h1>
+                    <p>{{ t('front', 'Вершина вашей популярности среди остальных! Получая место в ТОПе, вы получаете внимание пользователей всего мира!') }}</p>
+                </div>
+            </div>
+            <div class="col-6">
+            <div class="bg_top_vip"></div>
+            </div>
+        </div>
+        <div id="populatity-boost" class="popularity">
+
+            <div class="row">
+
+                <div class="description">
+                    <div class="col-6"><img src="/frontend/img/popularity-bg.png" /></div>
+
+                    <div class="col-6">
+                        <h1>{{ t('front', '«Усилитель популярности»') }}</h1>
+                        <p>
+                            {{ t('front', 'уникальная возможность поднять свою анкету вверх и выделить ее среди остальных анкет пользователей!') }}.
+                        </p>
+
+                    </div>
+                    <div class="button-popularity">
+                        <button class="proplan-get-cost" data-url="{{ path('ajax/proplancost', {'id': 3}) }}">{{ t('front', 'UP NOW') }}</button>
+                    </div>
+                </div>  
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="roulette">
+                <div>{{ t('front', 'Roulette') }}</div>
+                <p>{{ t('front', 'Описание') }}</p>
+                {#<a href="{{ path('site/proplaninfo', {'name': 'premium'}) }}">{{ t('base', 'Подробнее') }}</a>#}
+            </div>
+        </div>
+        <div class="row">
+            <center>
+                <img src="/frontend/img/rullete.png" />
+                <img style="margin-top: -10px; padding-bottom: 21px;"src="/frontend/img/border-bottom.png" />
+            </center>
+
+        </div>
+        <div class="row padd-footer">
+        <center>
+                <div class="footer-buttons">
+                    <div class="container-button">
+                        <div class="button-free-footer">
+                            <div class="free-text-up">FREE</div>
+                            <div class="free-bg-up"> </div>
+                        </div>
+                    </div>
+                    <div class="container-button">
+                        <div class="button-premium proplan-get-cost" data-url="{{ path('ajax/proplancost', {'id': 2}) }}">
+                            <div class="premium-text">PREMIUM <span>Account</span></div>
+                            <div class="premium-buy">BUY <span>{{ premiumPrice }}$</span> </div>
+                        </div>
+                    </div>
+                    <div class="container-button">
+                        <div class="button-vip proplan-get-cost" data-url="{{ path('ajax/proplancost', {'id': 1}) }}">
+                            <div class="vip-text">VIP <br><span>Account</span></div>
+                            <div class="vip-buy">BUY <span>{{ vipPrice }}$</span> </div>
+                        </div>
+                    </div>
+                </div>
+        </center>       
+                
+        </div>  
+                       
+    </div>
+
+
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    Proplans.init();
+{% endblock %}

@@ -1,0 +1,8 @@
+<div class="col-lg-3">
+    {{ regionsForm.dropDownList('city', regionsForm.cityItems, {
+        'id': null,
+        'class': 'form-control',
+        'data-url': path('ajax/statecities'),
+        'data-update': '#cities-selector'
+    }) }}
+</div>

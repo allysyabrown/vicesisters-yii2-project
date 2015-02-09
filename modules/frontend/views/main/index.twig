@@ -1,0 +1,60 @@
+{% extends '@frontend/views/layouts/main.twig' %}
+
+{% block cssFiles %}
+    {{ parent() }}
+
+{% endblock %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+    <script src="{{ '/frontend/js/plugins/bubble-manager/bubble-manager.js' }}" type="text/javascript"></script>
+    <script src="{{ '/frontend/js/pages/main-page.js' }}" type="text/javascript"></script>
+    <script src="{{ '/frontend/js/pages/all-ajax.js' }}" type="text/javascript"></script>
+    <script src="{{ '/general/js/plugins/cropper/cropper.js' }}" type="text/javascript"></script>
+    <script src="{{ '/general/js/plugins/cropper/crop.js' }}" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+
+    {% include '@app/modules/frontend/views/ajax/_topVips.twig' %}
+    <div class="members-area-content">
+        <div class="top-members-area">
+            <div class="add-top-members-post-btn" data-url="{{ path('escort/topmessagecost') }}">+</div>
+            <ul class="content" id="escort-messages"></ul>
+        </div>
+    </div>
+
+    <div id="vip-persons"></div>
+    {#{% include '@app/modules/frontend/views/main/_searchParamsSelector.twig' %}#}
+    <div id="last-verified"></div>
+
+    {% include '@app/modules/frontend/views/main/_escortTips.twig' %}
+
+    <div id="escort-feedback"></div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+
+    MainPage.init({
+        isGuest: {{ app.user.isGuest ? 1 : 0 }},
+        hasMoney: {{ app.user.balance >= app.params['hotMessageCost'] ? 1 : 0 }},
+        isGuestRedirectUrl: "{{ path('index/signup') }}",
+        hoHasMoneyRedirectUrl: "{{ path('account/index', {'page': 'credits'}) }}",
+        vipsUrl: "{{ path('ajax/vips') }}",
+        topMemebersUrl: "{{ path('ajax/hotmessages') }}",
+        premiumsUrl: "{{ path('ajax/premiums') }}",
+        topprofilesUrl: "{{ path('ajax/topprofiles') }}",
+        verifiedUrl: "{{ path('ajax/lastverified') }}",
+        getNewFeedbackUrl: "{{ path('ajax/lastfeedback') }}",
+        lastMemberUrl: "{{ path('ajax/lasthotmessage') }}",
+        feedbackUrl: "{{ path('ajax/feedbacklist') }}",
+        vipPersonsHide: {{ app.params['vipPersonsHide'] }},
+        vipPersonsShow: {{ app.params['vipPersonsShow'] }},
+        lastVerifiedTime: {{ app.params['lastVerifiedTime'] }},
+        lastHotMessageTime: {{ app.params['lastHotMessageTime'] }},
+        lastFeedBackTime: {{ app.params['lastFeedBackTime'] }}
+    });
+	
+{% endblock %}

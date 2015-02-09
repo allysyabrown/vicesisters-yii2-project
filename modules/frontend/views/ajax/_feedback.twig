@@ -1,0 +1,8 @@
+<li class="auto-url" data-url="{{ path('escort/profile', {'id': feedback.escortId}) }}" data-id="{{ feedback.id }}">
+    <img src="{{ feedback.ava }}" alt="">
+    <a href="{{ path('escort/profile', {'id': feedback.escortId}) }}"><b>{{ t('base', 'Подробнее') }}</b></a>
+    <div class="content">
+        <div class="title">{{ feedback.userName }}</div>
+        <div class="text">{{ feedback.text }}</div>
+    </div>
+</li>

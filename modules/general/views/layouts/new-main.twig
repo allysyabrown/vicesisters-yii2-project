@@ -1,0 +1,61 @@
+{{ this.beginPage() }}
+
+<!DOCTYPE html>
+<html lang="{{ app.language }}">
+
+<head>
+
+    <meta charset="utf-8">
+
+    {{ html.csrfMetaTags()|raw }}
+
+    {% if title is not defined %}
+        {% set title = app.name %}
+    {% endif %}
+
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+
+    {% if canonical is defined %}
+        <link rel="canonical" href="{{ canonical }}" />
+    {% endif %}
+
+    {% block cssFiles %}
+        <link href="/general/css/main.css" rel="stylesheet" type="text/css" />
+    {% endblock %}
+
+    <script src="{{ '/general/js/jquery-2.1.1.min.js' }}"></script>
+
+    {% block analytics %}
+    {% endblock %}
+
+</head>
+
+<body>
+
+{{ this.beginBody() }}
+
+    {% block body %}
+
+    {% endblock %}
+
+
+{% block scriptFiles %}
+    <script src="{{ '/general/js/ext.js' }}" type="text/javascript"></script>
+    <script src="{{ '/general/js/main.js' }}" type="text/javascript"></script>
+{% endblock %}
+
+<script type="text/javascript">
+    $(function() {
+        {% block scripts %}
+            Main.init();
+        {% endblock %}
+    })
+</script>
+
+{{ this.endBody() }}
+
+</body>
+
+</html>
+
+{{ this.endPage() }}

@@ -1,0 +1,16 @@
+{% if profile.ava %}
+    <div class="big-ava-cropper">
+        <img src="{{ profile.ava }}" alt=""/>
+        <div class="black-shadow"></div>
+    </div>
+{% elseif user.getAvatar() %}
+    <div class="big-ava-cropper">
+        <img src="{{ user.getAvatar() }}" alt=""/>
+        <div class="black-shadow"></div>
+    </div>
+{% elseif not app.user.isGuest and app.user.getAva() %}
+    <div class="big-ava-cropper">
+        <img src="{{ app.user.getAva() }}" alt=""/>
+        <div class="black-shadow"></div>
+    </div>
+{% endif %}

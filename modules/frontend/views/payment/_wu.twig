@@ -1,0 +1,30 @@
+<div id="wu-form-container" class="hide-container">
+    <div class="wu-description">
+        <img class="wu-desc-img" src="/frontend/img/wuDesc.png">
+        <span class="wu-title">
+            {{ t('payment', 'Перевод денег с помощью WesternUnion') }}
+        </span><br />
+        <span class="wu-desc wu-desc-one">
+            {{ t('payment', 'Если Вы еще не знакомы с процедурой перевода наличных денег через WesternUnion,') }}
+            {{ t('payment', 'то ответ на любой вопрос Вы сможете найти на официальном сайте WesternUnion (westernunion.com)') }}
+        </span><br />
+        <span class="wu-desc wu-desc-two">
+        {{ t('payment', 'Чтобы совершить перевод денег Вам потребуются данные получателя. Они указаны в деталях оплаты (следующий шаг).') }}<br />
+        </span>
+        <span class="wu-desc">
+        {{ t('payment', 'После отправки денег в Вашем местном представительстве WesternUnion') }}
+            {{ t('payment', 'или же с помощью online формы перевода на официальном сайте WU (где доступно),') }}
+            {{ t('payment', 'вы получите 10-значный код. позволит Вам отправить заявку администратору на добавление кредитов.') }}<br />
+        </span>
+        <span class="wu-last-desc">
+            {{ t('payment', 'Обратите внимание: ID транзакции должно состоять строго из 10 цифр (от 0 до 9, без пробелов и других символов).') }}
+        </span>
+        <button id="open-form-button" class="submit-button" type="submit">{{ t('base', 'OK') }}</button>
+    </div>
+
+    <div class="wu-form hide-container">
+        {% include service.formView %}
+    </div>
+</div>
+
+

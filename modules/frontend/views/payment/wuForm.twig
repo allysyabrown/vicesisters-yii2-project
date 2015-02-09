@@ -1,0 +1,29 @@
+{% if wuForm is not defined %}
+    {% set wuForm = service.getForm() %}
+{% endif %}
+
+{{ wuForm.begin({ 'action': path('payment/wuaddpayment'), 'placeholders': false, 'labels': true }) }}
+<div class="payment-details">
+    <label>Wu payment details: </label>
+<ul class="payment-details-one">
+    <li>To:</li>
+    <li>Address:</li>
+    <li>City:</li>
+    <li>Country:</li>
+</ul>
+<ul class="payment-details-two">
+    <li>Lev Charny</li>
+    <li>8 Egozim St.</li>
+    <li>Quiryat-Haim</li>
+    <li>ISRAEL</li>
+</ul>
+</div>
+    {{ wuForm.text('transferId') }}
+    {{ wuForm.text('amount') }}
+    {{ wuForm.text('userName') }}
+    {{ wuForm.text('city') }}
+    {{ wuForm.text('country') }}
+
+    {{ wuForm.submit() }}
+
+{{ bitcoinForm.end() }}

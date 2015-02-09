@@ -1,0 +1,92 @@
+{% extends '@frontend/views/layouts/main.twig' %}
+
+{% block cssFiles %}
+    {{ parent() }}
+
+{% endblock %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+    <script src="{{ '/frontend/js/plugins/bubble-manager/bubble-manager.js' }}" type="text/javascript"></script>
+    <script src="{{ '/frontend/js/pages/main-page.js' }}" type="text/javascript"></script>
+    <script src="{{ '/frontend/js/pages/all-ajax.js' }}" type="text/javascript"></script>
+    <script src="{{ '/general/js/plugins/cropper/cropper.js' }}" type="text/javascript"></script>
+    <script src="{{ '/general/js/plugins/cropper/crop.js' }}" type="text/javascript"></script>
+    <script src="{{ '/frontend/js/pages/chat.js' }}" type="text/javascript"></script>
+    <script src="{{ scriptUrl }}" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+
+    <div id="top-vips">
+        {% include '@app/modules/frontend/views/ajax/_topVips.twig' %}
+    </div>
+
+    <div class="members-area-content">
+        <div class="top-members-area">
+            <div class="add-top-members-post-btn" data-url="{{ path('escort/topmessagecost') }}">+</div>
+            <ul class="content" id="escort-messages">
+                {% include '@app/modules/frontend/views/ajax/_hotMessages.twig' %}
+            </ul>
+        </div>
+    </div>
+
+    <div id="vip-persons">
+        <div class="vip-persons-header">
+            <div class="title">{{ t('base', 'Премиум рулетка') }}</div>
+        </div>
+        <div class="dummy ajaxLoader"></div>
+        {# {% include '@app/modules/frontend/views/ajax/_vipPersons.twig' %} - by ajax #}
+    </div>
+
+    {% include '@app/modules/frontend/views/escort/_escortList.twig' %}
+
+    <div id="last-verified">
+        {# {% include '@app/modules/frontend/views/ajax/_lastVerified.twig' %} - by ajax #}
+    </div>
+
+    {% include '@app/modules/frontend/views/main/_escortTips.twig' %}
+
+    <div id="escort-feedback">
+        <div class="feedback-area">
+            <div class="title">{{ t('base', 'Отзывы клиентов') }}</div>
+            <div class="dummy ajaxLoader"></div>
+            {# {% include '@app/modules/frontend/views/ajax/_feedbacks.twig' %} - by ajax #}
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block chat %}
+    {% include '@app/modules/frontend/views/chat/_chat.twig' %}
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+
+    AllAjax.init({
+        lastHotMessageUrl: "{{ path('ajax/lasthotmessage') }}",
+        lastFeedbackUrl: "{{ path('ajax/lastfeedback') }}",
+        hotMessagesUrl: "{{ path('ajax/hotmessages') }}",
+        feedbackUrl: "{{ path('ajax/feedbacklist') }}",
+        lastVerifiedUrl: "{{ path('ajax/lastverified') }}",
+        lastHotMessageTime: {{ app.params['lastHotMessageTime'] }},
+        lastFeedBackTime: {{ app.params['lastFeedBackTime'] }},
+        lastVerifiedTime: {{ app.params['lastVerifiedTime'] }}
+    });
+
+    MainPage.init({
+        isGuest: {{ app.user.isGuest ? 1 : 0 }},
+        hasMoney: {{ app.user.hasMoneyToHotMessage ? 1 : 0 }},
+        isGuestRedirectUrl: "{{ path('index/signup') }}",
+        noHasMoneyRedirectUrl: "{{ path('account/index', {'page': 'credits'}) }}",
+        vipsUrl: "{{ path('ajax/vips') }}",
+        premiumsUrl: "{{ path('ajax/premiums') }}",
+        topprofilesUrl: "{{ path('ajax/topprofiles') }}",
+        vipPersonsHide: {{ app.params['vipPersonsHide'] }},
+        vipPersonsShow: {{ app.params['vipPersonsShow'] }},
+    });
+
+    Chat.init();
+	
+{% endblock %}

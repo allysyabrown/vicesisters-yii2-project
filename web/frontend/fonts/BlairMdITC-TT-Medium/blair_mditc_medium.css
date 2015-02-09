@@ -1,0 +1,14 @@
+/* 
+    Created on : 10.09.2014, 14:46:07
+    Author     : Fenix
+*/
+@font-face {
+    font-family: 'BlairMdITC-TT-Medium';
+    src: url('BlairMdITC-TT-Medium.eot');
+    src: url('BlairMdITC-TT-Medium.eot?#iefix') format('embedded-opentype'),
+        url('BlairMdITC-TT-Medium.woff') format('woff'),
+        url('BlairMdITC-TT-Medium.ttf') format('truetype'),
+        url('BlairMdITC-TT-Medium.svg#BlairMdITC-TT-Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,16 @@
+<div>
+
+    <div id="private-messages">
+
+        {% for message in messages %}
+            {% include '@app/modules/frontend/views/account/_message.twig' %}
+        {% endfor %}
+
+    </div>
+
+    <br />
+    <br />
+
+    {% include '@app/modules/frontend/views/account/messageForm.twig' %}
+
+</div>

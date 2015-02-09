@@ -1,0 +1,33 @@
+<div class="content-step-services hide-container">
+    <span class="select-pay">{{ t('payment', 'выберите способ оплаты') }}: </span>
+    <div>
+        <button class="bitcoin-service-btn bitcoin-btn"></button>
+    </div>
+    <div>
+        <button class="wu-service-btn wu-btn"></button>
+    </div>
+</div>
+
+<div class="content-step-2">
+    {% if bitcoinForm is not defined %}
+        {% set bitcoinForm = service.getForm() %}
+    {% endif %}
+
+    {{ bitcoinForm.begin({'action': path('payment/bitcoinmoney')}) }}
+
+        <img src="/frontend/img/bit_step_2_img.png" alt=""/>
+        <div class="title">{{  t('payment', 'Введите желаемую сумму') }}</div>
+
+        <label for="bitcoinform-amount">$</label>
+        {{ bitcoinForm.text('amount', { 'inputOptions': {'class': 'coint-field'} }) }}
+
+        <div id="bitcoin-hidden-fields hide-container"></div>
+
+        <div class="bit-step-2-buttons">
+            <div class="go-to-step-1-btn">{{ t('base', 'Назад') }}</div>
+            <button class="bit-sub-btn" type="submit">{{ t('base', 'Вперёд') }}</button>
+        </div>
+
+    {{ bitcoinForm.end() }}
+
+</div>

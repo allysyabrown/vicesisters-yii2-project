@@ -1,0 +1,12 @@
+{{ searchForm.dropDownList('state', searchForm.stateItems, {
+    'class': 'form-control auto-ajax-select',
+    'data-url': path('ajax/statecities'),
+    'data-update': '#cities-selector',
+    'data-run': 'Frontend.handleRegionSelector("#cities-selector")'
+}) }}
+
+<div id="cities-selector">
+    {% if searchForm.state and searchForm.cities %}
+        {% include '@app/modules/frontend/views/ajax/_citiesSelector.twig' %}
+    {% endif %}
+</div>

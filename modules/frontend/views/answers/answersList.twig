@@ -1,0 +1,27 @@
+<div class="answers">
+
+    <div class="notices">
+        <img src="/frontend/img/notise_img.png" alt=""/>
+        <span class="title">{{ t('front', 'Оповещения') }}</span>
+        <span class="arrow"></span>
+    </div>
+
+    <div class="message-area">
+        <div class="message-list">
+            <div class="nano">
+                <div class="nano-content">
+                    {% if answers %}
+                        <ul>
+                            {% for answer in answers %}
+                                <li>
+                                    {% include '@app/modules/frontend/views/answers/' ~ answer.render ~ '.twig' %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

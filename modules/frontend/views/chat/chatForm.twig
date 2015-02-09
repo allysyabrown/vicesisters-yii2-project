@@ -1,0 +1,7 @@
+{{ chatForm.begin({'action': chatNewMessageUrl(), 'options': {'class': 'chat-form', 'data-add': '#chat-messages'}}) }}
+
+    {{ chatForm.text('message') }}
+
+    {{ chatForm.submit() }}
+
+{{ chatForm.end() }}

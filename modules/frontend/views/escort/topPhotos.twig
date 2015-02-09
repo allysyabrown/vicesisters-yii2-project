@@ -1,0 +1,12 @@
+<div class="top-escort-photos-area">
+        <ul class="top-photos">
+            {% if profile.haveTopPhotos() %}
+                {% for photo in topPhotos %}
+                    {% include '@app/modules/frontend/views/escort/_topPhoto.twig' %}
+                {%  endfor %}
+            {% elseif not profile.haveTopPhotos() and profile.isMe %}
+            	{% include '@app/modules/frontend/views/escort/_addTopPhoto.twig' %}
+            {% endif %}
+        </ul>
+</div>
+

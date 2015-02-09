@@ -1,0 +1,25 @@
+{{ travelsForm.begin({ 'action': path('account/settravelslist'), 'placeholders': false, 'labels': true, 'options': {'class': 'auto-ajax-form'} }) }}
+    
+   <div class="form-group field-escorttravelsform-travels">  {{ travelsForm.select('travels') }}</div>
+
+    <div class="add-to-travel-list-btn">{{ t('base', 'Добавить') }}</div>
+    <br />
+    <br />
+    <br />
+    <div class="user-travel-list">
+        <ul>
+            {% for country in travelsForm.travelsListArray %}
+                <li>
+                    <div class="city">{{ country.name }}</div>
+                    <div class="remove-city" data-id="{{ country.id }}">X</div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {{ travelsForm.hidden('travelsList') }}
+    
+    <center>{{ travelsForm.submit() }}</center>
+
+
+{{ travelsForm.end() }}

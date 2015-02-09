@@ -1,0 +1,14 @@
+<div class="escort-content about-area" style="display: block">
+    <div class="triangle"></div>
+    <div class="about-text">
+        {{ profile.escortInfo.description }}
+    </div>
+    <div class="about-footer">
+        <div class="edit-about-btn">
+            {#{% if profile.isMe %}#}
+                {#<div class="about-btn-bg"></div>#}
+                {#<span>{{ t('base', 'Редактивровать') }}</span>#}
+            {#{% endif %}#}
+        </div>
+    </div>
+</div>

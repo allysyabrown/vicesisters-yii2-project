@@ -1,0 +1,25 @@
+{% for vip in vips %}
+    <li class="auto-url{{ vip.isTopAnket ? ' top-anket' : '' }}" data-url="{{ path('escort/profile', {'id': vip.id}) }}">
+        <img width="100px" src="{{ vip.ava }}" alt="">
+
+        {#<div class="favorites">#}
+        {#<div class="img-favorites"></div>#}
+        {#</div>#}
+
+        <div class="title">
+            <a href="{{ path('escort/profile', {'id': vip.id}) }}">{{ vip.fullName }}</a>
+            <br/>
+            <p>
+                {{ t('base', 'Возраст') }} {{ vip.escortInfo.age }}
+            </p>
+        </div>
+
+        <div class="text">
+            <div class="img-rating">{{ t('base', 'Рейтинг') }}</div>
+            <p>{{ vip.totalRating }}</p>
+            <div class="see">
+                <button><a href="{{ path('escort/profile', {'id': vip.id}) }}">{{ t('base', 'Подробнее') }}</a></button>
+            </div>
+        </div>
+    </li>
+{% endfor %}

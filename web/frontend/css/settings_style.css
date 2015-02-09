@@ -1,0 +1,1860 @@
+/* 
+    Created on : 09.12.2014, 9:14:55
+    Author     : Fenix
+*/
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+
+.gradient-bvb {
+  background: #7d36a3;
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdkMzZhMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI1JSIgc3RvcC1jb2xvcj0iI2ZmMDBjMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI1JSIgc3RvcC1jb2xvcj0iI2ZmMDBjMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc1JSIgc3RvcC1jb2xvcj0iI2ZmMDBjMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ZDM2YTMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(left, #7d36a3 0%, #ff00c0 25%, #ff00c0 25%, #ff00c0 75%, #7d36a3 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #7d36a3), color-stop(25%, #ff00c0), color-stop(25%, #ff00c0), color-stop(75%, #ff00c0), color-stop(100%, #7d36a3));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #7d36a3 0%, #ff00c0 25%, #ff00c0 25%, #ff00c0 75%, #7d36a3 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #7d36a3 0%, #ff00c0 25%, #ff00c0 25%, #ff00c0 75%, #7d36a3 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #7d36a3 0%, #ff00c0 25%, #ff00c0 25%, #ff00c0 75%, #7d36a3 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, #7d36a3 0%, #ff00c0 25%, #ff00c0 25%, #ff00c0 75%, #7d36a3 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d36a3', endColorstr='#7d36a3', GradientType=1);
+  /* IE6-8 */
+}
+body {
+  background-color: black;
+  color: white;
+  height: 100%;
+}
+input {
+  padding-left: 10px;
+}
+input:focus {
+  outline: none;
+}
+input::-webkit-input-placeholder {
+  color: #1d1d1d;
+}
+input:-moz-placeholder {
+  color: #1d1d1d;
+  opacity: 1;
+}
+input::-moz-placeholder {
+  color: #1d1d1d;
+  opacity: 1;
+}
+input:-ms-input-placeholder {
+  color: #1d1d1d;
+}
+.main-wrapper.blur {
+  -webkit-filter: blur(15px);
+}
+
+
+
+/*Header*/
+/*.main-wrapper .head-wrap {
+  position: fixed;
+  height: 88px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 10;
+}*/
+
+.main-wrapper .head-wrap .top-header:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 960px;
+  height: 38px;
+  -webkit-filter: blur(9px);
+}
+/*.main-wrapper .head-wrap .main-header-bg {
+  position: absolute;
+  background: #1a1a1a;
+  height: 49px;
+  top: 38px;
+  left: 0px;
+  right: 0px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}*/
+.main-wrapper .head-wrap .main-header-bg .header-red-line {
+  position: absolute;
+  height: 1px;
+  top: 49px;
+  left: 0px;
+  right: 0px;
+}
+/*.main-wrapper .head-wrap .header {
+  position: absolute;
+  top: 39px;
+  left: 50%;
+  margin-left: -480px;
+  width: 960px;
+  height: 48px;
+  background: #1a1a1a;
+}*/
+/*.main-wrapper .head-wrap .header .header-btns {
+  position: absolute;
+  font-family: 'BlairMdITC-TT-Medium', Arial;
+  font-size: 10px;
+  list-style: none;
+  top: 1px;
+}*/
+.main-wrapper .head-wrap .header .header-btns li {
+  position: relative;
+  display: inline-block;
+}
+.main-wrapper .head-wrap .header .header-btns li:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: -2px;
+  height: 37px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+.main-wrapper .head-wrap .header .header-btns li:hover {
+  background: #131313;
+}
+/*.main-wrapper .head-wrap .header .header-btns li a {
+  display: block;
+  width: 119px;
+  height: 49px;
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  line-height: 49px;
+}*/
+.main-wrapper .head-wrap .header .header-btns li a:hover {
+  background: #131313;
+  height: 50px;
+}
+.main-wrapper .head-wrap .header .header-btns li a:active {
+  background: #131313;
+  height: 50px;
+}
+.main-wrapper .head-wrap .header .header-btns li:last-child:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: -2px;
+  height: 37px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+.main-wrapper .head-wrap .header .login-btn {
+  /*display: none;*/
+  position: absolute;
+  height: 48px;
+  width: 190px;
+  top: 0px;
+  right: 39px;
+  background: #1a1a1a;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+.main-wrapper .head-wrap .header .login-btn:hover {
+  background: #131313;
+  height: 50px;
+}
+.main-wrapper .head-wrap .header .login-btn span {
+  color: #575655;
+  font-family: 'BlairMdITC-TT-Medium', Arial;
+  font-size: 10px;
+}
+.main-wrapper .head-wrap .header .login-btn img {
+  position: absolute;
+  top: 19px;
+  left: 40px;
+}
+/*.main-wrapper .head-wrap .header .user-prof {
+  position: absolute;
+  height: 48px;
+  width: 190px;
+  top: 0px;
+  right: 39px;
+  background: #1a1a1a;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}*/
+.main-wrapper .head-wrap .header .user-prof:hover {
+  background: #131313;
+  height: 50px;
+}
+.main-wrapper .head-wrap .header .user-prof span {
+  color: #575655;
+  font-family: 'BlairMdITC-TT-Medium', Arial;
+  font-size: 10px;
+}
+/*.main-wrapper .head-wrap .header .user-prof img {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  top: 6px;
+  right: 9px;
+  cursor: pointer;
+}*/
+/*.main-wrapper .head-wrap .header .user-prof .user-alerts {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  top: 28px;
+  right: 32px;
+  background: #e8204a;
+  color: white;
+  font-size: 12px;
+  font-family: 'OpenSansRegular', Arial;
+  text-align: center;
+  line-height: 17px;
+}*/
+.user-age{
+  width: 50%;
+  height: 30px;
+  border-radius: 5px;
+  font-size:15px;
+  font-family: 'Roboto-Regular', Arial;
+  color:#1a1a1a;
+}
+
+.escort-age .escort-selects-area input:focus {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.container-bio input:focus {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.main-wrapper .content-wrap {
+  position: absolute;
+  /*height: 100%;*/
+  width: 960px;
+  top: 90px;
+  left: 50%;
+  margin-left: -480px;
+  /*background-color: aqua;*/
+}
+
+
+
+/*Side block*/
+.main-wrapper .content-wrap .side-settings-block {
+  position: fixed;
+  width: 285px;
+  height: 545px;
+  float: left;
+  margin-top: 65px;
+  /*background-color: red;*/
+}
+.main-wrapper .content-wrap .side-settings-block .header {
+  position: relative;
+  font-family: 'Roboto-Light', Arial;
+  color: white;
+  margin-bottom: 12px;
+  font-size: 30px;
+}
+.main-wrapper .content-wrap .side-settings-block .contetnt {
+  position: relative;
+  width: 285px;
+  height: 241px;
+  /*background: gold;*/
+}
+.main-wrapper .content-wrap .side-settings-block .contetnt .side-menu {
+  position: relative;
+  height: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  line-height: 40px;
+  cursor: pointer;
+}
+.main-wrapper .content-wrap .side-settings-block .contetnt .side-menu:hover {
+  background: #1c1c1c;
+  opacity: 1;
+  border-bottom: 1px solid #1c1c1c;
+}
+.main-wrapper .content-wrap .side-settings-block .contetnt .side-menu:hover .arrow {
+  opacity: 1;
+}
+.main-wrapper .content-wrap .side-settings-block .contetnt .side-menu:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.main-wrapper .content-wrap .side-settings-block .contetnt .side-menu img {
+  margin-left: 25px;
+}
+.main-wrapper .content-wrap .side-settings-block .contetnt .side-menu span {
+  color: white;
+  font-family: 'Roboto-Light', Arial;
+  font-size: 16px;
+  margin-left: 30px;
+}
+.main-wrapper .content-wrap .side-settings-block .contetnt .side-menu .credits-settings span{
+  margin-top: -46px;
+  margin-left: 74px;
+  display: block;
+}
+.main-wrapper .content-wrap .side-settings-block .contetnt .side-menu .credits-settings img{
+  margin-top: 10px;
+}
+
+
+.main-wrapper .content-wrap .side-settings-block .contetnt .side-menu .arrow {
+  float: right;
+  margin-right: 14px;
+  opacity: 0;
+  margin-top: 14px;
+  background-image: url('/frontend/img/notice_errow.png');
+  width: 7px;
+  height: 13px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.main-wrapper .content-wrap .side-settings-block .footer-setting-content {
+  margin-top: 22px;
+  font-family: 'Roboto-Regular', Arial;
+  display: none;
+}
+.main-wrapper .content-wrap .side-settings-block .footer-setting-content .title {
+  font-size: 20px;
+  color: #464646;
+}
+.main-wrapper .content-wrap .side-settings-block .footer-setting-content .footer-text {
+  font-size: 12px;
+  color: #464646;
+}
+
+
+
+/*Settings area*/
+.main-wrapper .content-wrap .settings-area {
+  display: none;
+  position: relative;
+  height: 2400px;
+  width: 640px;
+  border-radius: 10px;
+  margin-top: 70px;
+  float: right;
+  margin-bottom: 28px;
+}
+.main-wrapper .content-wrap .settings-area .escort-preference {
+  position: relative;
+  width: 640px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: 'Roboto-Regular', Arial;
+  color: #333333;
+  /*background: rgba(0,255,0,0.4);*/
+  background: #dcdcdc;
+}
+.main-wrapper .content-wrap .settings-area .escort-preference .header {
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-bottom: 1px solid #bdbdbd;
+}
+.main-wrapper .content-wrap .settings-area .escort-preference .content .settings-container {
+  font-size: 15px;
+  font-family: 'Roboto-Medium', Arial;
+}
+.main-wrapper .content-wrap .settings-area .escort-preference .content .settings-container .settings-header {
+  font-size: 20px;
+  font-family: 'Roboto-Regular', Arial;
+  padding: 40px 0px 20px 30px;
+  border-bottom: 1px solid #bdbdbd;
+}
+.main-wrapper .content-wrap .settings-area .escort-preference .content .settings-container .settings-content .onoff-switch {
+  position: relative;
+  height: 25px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid #bfbfbf;
+  float: right;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-right: 18px;
+  border-radius: 15px;
+  background: #dcdcdc;
+  transition: background 0.5s ease;
+}
+.main-wrapper .content-wrap .settings-area .escort-preference .content .settings-container .settings-content .onoff-switch .slider {
+  position: absolute;
+  left: -1px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  border: 1px solid #bfbfbf;
+  top: -1px;
+  transition: left 0.5s ease;
+}
+.main-wrapper .content-wrap .settings-area .escort-preference .content .settings-container .settings-content .onoff-switch.is-on {
+  border: 1px solid #4cd662;
+  background: #3f3f3f;
+}
+.main-wrapper .content-wrap .settings-area .escort-preference .content .settings-container .settings-content .onoff-switch.is-on .slider {
+  border: none;
+  background: white;
+  top: 0px;
+  left: 15px;
+}
+.main-wrapper .content-wrap .settings-area .escort-preference .content .settings-container .settings-content .settings-holder {
+  position: relative;
+  height: 45px;
+  background: rgba(189, 189, 189, 0.55);
+  border-bottom: 1px solid #bdbdbd;
+  transition: background 0.5s ease;
+}
+.main-wrapper .content-wrap .settings-area .escort-preference .content .settings-container .settings-content .settings-holder .indicator {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  width: 16px;
+  height: 16px;
+  background: url('../img/side_block_icons/escort_settings_off.png') no-repeat;
+}
+.main-wrapper .content-wrap .settings-area .escort-preference .content .settings-container .settings-content .settings-holder .title {
+  position: absolute;
+  left: 70px;
+  top: 12px;
+}
+.main-wrapper .content-wrap .settings-area .escort-preference .content .settings-container .settings-content .settings-holder.is-on {
+  background: none;
+}
+.main-wrapper .content-wrap .settings-area .escort-preference .content .settings-container .settings-content .settings-holder.is-on .indicator {
+  background: url('../img/side_block_icons/escort_setting_img.png') no-repeat;
+}
+.main-wrapper .content-wrap .settings-area .escort-preference .content .settings-container .settings-footer {
+  position: relative;
+  font-size: 13px;
+  font-family: 'Roboto-Regular', Arial;
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+  line-height: 40px;
+}
+.main-wrapper .content-wrap .settings-area .escort-preference .content .settings-container .settings-footer .save-settings-btn {
+  width: 145px;
+  height: 40px;
+  cursor: pointer;
+  background: #404040;
+  margin: 60px 0px 30px 245px;
+  border-radius: 5px;
+}
+.main-wrapper .content-wrap .settings-area .escort-preference .content .settings-container .settings-footer .save-settings-btn:hover {
+  background: #4e4b4b;
+}
+
+
+
+/*Acount settings*/
+.main-wrapper .content-wrap .account-area {
+  position: relative;
+  height: 1750px;
+  width: 640px;
+  overflow: hidden;
+  overflow-y: auto;
+  border-radius: 10px;
+  margin-top: 70px;
+  float: right;
+  margin-bottom: -115px;
+}
+.main-wrapper .content-wrap .account-area .account-settings {
+  position: relative;
+  width: 640px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: 'Roboto-Regular', Arial;
+  color: #333333;
+  background: rgba(0, 255, 0, 0.4);
+  background: #dcdcdc;
+}
+.main-wrapper .content-wrap .account-area .account-settings .header {
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-bottom: 1px solid #bdbdbd;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container {
+  position: relative;
+  font-size: 15px;
+  font-family: 'Roboto-Medium', Arial;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-info-header {
+  position: relative;
+  height: 70px;
+  color: #1a1a1a;
+  font-size: 20px;
+  line-height: 70px;
+  margin-left: 30px;
+  font-family: 'Roboto-Regular', Arial;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-inputs-area {
+  font-family: 'Roboto-Regular', Arial;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-inputs-area input {
+  /*position: relative;*/
+  border-radius: 5px;
+  font-size: 15px;
+  border: 1px solid white;
+}
+.account-settings .form-group{
+
+}
+.account-settings .form-control{
+
+}
+.container-account{
+  width: 580px;
+  margin-left: 31px;
+  position:relative;  
+  height: 283px;
+}
+.control-label{
+  float: left;
+  margin-top: -24px;
+  font-size: 13px;
+  font-family: 'Roboto-Regular', Arial;
+  color: #1a1a1a;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-inputs-area input:focus {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-bio .escort-selects-area input:focus {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-inputs-area input::-webkit-input-placeholder {
+  color: #1d1d1d;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-inputs-area input:-moz-placeholder {
+  color: #1d1d1d;
+  opacity: 1;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-inputs-area input::-moz-placeholder {
+  color: #1d1d1d;
+  opacity: 1;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-inputs-area input:-ms-input-placeholder {
+  color: #1d1d1d;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-inputs-area .first-name {
+  float: left;
+  width: 45%;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 31px;
+  font-size:15px;
+  font-family: 'Roboto-Regular', Arial;
+  color:#1a1a1a;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-inputs-area .last-name {
+  float: left;
+  width: 45%;
+  height: 30px;
+  border-radius: 5px;
+  font-size:15px;
+  font-family: 'Roboto-Regular', Arial;
+  color:#1a1a1a;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-top-ava {
+  position: relative;
+  width: 640px;
+  height: 110px;
+  padding-top: 10px;
+  background: url('../img/user_top_bg.jpg');
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-top-ava .user-ava {
+  position: relative;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  left: 50%;
+  margin-left: -75px;
+  background: #404040;
+  text-align: center;
+  color: white;
+  border: 8px solid rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-top-ava .user-ava:hover .add-new-ava {
+  border: 1px dashed #898c8d;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-top-ava .user-ava:hover .ava-text {
+  color: #898c8d;
+}
+.user-top-ava .user-ava .add-new-ava{
+  position: relative;
+  width: 115px;
+  height: 115px;
+  left: 50%;
+  margin-left: -57.5px;
+  top: 50%;
+  margin-top: -57.5px;
+  border-radius: 50%;
+  border: 1px dashed #757575;
+  z-index: 5;
+}
+.user-top-ava .user-ava .add-new-ava img{
+    border-radius: 50%;
+    left: -16%;
+    position: relative;
+    top: -17%;
+    width: 150px;
+    z-index: 10;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-top-ava .user-ava .add-ava-img {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  left: 55px;
+  top: 45px;
+  background: url('../img/add_ava_img.png');
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-top-ava .user-ava .ava-text {
+  position: absolute;
+  bottom: 50px;
+  left: 40px;
+  color: #757575;
+  font-size: 12px;
+  font-family: 'Roboto-Medium', Arial;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .personal-info {
+  border-bottom: 1px solid #bdbdbd;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .personal-info .about-user {
+  position: relative;
+  font-family: 'Roboto-Regular', Arial;
+  margin-top: 15px;
+  color: #1a1a1a;
+  float: left;
+  margin-top: 35px;
+  font-size: 15px;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .personal-info .about-user textarea {
+  border-radius: 5px;
+  width: 549px;
+  height: 133px;
+  border: 1px solid white;
+  padding: 13px;
+  resize: none;
+  font-size:15px;
+  font-family: 'Roboto-Regular', Arial;
+  color:#1a1a1a;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .personal-info .about-user textarea:focus {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-location {
+  padding-bottom: 61px;
+  border-bottom: 1px solid #bdbdbd;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-location .city-label {
+  margin-top: 65px;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-location .user-state {
+  float: left;
+  width: 30.5%;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 15px;
+  outline: none;
+  font-size:15px;
+  font-family: 'Roboto-Regular', Arial;
+  color:#1a1a1a;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-location .user-city {
+  float: left;
+  width: 30.5%;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  font-size:15px;
+  font-family: 'Roboto-Regular', Arial;
+  color:#1a1a1a;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-age {
+  padding-bottom: 7px;
+  border-bottom: 1px solid #bdbdbd;
+}
+#escortaccountform-country{
+  float: left;
+  height: 30px;
+  border-radius: 5px;
+  width: 30.5%;
+  margin-right: 15px;
+  outline: none;
+  font-size:15px;
+  font-family: 'Roboto-Regular', Arial;
+  color:#1a1a1a;
+}
+
+.container-location{
+  width: 580px;
+  margin-left: 31px;
+  position:relative;  
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-age .escort-selects-area {
+  position: relative;
+  width: 305px;
+  height: 55px;
+  margin-left: 31px;
+  margin-top: 21px;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-age .escort-selects-area label {
+  position: absolute;
+  font-family: 'Roboto-Regular', Arial;
+  font-size: 13px;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-age .escort-selects-area select {
+  position: relative;
+  height: 30px;
+  margin-top: 25px;
+  border-radius: 5px;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-age .escort-selects-area select:focus {
+  outline: none;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-age .escort-selects-area .escort-age-day {
+  width: 70px;
+  padding-left: 25px;
+  margin-right: 10px;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-age .escort-selects-area .escort-age-month {
+  width: 130px;
+  padding-left: 25px;
+  margin-right: 10px;
+  text-align: center;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-age .escort-selects-area .escort-age-years {
+  width: 85px;
+  padding-left: 15px;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-bio {
+  border-bottom: 1px solid #bdbdbd;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-bio .escort-selects-area {
+  /*position: relative;
+  width: 550px;
+  height: 190px;
+  left: 50%;
+  margin-left: -255px;*/
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-bio .escort-selects-area label {
+ 
+  font-family: 'Roboto-Regular', Arial;
+  font-size: 13px;
+  
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-bio .escort-selects-area label.bio-height {
+  float:left;
+  width: 25%;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-bio .escort-selects-area label.bio-weight {
+  float:left;
+  width: 25%;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-bio .escort-selects-area label.bio-eye-color {
+  float:left;
+  width: 25%;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-bio .escort-selects-area label.bio-hair-color {
+  float:left;
+  width: 25%;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-bio .escort-selects-area label.bio-body {
+  float:left;
+  width: 25%;
+}
+.container-bio{
+  width: 580px;
+  margin-left: 31px;
+  position: relative;
+  height: 220px;
+  margin-top: 10px;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-bio .escort-selects-area select {
+  position: relative;
+  width: 30%;
+  height: 30px;
+  border-radius: 5px;
+  float: left;
+  margin:0px 15px 30px 0px;
+  font-size:15px;
+  font-family: 'Roboto-Regular', Arial;
+  color:#1a1a1a;
+
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-bio .escort-selects-area select:focus {
+  outline: none;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-bio .escort-selects-area input {
+  width: 28%;
+  height: 30px;
+  border-radius: 5px;
+  float: left;
+  margin-right: 15px;
+  font-size:15px;
+  font-family: 'Roboto-Regular', Arial;
+  color:#1a1a1a;
+  border: 1px solid white;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-languages {
+  border-bottom: 1px solid #bdbdbd;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-languages .escort-selects-area {
+  position: relative;
+  width: 550px;
+  height: 80px;
+}
+.container-languages{
+  width: 580px;
+  margin-left: 31px;
+  position:relative;  
+  height: 62px;
+  margin-top: 28px;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-languages .escort-selects-area label {
+  position: absolute;
+  font-family: 'Roboto-Regular', Arial;
+  font-size: 13px;
+  top: 0px;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-languages .escort-selects-area select {
+  position: relative;
+  width: 30.5%;
+  height: 30px;
+  margin-right: 15px;
+  border-radius: 5px;
+  float: left;
+  font-size:15px;
+  font-family: 'Roboto-Regular', Arial;
+  color:#1a1a1a;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .escort-languages .escort-selects-area select:focus {
+  outline: none;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-contacts {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #bdbdbd;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-contacts .user-phone-number {
+  float: left;
+  width: 45%;
+  margin-right: 31px;
+  height: 30px;
+  font-size:15px;
+  font-family: 'Roboto-Regular', Arial;
+  color:#1a1a1a;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-contacts .user-web-page {
+  float: left;
+  width:45%;
+  height: 30px;
+  font-size:15px;
+  font-family: 'Roboto-Regular', Arial;
+  color:#1a1a1a;
+}
+.container-contacts{
+  width: 580px;
+  margin-left: 31px;
+  position: relative;
+  height: 54px;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-email {
+  position: relative;
+  color: #1a1a1a;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-email .static-user-email {
+  position: relative;
+  margin-left: 30px;
+  margin-top: 10px;
+  /*background: red;*/
+  float: left;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-email .static-user-email .email-header {
+  font-family: 'Roboto-Regular', Arial;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-email .static-user-email span {
+  font-size: 16px;
+  font-family: 'Roboto-Medium', Arial;
+  padding-top: 60px;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-email .user-email-settings {
+  position: relative;
+  /*background: greenyellow;*/
+  margin-top: 40px;
+  margin-right: 30px;
+  float: right;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-email .user-email-settings span {
+  font-family: 'Roboto-Regular', Arial;
+  font-size: 13px;
+  margin-right: 38px;
+  line-height: 20px;
+  float: left;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-email .user-email-settings .email-switch {
+  float: right;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-email .user-email-settings .email-switch .onoff-switch {
+  position: relative;
+  height: 25px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid #bfbfbf;
+  overflow: hidden;
+  /*margin-top: 10px;*/
+  margin-right: 18px;
+  border-radius: 15px;
+  background: #dcdcdc;
+  transition: background 0.5s ease;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .user-email .user-email-settings .email-switch .onoff-switch .slider {
+  position: absolute;
+  left: -1px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  border: 1px solid #bfbfbf;
+  top: -1px;
+  transition: left 0.5s ease;
+}
+.main-wrapper .content-wrap .settings-area .escort-preference .content .settings-container .settings-content .onoff-switch.is-on {
+  border: 1px solid #4cd662;
+  background: #3f3f3f;
+}
+.main-wrapper .content-wrap .settings-area .escort-preference .content .settings-container .settings-content .onoff-switch.is-on .slider {
+  border: none;
+  background: white;
+  top: 0px;
+  left: 15px;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .settings-footer {
+  position: relative;
+  font-size: 13px;
+  font-family: 'Roboto-Regular', Arial;
+  text-align: center;
+  padding-bottom: 10px;
+  margin-top: 70px;
+  line-height: 40px;
+  border-top: 1px solid #bdbdbd;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .settings-footer button {
+  width: 145px;
+  height: 40px;
+  cursor: pointer;
+  color: white;
+  background: #404040;
+  margin: 30px 0px 30px 0px;
+  border-radius: 5px;
+  position: relative;
+  outline: none;
+}
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .settings-footer button:hover {
+  background: #4e4b4b;
+}
+
+.main-wrapper .content-wrap .account-area .account-settings .content .account-container .settings-footer button:before{
+  content: url(/frontend/img/save_pass_img.png);
+  position: absolute;
+  left: 14px;
+  top: 13px;
+}
+
+/*Credits area*/
+.main-wrapper .content-wrap .credits-area {
+  display: none;
+  position: relative;
+  height: 551px;
+  width: 640px;
+  overflow: hidden;
+  overflow-y: auto;
+  border-radius: 10px;
+  margin-top: 70px;
+  /*background: rgba(255,0,0,0.4);*/
+  float: right;
+  margin-bottom: -90px;
+  overflow: hidden;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings {
+  position: relative;
+  width: 640px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: 'Roboto-Regular', Arial;
+  color: #333333;
+  background: rgba(0, 255, 0, 0.4);
+  background: #dcdcdc;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .header {
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  background: #bdbdbd;
+  /*text-align: center;*/
+  border-bottom: 1px solid #bdbdbd;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .header span {
+  margin-left: 280px;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .header img {
+  float: right;
+  margin-top: 15px;
+  margin-right: 20px;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-1 {
+  /*display: none;*/
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-1 .credits-container {
+  position: relative;
+  font-size: 15px;
+  font-family: 'Roboto-Medium', Arial;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-1 .credits-container .bitcoin-area {
+  position: relative;
+  height: 120px;
+  background: #1a1a1a;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-1 .credits-container .bitcoin-area .wallet {
+  position: absolute;
+  width: 225px;
+  height: 120px;
+  top: 0px;
+  left: 0px;
+  /*line-height: 60px;*/
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-1 .credits-container .bitcoin-area .wallet img {
+  float: left;
+  margin-left: 50px;
+  padding-top: 28px;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-1 .credits-container .bitcoin-area .wallet span {
+  position: absolute;
+  color: white;
+  top: 48px;
+  left: 136px;
+}
+#wu-form-container .wu-description{
+    font-size: 16px;
+    text-align: center;
+    background: #CCCCCC;
+}
+.wu-description span{
+    display:block;
+}
+.wu-title{
+    font-family: roboto-medium;
+    margin-top: 15px;
+}
+.wu-desc-one{
+    margin-top: 5px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.wu-desc-two{
+    margin-top: 0!important;
+}
+.wu-desc{
+    margin-top: 20px;
+    font-family: roboto-light;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.wu-desc-img{
+    margin-top: 25px;
+}
+.wu-last-desc {
+    margin-top: 30px;
+    font-family: roboto-light;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.wu-important{
+    color: #E8204A;
+    margin-top: -10px;
+}
+.wu-desc-one{
+    margin-top: 5px;
+}
+.help-block{
+  text-align: center;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-1 .credits-container .bitcoin-area .bitcoints-count {
+  position: absolute;
+  width: 205px;
+  top: 0px;
+  left: 225px;
+  height: 120px;
+  color: #0099fe;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-1 .credits-container .bitcoin-area .bitcoints-count .count {
+  margin-top: 30px;
+  margin-left: 40px;
+  font-size: 40px;
+  font-family: 'Roboto-Thin', Arial;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-1 .credits-container .bitcoin-area .bitcoints-count .title {
+  position: absolute;
+  left: 40px;
+  font-size: 13px;
+  font-family: 'Roboto-Regular', Arial;
+  bottom: 20px;
+  text-transform: uppercase;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-1 .credits-container .bitcoin-area .add-coints {
+  position: relative;
+  height: 80px;
+  width: 170px;
+  left: 486px;
+  padding-top: 40px;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-1 .credits-container .bitcoin-area .add-coints .add-coints-btn {
+  background: #ff9600;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px 10px;
+  outline: none;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-1 .credits-container .bitcoin-area .add-coints .add-coints-btn:hover {
+  background: #ffb648;
+}
+
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-1 .credits-container .bitcoin-area .add-coints .add-coints-btn .btn-text {
+  position: absolute;
+  text-transform: uppercase;
+  color: white;
+  top: 10px;
+  left: 43px;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-1 .credits-container .bitcoin-area .bit-baner {
+  position: relative;
+  height: 210px;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-1 .credits-container .bitcoin-area .bit-footer {
+  position: relative;
+  height: 120px;
+  font-size: 14px;
+  font-family: 'Roboto-Regular', Arial;
+  text-align: center;
+  background: #dcdcdc;
+  padding-top: 50px;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-2 {
+  display: none;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-2 img {
+  margin-left: 140px;
+  margin-top: -70px;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-2 .title {
+  position: relative;
+color: #1a1a1a;
+font-size: 13px;
+font-family: 'Roboto-Regular', Arial;
+/*font-weight: bold;*/
+text-align: center;
+margin-top: -86px;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-2 label {
+  position: absolute;
+  font-size: 13px;
+  top: 295px;
+  left: 240px;
+  /*font-weight: bold;*/
+  font-size: 16px;
+  font-family: 'Roboto-Medium', Arial;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-2 input {
+  position: absolute;
+  top: 290px;
+  left: 260px;
+  width: 120px;
+  height: 30px;
+  /*padding-left: 10px;*/
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  font-size: 13px;
+  font-family: 'Roboto-Regular', Arial;
+  border-radius: 5px;
+  /*                        &:focus{
+                                                    outline: none;
+                                                }
+                                                &::-webkit-input-placeholder {
+                                                    color: #1d1d1d;
+                                                }
+                                                &:-moz-placeholder { 
+                                                    color: #1d1d1d;
+                                                    opacity:  1;
+                                                }
+                                                &::-moz-placeholder { 
+                                                    color: #1d1d1d;
+                                                    opacity:  1;
+                                                }
+                                                &:-ms-input-placeholder { 
+                                                    color: #1d1d1d;
+                                                }*/
+}
+
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-3 input {
+  position: absolute;
+  top: 158px;
+  left: 86px;
+  width: 451px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  font-size: 13px;
+  font-family: 'Roboto-Regular', Arial;
+  border-radius: 5px;
+}
+
+
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-2 .bit-step-2-buttons {
+  position: relative;
+  width: 305px;
+  height: 40px;
+  margin-left: 175px;
+  margin-top: 82px;
+  padding-bottom: 126px;
+  color: white;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-2 .bit-step-2-buttons .go-to-step-1-btn {
+  position: relative;
+  width: 145px;
+  height: 40px;
+  float: left;
+  background: #464646;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 40px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: 'Roboto-Regular', Arial;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-2 .bit-step-2-buttons .go-to-step-1-btn:hover {
+  background: #575656;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-2 .bit-step-2-buttons button {
+  position: relative;
+  width: 145px;
+  height: 40px;
+  float: right;
+  color: white;
+  border-radius: 5px;
+  background: #ff9600;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: 'Roboto-Regular', Arial;
+  cursor: pointer;
+  outline: none;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-2 .bit-step-2-buttons button:hover {
+  background: #ffb648;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-3 {
+  display: none;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-3 .sub-header {
+  position: relative;
+  height: 85px;
+  width: 640px;
+  font-size: 16px;
+  font-family: 'Roboto-Light', Arial;
+  color: white;
+  line-height: 85px;
+  background: #1a1a1a;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-3 .sub-header .title {
+  float: left;
+margin-left: 7%;
+color: #fff;
+position: absolute;
+margin-top: 1px;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-3 .sub-header .required-number {
+  position: absolute;
+  left: 202px;
+  color: #0099fe;
+  font-family: 'Roboto-Thin', Arial;
+  font-size: 40px;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-3 .sub-header .sub-title {
+  float: right;
+  margin-right: 95px;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-3 .code-area {
+  position: relative;
+  /*padding-bottom: 30px;*/
+  margin-top: 25px;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-3 .code-area input {
+  position: relative;
+  width: 285px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin-left: 110px;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-3 .code-area .copy-btn {
+  position: relative;
+  width: 135px;
+  height: 30px;
+  background: #464646;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 13px;
+  cursor: pointer;
+  float: right;
+  margin-top: 2px;
+  margin-right: 95px;
+  font-family: 'Roboto-Regular', Arial;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-3 .code-area .copy-btn:hover {
+  background: #575656;
+}
+
+.title-bitcoin{
+
+  color: #fff;
+float: right;
+margin-right: 5%;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-3 .qr-code-area {
+  position: relative;
+  width: 640px;
+  height: 235px;
+  background: #dcdcdc;
+}
+
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-3 .qr-code .qr-img {
+  margin-left: 5px;
+}
+
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-3 .qr-code-area .title {
+font-size: 13px;
+font-family: 'Roboto-Regular', Arial;
+color: #000;
+margin-top: 25px;
+position: relative;
+text-align: center;
+
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-3 .qr-code-area .qr-code {
+  position: relative;
+  margin-top: 15px;
+  left: 50%;
+  margin-left: -62.5px;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-3 .bit-step-3-buttons {
+  position: relative;
+  background: red;
+  color: white;
+  font-size: 13px;
+  font-family: 'Roboto-Regular', Arial;
+  height: 92px;
+  text-transform: uppercase;
+  background: #dcdcdc;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-3 .bit-step-3-buttons .back-btn {
+  float: left;
+  margin-left: 165px;
+  background: #464646;
+  width: 144px;
+  height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  line-height: 40px;
+  cursor: pointer;
+}
+.main-wrapper .content-wrap .credits-area .credits-settings .content-step-3 .bit-step-3-buttons .ok-btn {
+  float: right;
+  margin-right: 170px;
+  background: #ff9600;
+  width: 144px;
+  height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+
+
+/*Password area*/
+.main-wrapper .content-wrap .password-area {
+  display: none;
+  position: relative;
+  height: 551px;
+  width: 640px;
+  overflow: hidden;
+  overflow-y: auto;
+  border-radius: 10px;
+  margin-top: 70px;
+  margin-bottom: -90px;
+  float: right;
+}
+.main-wrapper .content-wrap .password-area .password-settings {
+  position: relative;
+  width: 640px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: 'Roboto-Regular', Arial;
+  color: #333333;
+  background: rgba(0, 255, 0, 0.4);
+  background: #dcdcdc;
+}
+.main-wrapper .content-wrap .password-area .password-settings .header {
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  background: #bdbdbd;
+  text-align: center;
+  border-bottom: 1px solid #bdbdbd;
+}
+.main-wrapper .content-wrap .password-area .password-settings .header span {
+  margin-left: 280px;
+}
+.main-wrapper .content-wrap .password-area .password-settings .content .password-container {
+  position: relative;
+  font-size: 15px;
+  height: 500px;
+  font-family: 'Roboto-Medium', Arial;
+}
+.main-wrapper .content-wrap .password-area .password-settings .content .password-container .pass-lock {
+  position: relative;
+  height: 300px;
+}
+.main-wrapper .content-wrap .password-area .password-settings .content .password-container .pass-lock img {
+  position: absolute;
+  left: 5px;
+  top: -50px;
+  margin-left: 150px;
+}
+.main-wrapper .content-wrap .password-area .password-settings .content .password-container .inputs-conta {
+  position: absolute;
+  height: 190px;
+  width: 280px;
+  top: 220px;
+  left: 190px;
+}
+.main-wrapper .content-wrap .password-area .password-settings .content .password-container .inputs-conta input {
+  position: relative;
+  width: 265px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  margin-bottom: 38px;
+}
+.main-wrapper .content-wrap .password-area .password-settings .content .password-container .inputs-conta input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.main-wrapper .content-wrap .password-area .password-settings .content .password-container .inputs-conta lamel {
+  font-size: 13px;
+  font-family: 'Roboto-Regular', Arial;
+}
+.main-wrapper .content-wrap .password-area .password-settings .content .password-container button {
+  position: relative;
+  width: 145px;
+  height: 40px;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  font-size: 13px;
+  font-family: 'Roboto-Regular', Arial;
+  text-transform: uppercase;
+  background: #404040;
+  cursor: pointer;
+  margin-left: 255px;
+  margin-top: 130px;
+  border-radius: 5px;
+  outline: none;
+}
+.main-wrapper .content-wrap .password-area .password-settings .content .password-container button:hover {
+  background: #4f4e4e;
+}
+
+.main-wrapper .content-wrap .password-area .password-settings .content .password-container button:before{
+  content: url(/frontend/img/save_pass_img.png);
+  position: absolute;
+  left: 11px;
+  top: 0px;
+}
+
+.main-wrapper .content-wrap .password-area .password-settings .content .password-container button img {
+  position: absolute;
+  left: 18px;
+  top: 12px;
+}
+
+
+
+/*Travel area*/
+.main-wrapper .content-wrap .travel-area {
+  display: none;
+  position: relative;
+  width: 640px;
+  overflow: hidden;
+  overflow-y: auto;
+  border-radius: 10px;
+  margin-top: 70px;
+  margin-bottom: -90px;
+  float: right;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings {
+  position: relative;
+  width: 640px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: 'Roboto-Regular', Arial;
+  color: #333333;
+  background: rgba(0, 255, 0, 0.4);
+  background: #dcdcdc;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .header {
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  background: #bdbdbd;
+  text-align: center;
+  border-bottom: 1px solid #bdbdbd;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .header span {
+  margin-left: 280px;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container {
+  position: relative;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content {
+  position: relative;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content label {
+  margin-left: 130px;
+  font-size: 13px;
+  font-family: 'Roboto-Regular', Arial;
+  margin-bottom: 10px;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content select {
+  position: relative;
+  width: 275px;
+  height: 30px;
+  float: left;
+  font-size: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  z-index: 5;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-left: 115px;
+}
+.field-escorttravelsform-travels .control-label{
+    display: none;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content select:focus {
+  outline: none;
+}
+
+.submit-button {
+    color: white;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-size: 13px;
+    font-family: 'Roboto-Regular', Arial;
+    border-radius: 5px;
+    text-align: center;
+    background: #404040;
+    padding: 11px 29px 13px 45px;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    margin-top: 35px;
+    outline: none;
+    width: 145px;
+    height: 40px;
+}
+.submit-button:before{
+  content: url(/frontend/img/save_pass_img.png);
+  position: absolute;
+  left: 14px;
+  top: 13px;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content .add-to-travel-list-btn {
+  position: relative;
+  cursor: pointer;
+  color: white;
+  font-size: 13px;
+  font-family: 'Roboto-Regular', Arial;
+  border-radius: 5px;
+  text-align: center;
+  float: left;
+  background: #404040;
+  padding: 5px 11px;
+  margin-top: 1px;
+  margin-left: 5px;
+}
+
+#WuForm-form div .control-label{
+    float: right;
+    margin-top: -24px;
+    font-size: 13px;
+    font-family: 'Roboto-Regular', Arial;
+    color: #1a1a1a;
+    position: relative;
+    left: -474px;
+    top: 32px;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content .add-to-travel-list-btn:hover {
+  background: #4f4e4e;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content .user-travel-list {
+  position: relative;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content .user-travel-list ul {
+  position: relative;
+  list-style: none;
+  font-size: 13px;
+  font-family: 'Roboto-Regular', Arial;
+  width: 500px;
+  color: white;
+  margin-left: 65px;
+}
+
+.form-group .field-escorttravelsform-travels{
+  margin-left: 23px;
+  margin-top: 31px;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content .user-travel-list ul li {
+  display: inline-block;
+  background: #a43bab;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content .user-travel-list ul li .city {
+  float: left;
+  margin: 5px 10px 5px 10px;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content .user-travel-list ul li .remove-city {
+  float: right;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-left: 1px solid #dcdcdc;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content .user-travel-list ul li .remove-city:hover {
+  opacity: 1;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content .user-travel-list ul li:first-child {
+  background: #a43bab;
+  margin-left: 30px;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content .user-travel-list ul li:nth-child(2) {
+  background: #0b94b6;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content .user-travel-list ul li:nth-child(3) {
+  background: #39bd2f;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content .user-travel-list ul li:nth-child(4) {
+  background: #cec818;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content .user-travel-list ul li:nth-child(5) {
+  background: #ce183a;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content .user-travel-list ul li:nth-child(6) {
+  background: #7c7d87;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content .user-travel-list ul li:nth-child(7) {
+  background: #6c67cb;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content .settings-footer-btn {
+  position: relative;
+  width: 145px;
+  height: 40px;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  font-size: 13px;
+  font-family: 'Roboto-Regular', Arial;
+  text-transform: uppercase;
+  background: #404040;
+  cursor: pointer;
+  margin-left: 255px;
+  margin-top: 90px;
+  border-radius: 5px;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content .settings-footer-btn:hover {
+  background: #4f4e4e;
+}
+.main-wrapper .content-wrap .travel-area .travel-settings .content .travel-container .travel-content .settings-footer-btn img {
+  position: absolute;
+  left: 18px;
+  top: 12px;
+}
+
+
+
+/*Footer*/
+.main-wrapper .footer {
+  position: relative;
+  display: inline-block;
+  height: 235px;
+  /*background: chocolate;*/
+  margin-top: 40px;
+  top: 90px;
+}
+.main-wrapper .footer .footer-menu {
+  position: relative;
+}
+.main-wrapper .footer .footer-menu ul {
+  position: absolute;
+  font-family: 'BlairMdITC-TT-Medium', Arial;
+  font-size: 12px;
+  width: 960px;
+  list-style: none;
+  /*background-color: brown;*/
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.main-wrapper .footer .footer-menu ul li {
+  position: relative;
+  margin: 42px 30px 35px 30px;
+  display: inline-block;
+}
+.main-wrapper .footer .footer-menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+.main-wrapper .footer .footer-menu ul li a:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: -32px;
+  height: 10px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+.main-wrapper .footer .footer-menu ul li .red-point {
+  position: relative;
+  width: 6px;
+  height: 4px;
+  left: 50%;
+  margin-left: -3px;
+  margin-top: 10px;
+  background: transparent;
+}
+.main-wrapper .footer .footer-menu ul li:hover .red-point {
+  background: #8d1e38;
+}
+.main-wrapper .footer .footer-menu ul li:first-child a:before {
+  display: none;
+}
+.main-wrapper .footer .footer-logo {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.main-wrapper .footer .footer-logo:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: -25px;
+  height: 70px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+.main-wrapper .footer .footer-logo .logo {
+  position: relative;
+  width: 151px;
+  height: 16px;
+  margin-bottom: 42px;
+  background: url('../img/vice_header_logo.png') no-repeat center;
+  cursor: pointer;
+}
+.main-wrapper .footer .footer-logo .logo-text {
+  position: relative;
+  font-family: 'OpenSansRegular', Arial;
+  font-size: 11px;
+  color: #555555;
+  margin-bottom: 20px;
+}
+.main-wrapper .footer .footer-text {
+  position: relative;
+  top: 130px;
+  left: 200px;
+  width: 165px;
+  font-family: 'Lato-Bold', Arial;
+  font-size: 12px;
+  color: #555555;
+}
+.main-wrapper .footer .footer-text:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: -25px;
+  height: 70px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+.main-wrapper .footer .footer-text:first-child {
+  border-left: none;
+}
+.main-wrapper .footer .languages-area {
+  position: relative;
+  font-family: 'Lato-Bold', Arial;
+  margin-top: 40px;
+  margin-left: 410px;
+  font-size: 12px;
+  color: #555555;
+  cursor: pointer;
+}
+.main-wrapper .footer .languages-area p:hover {
+  color: white;
+}
+.clear {
+  clear: both;
+}
+
+.contetnt .active{
+  background: #1a1a1a;
+}
+.form-group.field-escortaccountform-hips {
+  position: relative;
+  top: 28px;
+  left: -189px;
+}

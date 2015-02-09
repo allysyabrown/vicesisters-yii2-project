@@ -1,0 +1,21 @@
+<li class="cover">
+    <div class="triangle"></div>
+    <a href="{{ path('user/profile', {'id':message.getOwnerId()}) }}" class="user-ava">
+        <img src="{{ message.getAvatar() }}" alt=""/>
+    </a>
+    <div class="user-info">
+        <a href="{{ path('user/profile', {'id':message.getOwnerId()}) }}">{{ message.user.getFirstName()~' '~message.user.getLastName() }}</a>
+        <div class="feedback-date">
+            <img src="frontend/img/feed_date_img.png" alt=""/>
+            <span>{{ message.time }}</span>
+        </div>
+    </div>
+    <div class="feedback-text">
+       {{ message.text }}
+    </div>
+
+    {#<div class="feedback-footer">#}
+        {#<div class="feedback-seeall-btn">See all</div>#}
+    {#</div>#}
+
+</li>

@@ -1,0 +1,40 @@
+{% extends '@frontend/views/layouts/main.twig' %}
+{% block cssFiles %}
+    {{ parent() }}
+    <link href="/frontend/css/help.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+    <script src="{{ '/frontend/js/pages/help.js' }}" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="side-settings-block">
+
+        <div class="header">{{ t('base', 'Настройки') }}</div>
+
+        <div class="contetnt">
+            {% include '@app/modules/frontend/views/account/_leftMenu.twig' %}
+        </div>
+
+        <div class="footer-setting-content">
+            {% include '@app/modules/frontend/views/account/_settingsFooter.twig' %}
+        </div>
+    </div>
+
+    {% include '@app/modules/frontend/views/account/_privacyPolicy.twig' %}
+    {% include '@app/modules/frontend/views/account/helpStep2.twig' %}
+    {% include '@app/modules/frontend/views/account/_changePassword.twig' %}
+    {% include '@app/modules/frontend/views/account/_credits.twig' %}
+    {% include '@app/modules/frontend/views/account/_travels.twig' %}
+
+
+
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    Help.init();
+{% endblock %}

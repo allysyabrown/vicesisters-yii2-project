@@ -1,0 +1,17 @@
+
+
+<div class="title_popup">{{ proplan.proplanName }}</div>
+
+	<center><div class="proplan">{% include '@app/modules/frontend/views/partials/_proplanForm.twig' %}</div></center>
+    <input type="hidden" id="proplan-duration" value="{{ proplanForm.duration }}" />
+   <label for="proplan-price">{{ t('front', '') }}</label>
+
+    <div class="period_popup" id="proplan-price">
+        {{ proplanForm.price }}<span class="baks">$</span>
+    </div>
+
+
+
+
+
+

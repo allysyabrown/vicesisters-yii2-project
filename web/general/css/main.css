@@ -1,0 +1,16 @@
+.auto-url, .auto-ajax {
+    cursor: pointer;
+}
+.ajaxLoader {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 98;
+    background: rgba(0,0,0,.7) url('../img/A-Loader0.gif') no-repeat;
+    background-position: 50% 50%;
+    background-size: 100px 100px;
+    /*-webkit-border-radius: 12px;*/
+    /*-moz-border-radius: 12px;*/
+    /*border-radius: 12px;*/
+}

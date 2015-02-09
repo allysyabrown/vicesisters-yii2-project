@@ -1,0 +1,26 @@
+<div class="message-area">
+    <div class="message-list">
+        <div class="nano">
+            <div class="nano-content msg-scroll-area">
+                <ul id="messages-list">
+
+                    {% for message in messages %}
+
+                        {% if message.isMine %}
+                            {% include '@app/modules/frontend/views/account/_myMessage.twig' %}
+                        {% else %}
+                            {% include '@app/modules/frontend/views/account/_opponentMessage.twig' %}
+                        {% endif %}
+
+                    {% endfor %}
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="new-message-field">
+
+        {% include '@app/modules/frontend/views/account/messageForm.twig' %}
+
+    </div>
+</div>

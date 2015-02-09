@@ -1,0 +1,44 @@
+{% extends '@backend/views/layouts/main.twig' %}
+
+{% block cssFiles %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ '/backend/ext/data-tables/DT_bootstrap.css' }}" />
+{% endblock %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ '/backend/ext/data-tables/jquery.dataTables.js' }}"></script>
+    <script type="text/javascript" src="{{ '/backend/ext/data-tables/DT_bootstrap.js' }}"></script>
+    <script src="{{ '/backend/js/editable-table.js' }}"></script>
+{% endblock %}
+
+{% block content %}
+
+    <section class="site-min-height">
+        <section class="panel">
+
+            {% if pageName is not defined %}
+                {% set pageName = t('back', 'Таблица') %}
+            {% endif %}
+
+            <header class="panel-heading">
+                {{ pageName }}
+            </header>
+
+            <div class="panel-body">
+                <div class="adv-table editable-table simple-table">
+
+                    {% block table %}
+                    {% endblock %}
+
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+{% endblock %}

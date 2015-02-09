@@ -1,0 +1,8 @@
+<div class="feedback-area">
+    <div class="title">{{ t('base', 'Отзывы клиентов') }}</div>
+    <ul class="cover">
+        {% for feedback in feedbacks %}
+            {% include '@app/modules/frontend/views/ajax/_feedback.twig' %}
+        {% endfor %}
+    </ul>
+</div>

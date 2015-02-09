@@ -1,0 +1,79 @@
+.main-wrapper .content-wrap {
+	position: absolute;
+	height: 100%;
+	width: 960px;
+	left: 50%;
+	margin-left: -480px;
+	background: url('../img/age_bg.png');
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.home-btn a{
+	font-size: 12px;
+	font-family: 'Roboto-Medium', Arial;
+	color:#fff;
+	text-decoration:none;
+}
+.aa{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+	background: red;
+	display: block;
+}
+.wrapper-banned{
+	position: relative;
+	height: 100%;
+	margin-top: 10%;
+}
+.title{
+	display: block;
+	font-size: 40px;
+  	font-family: 'Roboto-Light', Arial;
+  	color:#fff;
+  	margin-bottom: 20px;
+}
+
+.description{
+	display: block;
+	font-size: 18px;
+  	font-family: 'Roboto-Light', Arial;
+  	width: 35%;
+  	color: rgba(255, 255, 255, 0.7);
+}
+.link{
+	display: block;
+	font-size: 18px;
+  	font-family: 'Roboto-Light', Arial;
+  	padding-bottom: 115px;
+  	width: 35%;
+  	text-decoration: underline;
+  	color: rgba(255, 255, 255, 0.7);
+  	cursor: pointer;
+}
+
+.home-btn{
+	background: #7a7a7a;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 165px;
+	height: 35px;
+	line-height: 35px;
+}
+
+.home-btn:hover{
+	background: #98999b
+}
+.lock-img{
+	width:130px;
+	height: 175px;
+	background: url('../img/lock-page.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin-bottom: 80px;
+}
+

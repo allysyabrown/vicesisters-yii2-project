@@ -1,0 +1,12 @@
+<div class="roll-left auto-ajax" data-url="{{ path('photo/prev', {'id': photo.id, 'escortId': escortId}) }}" data-update=".gal-popup-wrap"></div>
+
+<div class="comment-container">
+    <div id="escort-photo-{{ photo.id }}" class="user-photo">
+        <div class="photo-wrapper">
+            <img src="{{ photo.src }}" alt=""/>
+            {% include '@app/modules/frontend/views/escort/_escortPhotoLike.twig' %}
+        </div>
+    </div>
+</div>
+
+<div class="roll-right auto-ajax" data-url="{{ path('photo/next', {'id': photo.id, 'escortId': escortId}) }}" data-update=".gal-popup-wrap"></div>

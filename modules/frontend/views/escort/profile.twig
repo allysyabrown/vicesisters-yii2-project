@@ -1,0 +1,43 @@
+{% extends '@frontend/views/layouts/main.twig' %}
+
+{% block cssFiles %}
+    {{ parent() }}
+    <link href="/frontend/css/escort_profile.css" rel="stylesheet" type="text/css" />
+    <link href="/frontend/css/cropper.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+    <script src="{{ '/general/js/plugins/cropper/cropper.js' }}" type="text/javascript"></script>
+    <script src="{{ '/general/js/plugins/cropper/crop.js' }}" type="text/javascript"></script>
+    <script src="{{ '/frontend/js/pages/main-page.js' }}" type="text/javascript"></script>
+    <script src="{{ '/frontend/js/pages/all-ajax.js' }}" type="text/javascript"></script>
+    <script src="{{ '/frontend/js/pages/profile.js' }}" type="text/javascript"></script>
+    <script src="{{ '/frontend/js/pages/feed-messages.js' }}" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+
+    {% include '@app/modules/frontend/views/escort/topPhotos.twig' %}
+
+    {#    <div class="main-wrapper">#}
+    {% include '@app/modules/frontend/views/escort/_escortInfoArea.twig' %}
+    {% include '@app/modules/frontend/views/escort/_escortAbout.twig' %}
+    {% include '@app/modules/frontend/views/escort/_escortFeeds.twig' %}
+    {% include '@app/modules/frontend/views/escort/_galleryArea.twig' %}
+    {% include '@app/modules/frontend/views/escort/_escortFeedbacks.twig' %}
+
+    {% include '@app/modules/frontend/views/escort/_galleryPopup.twig' %}
+    {% include '@app/modules/frontend/views/escort/_firstPrivateMessage.twig' %}
+    {#    </div>#}
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    Profile.init({
+        show: "{{ show }}",
+        uploadPhotoUrl: "{{ path('escort/uploadphoto') }}",
+    });
+    FeedMessages.init();
+{% endblock %}

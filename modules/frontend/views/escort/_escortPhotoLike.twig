@@ -1,0 +1,4 @@
+<div class="likes-count {% if photo.getIsLiked() %}already-liked{% endif %}" data-id="{{ photo.id }}" data-type="photo">
+    <span>{{ photo.likes }}</span>
+    <i class="like-bg flaticon-like78"></i>
+</div>

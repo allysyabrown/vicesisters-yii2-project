@@ -1,0 +1,113 @@
+{{ this.beginPage() }}
+
+<!DOCTYPE html>
+<html lang="{{ app.language }}">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        {{ html.csrfMetaTags()|raw }}
+
+        {% if title is not defined %}
+            {% set title = app.name %}
+        {% endif %}
+
+        <title>{% block title %}{{ title }}{% endblock %}</title>
+
+        {% if canonical is defined %}
+            <link rel="canonical" href="{{ canonical }}" />
+        {% endif %}
+
+        {% block cssFiles %}
+            <link href="/general/css/main.css" rel="stylesheet" type="text/css" />
+            <link href="/frontend/css/cropper.css" rel="stylesheet" type="text/css" />
+        {% endblock %}
+
+        <script src="{{ '/general/js/jquery-2.1.1.min.js' }}"></script>
+
+        {% block analytics %}
+        {% endblock %}
+
+    </head>
+
+    <body>
+
+        {{ this.beginBody() }}
+
+        <section id="container">
+
+            {% if notShowShit is not defined %}
+                {% set notShowShit = false %}
+            {% endif %}
+
+            {% if notShowFuckingShit is not defined %}
+                {% set notShowFuckingShit = false %}
+            {% endif %}
+
+            {% if not app.user.isAdmin and not notShowFuckingShit %}
+                {% include '@app/modules/frontend/views/main/_mainPopups.twig' %}
+            {% endif %}
+
+            {% if not app.user.isAdmin and not notShowShit %}
+                {% include '@app/modules/frontend/views/main/_bubblesPopup.twig' %}
+
+                {% include '@app/modules/frontend/views/main/_cropAva.twig' %}
+
+                {% include '@app/modules/frontend/views/escort/_bigAvaBgCropper.twig' %}
+            {% endif %}
+
+            {% if mainWrapperStyle is not defined %}
+                {% set mainWrapperStyle = '' %}
+            {% endif %}
+            {% if contentWrapperStyle is not defined %}
+                {% set contentWrapperStyle = '' %}
+            {% endif %}
+
+            <div class="main-wrapper cover" id="wrapper" style="{{ mainWrapperStyle }}">
+
+                {% block header %}
+                {% endblock %}
+
+                <div class="content-wrap" style="{{ contentWrapperStyle }}">
+                    {% block body %}
+
+                    {% endblock %}
+
+                    {% block chat %}
+                    {% endblock %}
+
+                    {% block footer %}
+                    {% endblock %}
+
+                </div>
+            </div>
+
+        </section>
+
+        {% block modalwindow %}
+            {% include('@general/views/partials/modalWindow.twig') %}
+        {% endblock %}
+
+        {% block scriptFiles %}
+            <script src="{{ '/general/js/ext.js' }}" type="text/javascript"></script>
+            <script src="{{ '/general/js/main.js' }}" type="text/javascript"></script>
+        {% endblock %}
+
+        <script type="text/javascript">
+			$(function() {
+				{% block scripts %}
+					Main.init({
+                        proplansUrl: "{{ path('site/proplans') }}"
+                    });
+				{% endblock %}
+			})
+        </script>
+
+        {{ this.endBody() }}
+
+    </body>
+
+</html>
+
+{{ this.endPage() }}

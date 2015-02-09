@@ -1,0 +1,126 @@
+<div>
+    {{ accountForm.begin({ 'action': path('account/index'), 'placeholders': false, 'labels': true }) }}
+
+    <div class="personal-info">
+
+        <div class="user-info-header">{{ t('base', 'Аккаунт') }}</div>
+
+
+        <div class="container-account">
+            <div class="user-inputs-area">
+                {{ accountForm.text('first_name', { 'inputOptions': {'class': 'first-name'} }) }}
+                {{ accountForm.text('last_name', { 'inputOptions': {'class': 'last-name'} }) }}
+            </div>
+            <div class="about-user">
+                {{ accountForm.textarea('description', { 'inputOptions': {'rows': 4} }) }}
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="user-location">
+
+        <div class="user-info-header">{{ t('base', 'Адрес') }}</div>
+    <div class="container-location">
+        <div class="user-inputs-area">
+            <div class="user-country">{{ accountForm.select('country', {'options': {'class': 'user-country auto-ajax-select', 'data-url': path('account/citiesbycountry'), 'data-update': '#state-selector'} }) }}
+            </div>
+            <div id="state-selector">
+                {% include '@app/modules/frontend/views/account/_statesSelector.twig' %}
+                {% include '@app/modules/frontend/views/account/_citiesSelector.twig' %}
+            </div>
+        </div>
+    </div>    
+    </div>
+
+    <div class="escort-age">
+
+        <div class="user-info-header">{{ t('base', 'Возраст') }}</div>
+        
+        <div class="escort-selects-area">
+            {{ accountForm.text('age', { 'inputOptions': {'class': 'user-age'} }) }}
+        </div>
+        
+
+    </div>
+
+    <div class="escort-bio">
+
+        <div class="user-info-header">{{ t('base', 'Био параметры') }}</div>
+        <div class="container-bio">
+        <div class="escort-selects-area">
+            {{ accountForm.select('sex') }}
+            {{ accountForm.select('orientation') }}
+            {{ accountForm.select('ethnicity') }}
+            {{ accountForm.text('height') }}
+            {{ accountForm.text('weight') }}
+            {{ accountForm.select('eyes') }}
+            {{ accountForm.select('hair') }}
+
+            {{ accountForm.select('breast') }}
+            {{ accountForm.text('waist') }}
+            {{ accountForm.text('hips') }}
+
+            {#{{ accountForm.text('bodyParams', { 'inputOptions': {'class': 'escort-bio-body'} }) }}#}
+        </div>
+        </div>
+
+    </div>
+
+    <div class="escort-languages">
+
+        <div class="user-info-header">{{ t('base', 'Языки') }}</div>
+        <div class="container-languages">
+        <div class="escort-selects-area">
+            {{ accountForm.select('language1', { 'options': {'class': 'escort-languages-1'} }) }}
+            {{ accountForm.select('language2', { 'options': {'class': 'escort-languages-2'} }) }}
+            {{ accountForm.select('language3', { 'options': {'class': 'escort-languages-3'} }) }}
+        </div>
+        </div>
+
+    </div>
+
+    <div class="user-contacts">
+
+        <div class="user-info-header">{{ t('base', 'Контакты') }}</div>
+        <div class="container-contacts">
+        <div class="user-inputs-area">
+            {{ accountForm.text('phone', { 'inputOptions': {'class': 'user-phone-number'} }) }}
+            {{ accountForm.text('webPage', { 'inputOptions': {'class': 'user-web-page'} }) }}
+        </div>
+        </div>
+    </div>
+
+    <div class="user-email">
+
+        <div class="user-info-header">{{ t('base', 'Личная информация') }}</div>
+
+        <div class="static-user-email">
+            <div class="email-header">E-mail</div>
+            <div class="clear"></div>
+            <span>{{ accountForm.email }}</span>
+        </div>
+
+        <!-- <div class="user-email-settings">
+            <span>Hide my E-mail form in profile</span>
+            <div class="email-switch">
+                <div id="user-email" class="onoff-switch" data-state="0">
+                    <div class="slider"></div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+
+    <div class="hide-container">
+        {{ accountForm.checkboxList('extended') }}
+    </div>
+
+    <div class="settings-footer">
+        <button type="submit">{{ t('base', 'Сохранить') }}</button>
+    </div>
+
+    {{ accountForm.end() }}
+
+</div>

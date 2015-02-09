@@ -1,0 +1,55 @@
+{% extends '@frontend/views/layouts/main.twig' %}
+{% block cssFiles %}
+    {{ parent() }}
+    <link href="/frontend/css/dialog_style.css" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block scriptFiles %}
+    {{ parent() }}
+    <script src="{{ '/general/js/plugins/form-master/jquery.form.js' }}" type="text/javascript"></script>
+    <script src="{{ '/frontend/js/plugins/nano_scroller/nanoScrollerJS.js' }}" type="text/javascript"></script>
+    <script src="{{ '/frontend/js/pages/dialogs.js' }}" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+
+    {% if dialogs %}
+        <div class="dialogs">
+            {% include '@app/modules/frontend/views/account/_dialogsList.twig' %}
+
+            <div class="message-block-area">
+                {% include '@app/modules/frontend/views/account/_messagesArea.twig' %}
+            </div>
+
+        </div>
+    {% else %}
+        <div class="dialogs empty">
+            <div class="left-col">
+                <!-- <input type="text" name="search-field" class="search-window" placeholder="Search Name ..." disabled="disabled"/>
+                <div class="edit-btn"></div> -->
+                <div class="no-messages">
+                    <span>You have</span>
+                    <p>no messages..</p>
+                </div>
+            </div>
+            <div class="right-col">
+                <div class="container-top">
+                    <div class="block-inside">
+                        <span>Find a friend</span>
+                        <button class="find auto-url" data-url="{{ path('escort/females') }}"><div class="bg-search"></div></button>
+                    </div>
+                </div>
+                <div class="container-bottom">
+                <!-- <textarea name="" disabled="disabled
+">Текст вашего сообщения</textarea>
+                    <button>Отправить</button> -->
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    Dialogs.init();
+{% endblock %}

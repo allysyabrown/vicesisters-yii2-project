@@ -1,0 +1,61 @@
+{% extends '@frontend/views/layouts/bloor.twig' %}
+
+{% block cssFiles %}
+    {{ parent() }}
+
+    <link href="frontend/fonts/Roboto-Thin/roboto_thin.css" rel="stylesheet" type="text/css"/>
+    <link href="frontend/fonts/Roboto-Medium/roboto_medium.css" rel="stylesheet" type="text/css"/>
+    <link href="frontend/fonts/Roboto-Light/roboto_light.css" rel="stylesheet" type="text/css"/>
+    <link href="frontend/css/main.css" rel="stylesheet" type="text/css"/>
+
+{% endblock %}
+
+{% block scriptFiles %}
+    {{ parent() }}
+    {#    <script src="{{ script('pages/age.js') }}" type="text/javascript"></script>#}
+    <script src="frontend/js/pages/blur.js" type="text/javascript"></script>
+    <script src="frontend/js/pages/adultChack.js" type="text/javascript"></script>
+    <script src="frontend/js/pages/age.js" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+
+    <div class="main-wrap">
+
+    </div>
+
+    <div class="age-wrapper">
+        <div class="age-shadow"></div>
+        <div class="age-content">
+            <div class="age-window">
+                <div class="age-window-header">
+                    <div class="header-title">{{ t('base','Вход') }}</div>
+                    <div class="header-logo"></div>
+                    <div class="clear"></div>
+                    <div class="header-sub-title">{{ t('base', 'Вы хотите посетить веб-сайт, содержащий страницы сексуального характера?') }}</div>
+                </div>
+                <div class="age-window-body">
+                    <div class="age-buttons">
+                        <div class="go-away-btn auto-url" data-url="http://google.com">{{ t('base', 'НЕТ. Перейти в Google') }}</div>
+                        <span class="btn-separator">{{ t('base', 'или') }}</span>
+                        <div class="enter-the-site-btn auto-url" data-url="{{ path('index/setage') }}">{{ t('base', 'ДА. Мне есть 18. Войти') }}</div>
+                    </div>
+                </div>
+                <div class="age-window-footer">
+                    <div class="footer-logo"></div>
+                    <div class="join-btn auto-url" data-url="{{ path('index/login') }}">{{ t('base', 'Войти или зарегистрироваться') }}</div>
+                    <div class="privacy-btn">{{ t('front', 'Конфиденциальность') }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    Age.init({
+    name: "World"
+    });
+    AdultCheck.init();
+{% endblock %}

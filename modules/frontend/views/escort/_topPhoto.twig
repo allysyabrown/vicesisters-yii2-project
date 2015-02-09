@@ -1,0 +1,8 @@
+<li class="top-photo auto-ajax"
+    data-id="{{ photo.id }}"
+    data-url="{{ path('photo/index', {'id': photo.id, 'escortId': profile.id}) }}"
+    data-update=".gal-popup-wrap">
+    {% include '@app/modules/frontend/views/escort/_escortPhotoLike.twig' %}
+    <div class="mini-shadow"></div>
+    <img src="{{ photo.src }}" alt=""/>
+</li>

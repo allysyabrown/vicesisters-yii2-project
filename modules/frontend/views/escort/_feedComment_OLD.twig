@@ -1,0 +1,20 @@
+<li class="feed-comment" data-id="{{ comment.id }}">
+    <div class="triangle"></div>
+    <a href="{{ comment.owner.homeUrl }}" class="user-ava">
+        <img src="{{ comment.owner.avatar }}" alt=""/>
+    </a>
+    <div class="user-info">
+        <a href="{{ link }}">{{ comment.owner.getFullName() }}</a>
+        <div class="feedback-date">
+            <img src="frontend/img/feed_date_img.png" alt=""/>
+            <span>{{ comment.date }}</span>
+        </div>
+    </div>
+    <p class="feedback-text">{{ comment.text }}</p>
+
+    {#<div class="feedback-footer">#}
+        {#<div class="comment-img"></div>#}
+        {#<div class="feedback-seeall-btn">Comment this</div>#}
+    {#</div>#}
+
+</li>

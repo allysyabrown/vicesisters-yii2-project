@@ -1,0 +1,35 @@
+{% extends '@frontend/views/layouts/main.twig' %}
+{% block cssFiles %}
+{{ parent() }}
+<link rel="stylesheet" href="/frontend/css/user_profile.css"> 
+{% endblock %}
+{% block scriptFiles %}
+    {{ parent() }}
+    <script src="{{ '/frontend/js/pages/user-profile.js' }}" type="text/javascript"></script>
+    <script src="/frontend/js/bootstrap/bootstrap.min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+        <div class="left">
+            {% include '@app/modules/frontend/views/user/_userBlock.twig' %}
+
+            {% include '@app/modules/frontend/views/user/_lastVerified.twig' %}
+        </div>
+
+        <div class="right">
+            <div class="header"> 
+                <div class="likes">
+                    {{ t('profile', 'Новые фотографии') }}
+                </div>
+            </div>
+
+            {% include '@app/modules/frontend/views/user/_lastPhotos.twig' %}
+        </div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    UserProfile.init();
+{% endblock %}

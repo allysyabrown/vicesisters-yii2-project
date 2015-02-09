@@ -1,0 +1,17 @@
+{{ regForm.begin({'id': 'reg-form', 'action': path('index/registration'), 'placeholders': true}) }}
+
+
+
+<div class="registration-radio">{{ regForm.radioList('role') }} </div>
+	
+	
+<div class="registration-input">
+    {{ regForm.mail('user_name') }}
+    {{ regForm.text('phone') }}
+    {{ regForm.password('password', {}) }}
+    {{ regForm.password('retypePassword') }}
+ 	</div>
+
+{{ regForm.submit() }} 
+
+{{ regForm.end() }}

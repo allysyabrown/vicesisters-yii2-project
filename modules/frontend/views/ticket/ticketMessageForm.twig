@@ -1,0 +1,8 @@
+{{ ticketMessageForm.begin({'action': path('ticket/send'), 'placeholders': true, 'options': {'class': 'auto-ajax-form'}}) }}
+
+    {{ ticketMessageForm.hidden('ticket_id') }}
+    {{ ticketMessageForm.text('text') }}
+
+    {{ ticketMessageForm.submit() }}
+
+{{ ticketMessageForm.end() }}

@@ -1,0 +1,52 @@
+<div class="footer cover">
+    <div class="footer-menu cover">
+        <ul class="cover">
+            <li>
+                <a href="{{ path('site/disclaimer') }}">{{ t('front', 'Предупреждения') }}</a>
+                <div class="red-point"></div>
+            </li>
+            <li>
+                <a href="{{ path('site/privacy') }}">{{ t('front', 'Конфиденциальность') }}</a>
+                <div class="red-point"></div>
+            </li>
+            <li>
+                <a href="{{ path('site/terms') }}">{{ t('front', 'Условия использования') }}</a>
+                <div class="red-point"></div>
+            </li>
+            <li>
+                <a class="{{ app.user.isGuest ? ' auto-url' : ' help-popup-button' }}"{{ app.user.isGuest ? ' data-url='~path('index/login') : '' }} href="{{ path('site/help') }}">{{ t('front', 'Помощь') }}</a>
+                <div class="red-point"></div>
+            </li>
+            <li>
+                <a href="{{ path('site/contact') }}">{{ t('front', 'Контакты') }}</a>
+                <div class="red-point"></div>
+            </li>
+            <li>
+                <a href="{{ path('site/abuse') }}">{{ t('front', 'Сообщить о нарушении') }}</a>
+                <div class="red-point"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="footer-logo">
+        <div class="logo auto-url" data-url="/">
+            <!--ViceSisters-->
+        </div>
+        <div class="logo-text">
+            ViceSisters.com © 2006-{{ date('Y') }}<br/>
+            All rights reserved.
+        </div>
+    </div>
+    <div class="footer-text">
+        {{ t('front', '{name} является Глобальным', {'name': app.params.serviceName}) }}
+        {{ t('front', ' Каталогом Эскортов. Мы') }}{{ t('front', ' специализируемся на предоставлении') }}
+        {{ t('front', ' Эскортов любого пола и') }}
+        {{ t('front', ' расположения для самых взыскательных') }}
+        {{ t('front', ' клиентов') }}
+    </div>
+    <div class="languages-area">
+        {% for lang in app.local.languages %}
+            <p{{ lang.active ? ' class="active"' : '' }}><a class="link" href="{{ lang.url }}">{{ lang.name }}</a></p>
+        {% endfor %}
+    </div>
+</div>
+

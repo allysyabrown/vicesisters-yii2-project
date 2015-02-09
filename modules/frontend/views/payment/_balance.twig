@@ -1,0 +1,37 @@
+<div class="content-step-1 user-balance">
+    <div class="credits-container">
+        <div class="bitcoin-area">
+
+            <div class="wallet">
+                <img src="/frontend/img/bitcoin_wallet_img.png" alt=""/>
+                <span>{{ t('account', 'Ваш баланс') }}</span>
+            </div>
+            <div class="bitcoints-count">
+                <div class="count">{{ app.user.balance }}</div>
+                <span class="title">{{ app.payment.currency }}</span>
+            </div>
+            <div class="add-coints add-to-balance">
+                
+                <button class="add-coints-btn"><img src="/frontend/img/coints_img.png" alt="Зонтик"
+                style="vertical-align: middle"> {{ t('account', 'Пополнить счёт') }}</button>
+
+                <!-- <div class="add-coints-btn">
+                    <img src="/frontend/img/coints_img.png" alt=""/>
+                    <div class="btn-text">{{ t('account', 'Пополнить счёт') }}</div>
+                </div> -->
+
+
+
+            </div>
+            <div class="bit-baner">
+                <img src="/frontend/img/bit_ad.jpg" alt=""/>
+            </div>
+            <div class="bit-footer">
+                {{ t('account', 'Мы рады сообщить, что на нашем сайте') }}<br/>
+                {{ t('account', 'доступен новый вид оплаты - теперь вы можете платить с помощью Bitcoin') }}<br/>
+                {{ t('account', 'Это очень быстро и удобно в использовании!') }}
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,190 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('icomoon.eot?8xxq4y');
+	src:url('icomoon.eot?#iefix8xxq4y') format('embedded-opentype'),
+		url('icomoon.woff?8xxq4y') format('woff'),
+		url('icomoon.ttf?8xxq4y') format('truetype'),
+		url('icomoon.svg?8xxq4y#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon_dropdownmenu{
+	float: left;
+	margin-right: -41px;
+	margin-left: 21px;
+	font-size: 14px;
+	}
+.icon_navmenu{
+	margin-left: 11px;
+	margin-right: -11px;
+	float: left;
+}
+
+.icon-messages{
+	font-size: 18px;
+	margin-top: 11px;
+	margin-left: 22px;
+}
+
+.icon-myprofile{
+	font-size: 20px;
+	margin-top: 11px;
+}
+.icon-photogalery{
+	margin-top: 14px;
+	margin-left: 23px;
+}
+
+.icon-settings{
+	font-size: 17px;
+	margin-top: 13px;
+	margin-left: 24px;
+}
+.icon-signout{
+	font-size: 19px;
+	margin-top: 12px;
+	margin-left: 24px;
+}
+.icon-aboutme{
+	margin-top: 8px;
+}
+.icon-feedbacks{
+	margin-top: 10px;
+}
+.icon-feeds{
+	margin-top: 7px;
+}
+.icon-photogalery2{
+	margin-top: 10px;
+	margin-left: 11px;
+}
+
+.icon-signinheader:before {
+    content: "\e60d";
+    left:35px;
+    position: absolute;
+}
+.icon-signinheader{
+	font-size: 22px;
+}
+.icon-tag31:before {
+	content: "\e60b";
+}
+.icon-dollar103:before {
+	content: "\e60c";
+}
+.icon-dollar103{
+	font-size: 17px;
+	margin-top: 11px;
+	margin-left: 23px;
+}
+.icon-dollar103-color{
+	color: rgb(248, 158, 28);
+}
+.icon-shopping2{
+	font-size: 20px;
+	margin-top: 10px;
+	margin-left: 21px;
+}
+.icon-shopping2-color{
+	color: rgb(94, 158, 12);
+}
+.icon-aboutme:before {
+	content: "\e600";
+	font-size: 20px;
+}
+
+.icon-airplane70:before {
+	content: "\e601";
+}
+.icon-airplane70{
+	font-size: 14px;
+	margin-left: 21px;
+	color: #70BED1;
+}
+
+.icon-dollar103:before {
+	content: "\e602";
+}
+
+.icon-feedbacks:before {
+	content: "\e603";
+	font-size: 17px;
+}
+
+.icon-feeds:before {
+	content: "\e604";
+	font-size: 22px;
+}
+
+.icon-little13:before {
+	content: "\e605";
+}
+.icon-little13{
+	font-size: 18px;
+	margin-left: 23px;
+	color: #1A63BD;
+}
+
+.icon-messages:before {
+	content: "\e606";
+}
+
+.icon-myprofile:before {
+	content: "\e607";
+}
+
+.icon-photogalery:before {
+	content: "\e608";
+}
+
+.icon-profile7:before {
+	content: "\e609";
+}
+.icon-profile7{
+	font-size: 15px;
+	margin-left: 24px;
+}
+.icon-proplans:before {
+	content: "\e60a";
+}
+
+.icon-settings:before {
+	content: "\e60b";
+}
+
+.icon-shopping2:before {
+	content: "\e60c";
+}
+
+.icon-signinheader:before {
+	content: "\e60d";
+}
+
+.icon-signout:before {
+	content: "\e60e";
+}
+
+.icon-tag31:before {
+	content: "\e60f";
+}
+.icon-tag31{
+	font-size: 16px;
+	margin-left: 23px;
+	color: #A43BAB;
+}

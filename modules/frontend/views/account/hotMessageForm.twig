@@ -1,0 +1,7 @@
+{{ hotMessageForm.begin({'action': path('escort/addhotmessage')} ) }}
+
+    {{ hotMessageForm.text('title', {'inputOptions': {'maxlength': 30, 'class': 'intro-title'} }) }}
+    {{ hotMessageForm.textarea('text', {'inputOptions': {'maxlength': 256, 'class': 'intro-text'} }) }}
+    {{ hotMessageForm.text('img', {'inputOptions': {'id': 'crop-image-name', 'class': 'hide-container'} }) }}
+
+{{ hotMessageForm.end() }}

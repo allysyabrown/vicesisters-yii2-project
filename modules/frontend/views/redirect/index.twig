@@ -1,0 +1,11 @@
+{% extends '@general/views/layouts/main.twig' %}
+
+{% block scriptFiles %}
+    <script src="{{ '/frontend/js/pages/redirect.js' }}" type="text/javascript"></script>
+{% endblock %}
+
+{% block scripts %}
+    Redirect.init({
+        page: "{{ page }}"
+    });
+{% endblock %}

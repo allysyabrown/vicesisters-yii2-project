@@ -1,0 +1,51 @@
+<div class="content-step-3">
+
+    <div class="blockchain-btn" data-create-url="{{ path('payment/bitcoininfo') }}">
+
+        <div class="blockchain stage-begin hide-container">
+            <img src="{{ bitcoin.remoteServiceUrl }}Resources/buttons/pay_now_64.png">
+        </div>
+
+        <div class="blockchain stage-ready">
+
+            <div class="sub-header">
+                <div class="title">{{ t('payment', 'Перешлите') }}</div>
+                <div class="required-number">{{ bitcoin.getBitcoins() }}</div>
+                <div class="title-bitcoin">{{ t('payment', 'BTC') }} {{ t('payment', 'На биткоин-адрес') }}</div>
+            </div>
+
+            <input class="input_qr" type="text">
+
+            <div class="code-area">
+                <div style="text-align:center" class="sub-title">[[address]]</div>
+            </div>
+
+            <div class="qr-code-area">
+                <div class="title">{{ t('payments', 'Или воспользуйтесь qr-кодом') }}</div>
+            
+                <div class="qr-code">
+                        <img id="qrsend" src="{{ bitcoin.getQrImage() }}" alt=""/>
+                </div>
+                
+            </div>
+
+            <div class="bit-step-3-buttons">
+                <div class="back-btn">back</div>
+                <div class="ok-btn">ok</div>
+            </div>
+
+        </div>
+
+        <div class="blockchain stage-paid">
+            Payment Received <b>[[value]] BTC</b>. Thank You.
+        </div>
+
+        <div class="blockchain stage-error">
+            <font color="red">[[error]]</font>
+        </div>
+
+        <input id="service-script-input" type="hidden" value="{{ serviceScript }}" />
+
+    </div>
+
+</div>

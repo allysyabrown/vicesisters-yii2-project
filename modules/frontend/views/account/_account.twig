@@ -1,0 +1,25 @@
+<div class="account-area escort-account escort-account-settings">
+    <div class="account-settings">
+
+        <div class="header">{{ t('base', 'Аккаунт') }}</div>
+
+        <div class="content">
+            <div class="account-container">
+
+                <div class="user-top-ava">
+                    <div class="user-ava">
+                        <div class="add-new-ava">
+                            <img src="{{ app.user.ava }}" />
+                        </div>
+                        <div class="add-ava-img"></div>
+                        <div class="ava-text">{{ t('base', 'Аватар') }}</div>
+                    </div>
+                </div>
+
+                {% include '@app/modules/frontend/views/account/accountForm.twig' %}
+
+            </div>
+        </div>
+
+    </div>
+</div>
